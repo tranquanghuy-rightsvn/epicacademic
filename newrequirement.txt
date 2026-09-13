@@ -1,0 +1,231 @@
+NGUYENTHEVAN.COM · KIỂM TỪ SITE THẬT NGÀY 11/09/2026
+BẢN ĐỐI CHIẾU SỬA BLOG
+Gửi: bạn quản lý web · Từ: Nguyễn Thế Vận
+
+Đổi site từ cấu trúc cũ sang kênh "Học Toán thế nào trong thời đại AI". Mỗi dòng ghi chỗ cần sửa, chữ đang có trên site, và chữ thay vào. Làm theo thứ tự A → F; phần A áp cho mọi trang nên làm trước. Trang Thành viên và phần Đăng nhập giữ nguyên, chỉ đổi những chỗ chung ở phần A.
+
+Ghi chú: mỗi mục có dòng [TRẠNG THÁI] = việc đã làm trên code, kèm file/chỗ để kiểm tra.
+
+==================================================================================================
+A. TOÀN SITE — Đầu trang, chân trang và thẻ ẩn, lặp trên mọi trang
+==================================================================================================
+
+A1. Tên site: chữ ở đầu trang và alt của ảnh logo
+    Hiện tại : "Huấn luyện tư duy thời đại số"
+    Sửa thành: Học Toán thế nào trong thời đại AI
+    [TRẠNG THÁI] ĐÃ SỬA — .logo-wordmark + alt logo trong popup đăng nhập, mọi trang.
+                 Lệnh kiểm: grep -rn "Huấn luyện tư duy" html/*.html  → không còn kết quả.
+
+A2. Đuôi tiêu đề tab, mọi trang
+    Hiện tại : "Về tôi — Blog cá nhân"
+    Sửa thành: Về tôi — Nguyễn Thế Vận
+               Trang chủ: Học Toán thế nào trong thời đại AI — Nguyễn Thế Vận
+    [TRẠNG THÁI] ĐÃ SỬA — thẻ <title> của cả 16 trang.
+
+A3. Menu Bài viết · khối "Khám phá bài viết theo chủ đề" · cột "Trang" ở chân trang
+    Hiện tại : Sức khỏe tinh thần học tập · Tư duy chủ động · Chinh phục Toán học · Giáo dục tỉnh thức · Cuốn sách tôi yêu
+    Sửa thành: Năm mục, đúng thứ tự:
+               1. Tư duy chủ động
+               2. Toán học thật dễ
+               3. Chinh phục Toán học
+               4. Toán Stem
+               5. Câu chuyện Toán học
+    [TRẠNG THÁI] ĐÃ SỬA — .nav-dropdown, .category-pills, .footer-nav trên mọi trang.
+
+A4. Khung bản tin "Đừng bỏ lỡ"
+    Hiện tại : "Nhận email hàng tuần với những insight thực tế về học toán, rèn não và tư duy mà bạn có thể áp dụng ngay."
+    Sửa thành: Mỗi tuần một email: một cách giúp con tự nghĩ khi học Toán, lấy từ lớp học thật.
+    [TRẠNG THÁI] ĐÃ SỬA — .footer-grid h2, mọi trang (trang Đăng nhập không có khung này).
+
+A5. Khối "Về tôi" ở chân trang
+    Hiện tại : "Mình là Nguyễn Thế Vận — giáo viên Toán, người viết blog này. Mình viết về cách bộ não học toán và những công cụ tư duy giúp học đúng, nghĩ đúng."
+    Sửa thành: Mình là Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9. Mình dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI.
+    [TRẠNG THÁI] ĐÃ SỬA — .footer-bio p, mọi trang.
+
+A6. Dòng bản quyền — hiện mỗi trang một kiểu
+    Hiện tại : "© Blog cá nhân "Huấn luyện tư duy thời đại số". Bảo lưu mọi quyền." — riêng trang Thành viên ghi "© Blog cá nhân. … không phải lời khuyên chuyên môn."
+    Sửa thành: Một dòng chung cho mọi trang:
+               © Nguyễn Thế Vận · Học Toán thế nào trong thời đại AI. Bảo lưu mọi quyền. · Chính sách quyền riêng tư
+    [TRẠNG THÁI] ĐÃ SỬA — .footer-legal-dark (và .footer-copyright ở login.html), mọi trang.
+
+A7. Link "Chính sách quyền riêng tư"
+    Hiện tại : Trỏ về #
+    Sửa thành: Tạo trang chinh-sach-rieng-tu.html; nội dung sẽ gửi sau.
+    [TRẠNG THÁI] ĐÃ SỬA — tạo html/chinh-sach-rieng-tu.html (tạm ghi "đang được cập nhật"), link ở chân trang mọi trang trỏ vào đó.
+
+A8. Thẻ chia sẻ Facebook
+    Hiện tại : Không trang nào có og:title, og:description, og:image, og:url, canonical
+    Sửa thành: Thêm cho mọi trang: og:title = tiêu đề trang · og:description = mô tả meta · og:image = ảnh đầu bài, bài không có ảnh thì dùng ảnh chân dung · og:url và canonical = địa chỉ trang.
+    [TRẠNG THÁI] ĐÃ SỬA — <head> của cả 16 trang. Chưa bài nào có ảnh đầu bài nên og:image = https://nguyenthevan.com/assets/images/nguyen-the-van.jpg
+
+==================================================================================================
+B. TRANG CHỦ — index.html
+==================================================================================================
+
+B1. Mô tả meta
+    Hiện tại : "Rèn não, học toán, và nâng tầm tư duy: những bài viết về cách bộ não học toán, hệ thống ghi chú, và tư duy ra quyết định."
+    Sửa thành: Cha mẹ có con lớp 4–9: làm sao để con tự nghĩ khi máy đã giải được bài? Blog của thầy Nguyễn Thế Vận, giáo viên Toán đang đứng lớp.
+    [TRẠNG THÁI] ĐÃ SỬA — index.html dòng 7.
+
+B2. Lời mở đầu
+    Hiện tại : "Làm thế nào để học đúng, nghĩ đúng — trong một thời đại mà máy móc đã tính toán thay ta?"
+    Sửa thành: Giữ nguyên câu này.
+               Thêm một dòng ngay dưới: Viết cho cha mẹ có con lớp 4–9, từ những giờ Toán có thật ở cả tiểu học lẫn THCS.
+    [TRẠNG THÁI] ĐÃ SỬA — index.html <p class="hero-audience"> ngay dưới <h1>; thêm CSS.
+
+B3. Nút "Xem bài viết cũ hơn"
+    Hiện tại : Trỏ về #
+    Sửa thành: Ẩn cho tới khi có hơn 5 bài.
+    [TRẠNG THÁI] ĐÃ SỬA — khối .pagination có thuộc tính hidden; main.js tự hiện khi > 5 bài.
+
+B4. Bài "Rèn não, học toán, nâng tầm tư duy"
+    Hiện tại : Đang hiện ở trang chủ và mục Chinh phục Toán học
+    Sửa thành: Gỡ khỏi trang chủ, trang mục và ô tìm kiếm. Giữ file, không xoá.
+    [TRẠNG THÁI] ĐÃ SỬA — gỡ khỏi index.html, trang mục, assets/js/search-index.js; file ren-nao-hoc-toan-nang-tam-tu-duy.html vẫn còn.
+
+==================================================================================================
+C. TRANG MỤC
+   Câu mô tả ở C2–C6 hiện dưới tên mục, dùng luôn làm mô tả meta của trang đó, và dùng lại ở trang Về tôi (E3).
+==================================================================================================
+
+C1. Địa chỉ 5 trang mục
+    Hiện tại : song-song.html · toan-hoc.html · suc-khoe.html · giao-duc-tinh-thuc.html · sach-toi-yeu.html
+    Sửa thành: tu-duy-chu-dong.html · toan-hoc-that-de.html · chinh-phuc-toan-hoc.html · toan-stem.html · cau-chuyen-toan-hoc.html
+               Chuyển hướng tự động: song-song.html → tu-duy-chu-dong.html, toan-hoc.html → chinh-phuc-toan-hoc.html. Ba trang còn lại gỡ.
+    [TRẠNG THÁI] ĐÃ SỬA — tạo 5 file mới; song-song.html và toan-hoc.html thành trang chuyển hướng; xoá suc-khoe.html, giao-duc-tinh-thuc.html, sach-toi-yeu.html.
+
+C2. Tư duy chủ động
+    Hiện tại : "Lateral Thinking của De Bono cùng các công cụ ghi chú giúp bạn tư duy chủ động, rõ ràng hơn, thay vì phản xạ theo lối mòn."
+    Sửa thành: Vì sao con phải tự nghĩ, khi máy đã giải được bài — và điều gì đang khiến con thôi nghĩ.
+    [TRẠNG THÁI] ĐÃ SỬA — tu-duy-chu-dong.html (mô tả dưới tên mục + meta), có 4 bài.
+
+C3. Toán học thật dễ
+    Hiện tại : Trang mới
+    Sửa thành: Hiểu đúng, hiểu đơn giản — cho mọi học sinh, từ em đang vấp đến em đang giỏi.
+    [TRẠNG THÁI] ĐÃ SỬA — toan-hoc-that-de.html
+
+C4. Chinh phục Toán học
+    Hiện tại : "Cách bộ não học toán, triết lý học toán trong thời đại AI, và những bài tập giữ phản xạ số học sắc bén mỗi ngày."
+    Sửa thành: Học thế nào cho hiệu quả — các kỹ thuật học và sáu bước Lasotic để tự giải một bài toán.
+    [TRẠNG THÁI] ĐÃ SỬA — chinh-phuc-toan-hoc.html
+
+C5. Toán Stem
+    Hiện tại : Trang mới
+    Sửa thành: Toán dùng vào việc gì trong đời thật — từ những tình huống quanh con.
+    [TRẠNG THÁI] ĐÃ SỬA — toan-stem.html
+
+C6. Câu chuyện Toán học
+    Hiện tại : Trang mới
+    Sửa thành: Các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.
+    [TRẠNG THÁI] ĐÃ SỬA — cau-chuyen-toan-hoc.html
+
+C7. Trang mục chưa có bài
+    Hiện tại : —
+    Sửa thành: Hiện câu mô tả và dòng "Bài đầu tiên sắp lên." thay vì để trống.
+    [TRẠNG THÁI] ĐÃ SỬA — 4 trang mục chưa có bài hiện câu mô tả + "Bài đầu tiên sắp lên."
+
+==================================================================================================
+D. BÀI VIẾT
+==================================================================================================
+
+D1. Sự cấm đoán khi học Toán và hậu quả về tư duy
+    Hiện tại : Nhãn: Chinh phục Toán học
+    Sửa thành: Nhãn: Tư duy chủ động
+    [TRẠNG THÁI] ĐÃ SỬA — nhãn trong bài + thẻ bài ở trang chủ + ô tìm kiếm.
+
+D2. Từ "bên ngoài" vào "bên trong": điều Pólya khuyên chúng ta về việc giúp học sinh
+    Hiện tại : Nhãn: Chinh phục Toán học
+    Sửa thành: Nhãn: Tư duy chủ động
+    [TRẠNG THÁI] ĐÃ SỬA — như D1.
+
+D3. Bỏ thi vào lớp 10: Chúng ta có nên đúc khuôn trong kỷ nguyên AI
+    Hiện tại : Nhãn: Chinh phục Toán học
+    Sửa thành: Nhãn: Tư duy chủ động
+    [TRẠNG THÁI] ĐÃ SỬA — như D1.
+
+D4. Luyện tủ: khi bộ não học cách không cần nghĩ
+    Hiện tại : Nhãn: Tư duy chủ động
+    Sửa thành: Giữ nguyên.
+    [TRẠNG THÁI] GIỮ NGUYÊN nhãn (chỉ đổi link nhãn sang tu-duy-chu-dong.html).
+
+D5. Khuôn bài viết
+    Hiện tại : Chưa có
+    Sửa thành: Thêm một dòng nhỏ dưới tiêu đề mỗi bài: "Dành cho: lớp …" — tác giả điền khi đăng.
+    [TRẠNG THÁI] ĐÃ THÊM — <p class="post-audience">Dành cho: lớp …</p> dưới tiêu đề mỗi bài.
+                 CẦN TÁC GIẢ ĐIỀN số lớp cho từng bài.
+
+==================================================================================================
+E. VỀ TÔI — about.html
+==================================================================================================
+
+E1. Mô tả meta
+    Hiện tại : "Mình là người viết blog này — chia sẻ về cách bộ não học toán, hệ thống ghi chú, và tư duy ra quyết định. Đây là những gì mình viết."
+    Sửa thành: Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9, dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán trong thời đại AI.
+    [TRẠNG THÁI] ĐÃ SỬA
+
+E2. Đoạn "Về mình"
+    Hiện tại : "Mình là Nguyễn Thế Vận — giáo viên Toán, người viết blog này. Ngoài giờ lên lớp, mình dành thời gian tìm hiểu cách bộ não học toán, xây hệ thống ghi chú cá nhân, và rèn các công cụ tư duy giúp ra quyết định tỉnh táo hơn — rồi mang những gì học được quay lại việc dạy và học Toán."
+    Sửa thành: Mình là Nguyễn Thế Vận, giáo viên Toán. Mình đang dạy các lớp từ lớp 4 đến lớp 9, dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI. Dạy cả tiểu học lẫn THCS, mình thấy những chỗ các em vấp khi lên lớp 6 — và chúng bắt đầu từ đâu. Blog này viết cho cha mẹ có con lớp 4–9, muốn con tự nghĩ chứ không chỉ làm xong bài.
+    [TRẠNG THÁI] ĐÃ SỬA
+
+E3. Khối "Những gì mình viết" (5 ô)
+    Hiện tại : 5 mục cũ, mô tả cũ
+    Sửa thành: 5 mục mới theo thứ tự ở A3. Mỗi ô dùng đúng câu mô tả ở C2–C6; nút "Khám phá" trỏ tới địa chỉ mới ở C1.
+    [TRẠNG THÁI] ĐÃ SỬA
+
+E4. Số điện thoại
+    Hiện tại : "081 361 5333"
+    Sửa thành: 0813 615 333 — cùng cách viết với danh thiếp và trang Về blog này.
+    [TRẠNG THÁI] ĐÃ SỬA
+
+==================================================================================================
+F. VỀ BLOG NÀY, VÀ VỀ MÌNH — ve-blog-va-nguoi-viet.html
+==================================================================================================
+
+F1. Tiêu đề tab
+    Hiện tại : "Về blog này, và về mình — Blog cá nhân"
+    Sửa thành: Về blog này, và về mình — Nguyễn Thế Vận
+    [TRẠNG THÁI] ĐÃ SỬA
+
+F2. Hai phần "Về blog này" và "Về Nguyễn Thế Vận"
+    Hiện tại : Toàn bộ nội dung hiện có của hai phần này
+    Sửa thành: Thay toàn bộ bằng văn bản ở Phụ lục (trang cuối). Giữ nguyên phần "Lời mở đầu" ở đầu trang.
+    [TRẠNG THÁI] ĐÃ SỬA — dán nguyên văn Phụ lục. Giữ ảnh chân dung; bỏ khối "Liên hệ với tôi" cũ vì Phụ lục đã có dòng "Liên hệ:" ở cuối.
+
+SẼ GỬI SAU: nội dung trang Chính sách quyền riêng tư (A7).
+
+==================================================================================================
+PHỤ LỤC — NỘI DUNG MỚI TRANG "VỀ BLOG NÀY, VÀ VỀ MÌNH"
+Dùng cho dòng F2. Dán nguyên văn; hai tiêu đề "Về blog này" và "Về Nguyễn Thế Vận" giữ kiểu tiêu
+đề hiện có của trang.
+==================================================================================================
+
+VỀ BLOG NÀY
+
+Một học sinh lớp 6 hôm nay có thể chụp đề bài và nhận lời giải trong vài giây. Máy làm được phần tính. Phần còn lại — hiểu bài toán hỏi gì, chọn một hướng đi, tự biết mình đúng hay sai — vẫn phải do chính các em làm. Blog này viết về phần đó.
+
+Tôi viết cho cha mẹ có con từ lớp 4 đến lớp 9: muốn con tự nghĩ chứ không chỉ làm xong bài, và không cần giỏi Toán mới giúp được con. Các bài xếp theo năm câu hỏi:
+
+  • Tư duy chủ động — vì sao con phải tự nghĩ, và điều gì đang khiến con thôi nghĩ.
+  • Toán học thật dễ — hiểu đúng, hiểu đơn giản, cho mọi học sinh.
+  • Chinh phục Toán học — học thế nào cho hiệu quả: các kỹ thuật học và sáu bước Lasotic.
+  • Toán Stem — Toán dùng vào việc gì trong đời thật.
+  • Câu chuyện Toán học — các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.
+
+VỀ NGUYỄN THẾ VẬN
+
+Tôi là giáo viên Toán, đã đứng lớp nhiều năm. Hiện tôi đang dạy các lớp từ lớp 4 đến lớp 9, dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI. Lớp học là nơi mọi thứ trên blog này được thử trước khi được viết ra.
+
+Trong những năm ấy, tôi đã dạy đủ các nhóm học sinh: các em học chuyên, các em có hoàn cảnh khó khăn, và các em lớn lên trong điều kiện thuận lợi. Chính sự đa dạng đó cho tôi thấy cùng một cách dạy không cho ra cùng một kết quả, và điều mỗi em cần cũng không giống nhau.
+
+Bước ngoặt đến khi tôi nhận ra một điều mà nhiều năm luyện thi không giải quyết được: có những học sinh hiểu bài rất nhanh khi tôi giảng, làm lại đúng hết, nhưng tuần sau gặp một dạng hơi khác thì lại ngồi im. Điều này xảy ra ở cả em giỏi lẫn em yếu. Vấn đề không nằm ở kiến thức tôi truyền đạt, mà ở cách các em tư duy khi không có tôi bên cạnh.
+
+Dạy ở cả hai phía của lớp 6, tôi thấy nhiều chỗ các em vấp ở lớp 6 đã bắt đầu từ lớp 4 — từ phân số, từ ý nghĩa của một phép tính. Ở tiểu học, lỗ hổng ấy còn nhỏ.
+
+Để tìm câu trả lời, tôi dựa vào hai nguồn: những nghiên cứu đã được kiểm chứng về cách con người học, và cách dạy giải toán bằng câu hỏi — như George Pólya dẫn học sinh tự tìm ra lời giải thay vì chỉ đường. Tôi cũng là huấn luyện viên tư duy song song theo phương pháp của Edward de Bono. Từ đó tôi đang xây Lasotic: sáu bước để một em tự gỡ một bài toán. Tôi sẽ thử nó ngay trong lớp mình dạy, và ghi lại ở đây cả chỗ được lẫn chỗ chưa được.
+
+Trên blog này, tôi cố gắng phân định rõ ràng: điều gì có bằng chứng khoa học, điều gì là truyền thống lâu đời, và điều gì là trải nghiệm riêng của tôi. Khi các nguồn mâu thuẫn nhau — mà điều đó xảy ra thường xuyên hơn ta tưởng — tôi trình bày cả hai phía thay vì chọn phía dễ nghe hơn.
+
+Blog này không có quảng cáo, và sẽ không bao giờ có. Tôi viết vì tin rằng những gì mình học được, nếu chia sẻ đúng cách, có thể giúp ích cho những người đang dạy và học Toán, và cho các gia đình muốn con mình tự nghĩ.
+
+Liên hệ: 0813 615 333 · vannt.lateral@gmail.com

@@ -219,6 +219,13 @@
     });
   }
 
+  // "See older articles" — chỉ hiện khi trang chủ có hơn 5 bài
+  var pagination = document.getElementById("pagination");
+  var articleList = document.getElementById("articleList");
+  if (pagination && articleList && articleList.querySelectorAll(".article-item").length > 5) {
+    pagination.hidden = false;
+  }
+
   // "See older articles" — demo pagination
   var loadMoreBtn = document.getElementById("loadMoreBtn");
   if (loadMoreBtn) {

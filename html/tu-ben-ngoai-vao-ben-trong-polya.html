@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Từ “bên ngoài” vào “bên trong”: điều Pólya khuyên chúng ta về việc giúp học sinh &mdash; Blog cá nhân</title>
+<title>Từ “bên ngoài” vào “bên trong”: điều Pólya khuyên chúng ta về việc giúp học sinh — Nguyễn Thế Vận</title>
 <meta name="description" content="Pólya phân biệt hai kiểu giúp học sinh: chỉ thẳng phương pháp, và kiên nhẫn hỏi “cái phải tìm là gì?”. Trong thời đại ChatGPT giải hộ trong ba giây, sự khác biệt ấy quyết định ai đang học và ai đang “đầu hàng nhận thức”.">
+<link rel="canonical" href="https://nguyenthevan.com/tu-ben-ngoai-vao-ben-trong-polya.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Từ “bên ngoài” vào “bên trong”: điều Pólya khuyên chúng ta về việc giúp học sinh — Nguyễn Thế Vận">
+<meta property="og:description" content="Pólya phân biệt hai kiểu giúp học sinh: chỉ thẳng phương pháp, và kiên nhẫn hỏi “cái phải tìm là gì?”. Trong thời đại ChatGPT giải hộ trong ba giây, sự khác biệt ấy quyết định ai đang học và ai đang “đầu hàng nhận thức”.">
+<meta property="og:image" content="https://nguyenthevan.com/assets/images/nguyen-the-van.jpg">
+<meta property="og:url" content="https://nguyenthevan.com/tu-ben-ngoai-vao-ben-trong-polya.html">
 <link rel="icon" href="assets/images/site-icon-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +22,7 @@
 <header class="site-header">
   <div class="header-top">
     <a href="index.html" class="logo-link">
-      <span class="logo-wordmark">Huấn luyện tư duy thời đại số</span>
+      <span class="logo-wordmark">Học Toán thế nào trong thời đại AI</span>
     </a>
 
     <nav class="primary-nav" id="primaryNav">
@@ -26,11 +32,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <ul class="nav-dropdown">
-          <li><a href="suc-khoe.html">Sức khỏe tinh thần học tập</a></li>
-          <li><a href="song-song.html">Tư duy chủ động</a></li>
-          <li><a href="toan-hoc.html">Chinh phục Toán học</a></li>
-          <li><a href="giao-duc-tinh-thuc.html">Giáo dục tỉnh thức</a></li>
-          <li><a href="sach-toi-yeu.html">Cuốn sách tôi yêu</a></li>
+          <li><a href="tu-duy-chu-dong.html">Tư duy chủ động</a></li>
+          <li><a href="toan-hoc-that-de.html">Toán học thật dễ</a></li>
+          <li><a href="chinh-phuc-toan-hoc.html">Chinh phục Toán học</a></li>
+          <li><a href="toan-stem.html">Toán Stem</a></li>
+          <li><a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a></li>
         </ul>
       </div>
       <a href="about.html">Về tôi</a>
@@ -71,30 +77,32 @@
 
   <article>
     <section class="post-hero">
-      <p class="post-meta">Chinh phục Toán học</p>
+      <p class="post-meta">Tư duy chủ động</p>
       <h1>Từ &ldquo;bên ngoài&rdquo; vào &ldquo;bên trong&rdquo;: điều Pólya khuyên chúng ta về việc giúp học sinh</h1>
-      <p class="intro">Có một câu hỏi tôi từng tự hỏi rất nhiều năm trong nghề: giúp học sinh thế nào mới thực sự là giúp? Nghe có vẻ thừa. Trò bí, thầy gỡ &mdash; còn gì phải bàn.</p>
+      <!-- Dành cho: tác giả điền lớp khi đăng -->
+      <p class="post-audience">Dành cho: lớp …</p>
+      <p class="intro">Có một câu hỏi tôi từng tự hỏi rất nhiều năm trong nghề: giúp học sinh thế nào mới thực sự là giúp? Nghe có vẻ thừa. Trò bí, thầy gỡ — còn gì phải bàn.</p>
     </section>
 
     <div class="post-body">
-      <p>Nhưng nếu bạn từng dạy đủ lâu, hẳn bạn đã gặp cảnh này: một học sinh được bạn gỡ cho ba bài liên tiếp, hiểu gật gù, làm lại đúng hết. Tuần sau, bài thứ tư &mdash; dạng hơi khác một chút &mdash; em lại ngồi im như chưa từng học gì.</p>
+      <p>Nhưng nếu bạn từng dạy đủ lâu, hẳn bạn đã gặp cảnh này: một học sinh được bạn gỡ cho ba bài liên tiếp, hiểu gật gù, làm lại đúng hết. Tuần sau, bài thứ tư — dạng hơi khác một chút — em lại ngồi im như chưa từng học gì.</p>
       <p>Bạn đã giúp. Em đã hiểu. Vậy mà không có gì ở lại.</p>
       <p>George Pólya, trong <em>Giải bài toán như thế nào</em>, đặt tên chính xác cho vấn đề này. Ông phân biệt hai hình thức trợ giúp, và khoảng cách giữa chúng lớn hơn nhiều so với vẻ ngoài.</p>
 
       <h2>Hai kiểu giúp</h2>
       <p>Giúp đỡ từ bên ngoài là khi giáo viên chỉ thẳng vào phương pháp: &ldquo;Tam giác này vuông, áp dụng định lý Pythagoras đi em.&rdquo;</p>
       <p>Học sinh làm theo, ra đáp số. Nhanh, gọn, cả thầy lẫn trò đều thấy nhẹ nhõm.</p>
-      <p>Nhưng hãy để ý xem điều gì vừa xảy ra: cái mà em nhận được chỉ dùng được đúng một lần. Nó gắn chặt với bài toán này, tam giác này. Sang bài khác, em không mang theo được gì &mdash; vì cái em nhận không phải một cách nghĩ, mà là một mệnh lệnh.</p>
+      <p>Nhưng hãy để ý xem điều gì vừa xảy ra: cái mà em nhận được chỉ dùng được đúng một lần. Nó gắn chặt với bài toán này, tam giác này. Sang bài khác, em không mang theo được gì — vì cái em nhận không phải một cách nghĩ, mà là một mệnh lệnh.</p>
       <p>Tệ hơn, nó lấy mất phần quan trọng nhất: phần em tự tìm ra. Bài toán đã bị giải xong trong đầu người khác trước khi em kịp bắt đầu.</p>
       <p>Giúp đỡ từ bên trong trông có vẻ ít ỏi hơn nhiều. Giáo viên không chỉ đường, chỉ hỏi: &ldquo;Cái phải tìm là gì?&rdquo; &ldquo;Đề cho những gì?&rdquo; &ldquo;Em đã gặp bài nào tương tự chưa?&rdquo;</p>
-      <p>Ba câu này không nói gì về tam giác vuông cả. Chúng có thể hỏi cho bài hình học, bài đại số, bài số học, thậm chí cho một vấn đề ngoài đời. Chính sự chung chung ấy &mdash; thứ thoạt nhìn như nhược điểm &mdash; mới là giá trị của chúng.</p>
+      <p>Ba câu này không nói gì về tam giác vuông cả. Chúng có thể hỏi cho bài hình học, bài đại số, bài số học, thậm chí cho một vấn đề ngoài đời. Chính sự chung chung ấy — thứ thoạt nhìn như nhược điểm — mới là giá trị của chúng.</p>
 
       <h2>Chuyện xảy ra khi ta kiên nhẫn lặp lại</h2>
       <p>Đây là chỗ Pólya nói điều mà tôi cho là sâu sắc nhất, và cũng là điều dễ bị bỏ qua nhất.</p>
       <p>Những câu hỏi kia, nếu chỉ hỏi một lần, chẳng có tác dụng gì đặc biệt. Sức mạnh của chúng nằm ở sự lặp lại có chuẩn mực.</p>
       <p>Bài này thầy hỏi: &ldquo;Cái phải tìm là gì?&rdquo; Bài sau, thầy lại hỏi: &ldquo;Cái phải tìm là gì?&rdquo; Bài sau nữa, vẫn câu ấy.</p>
       <p>Đến bài thứ mười, có một chuyện xảy ra mà không ai công bố: học sinh bắt đầu tự hỏi câu ấy trước khi thầy kịp mở miệng.</p>
-      <p>Rồi đến một ngày, em ngồi làm bài ở nhà, không có thầy bên cạnh. Em đọc đề, bí. Và trong đầu em vang lên &mdash; bằng giọng của chính em &mdash; &ldquo;cái phải tìm là gì nhỉ?&rdquo;</p>
+      <p>Rồi đến một ngày, em ngồi làm bài ở nhà, không có thầy bên cạnh. Em đọc đề, bí. Và trong đầu em vang lên — bằng giọng của chính em — &ldquo;cái phải tìm là gì nhỉ?&rdquo;</p>
       <p>Đó là khoảnh khắc tự vấn ra đời.</p>
       <p>Câu hỏi đã đi từ ngoài vào trong. Nó không còn là công cụ của thầy nữa; nó đã thành công cụ của trò. Và khác với định lý Pythagoras được chỉ cho hôm nọ, thứ này em mang theo được suốt đời.</p>
       <p>Nói cách khác: mục tiêu cuối cùng của việc dạy không phải là học sinh giải được bài, mà là học sinh không cần ta nữa.</p>
@@ -102,42 +110,42 @@
       <h2>Vì sao điều này trở nên khẩn cấp hơn bao giờ hết</h2>
       <p>Nếu Pólya viết những dòng trên vào năm 1945, thì hôm nay chúng đọc lên như một lời cảnh báo.</p>
       <p>Bởi vì học sinh của chúng ta giờ đây có trong túi một nguồn trợ giúp từ bên ngoài mạnh nhất lịch sử loài người. Chụp một tấm ảnh đề bài, dán vào ChatGPT, ba giây sau có lời giải đầy đủ, trình bày sạch sẽ, thậm chí có giải thích từng bước.</p>
-      <p>Xét theo phân loại của Pólya, đây là trợ giúp từ bên ngoài ở dạng thuần khiết và cực đoan nhất. Nó không chỉ chỉ đường &mdash; nó đi thay luôn.</p>
-      <p>Giới nghiên cứu gần đây đặt tên cho hiện tượng này, và cái tên rất đắt: <strong>cognitive surrender</strong> &mdash; sự đầu hàng nhận thức. Người ta phân biệt nó với <em>cognitive offloading</em> (giảm tải nhận thức) đã có từ lâu: dùng máy tính bỏ túi để tính 47 &times; 83 là giảm tải &mdash; bạn giao đi một thao tác hẹp nhưng vẫn giữ toàn bộ cấu trúc lập luận trong tay. Còn chép nguyên lời giải AI đưa ra mà chưa từng tự hỏi &ldquo;cái phải tìm là gì&rdquo; &mdash; đó là đầu hàng. Bạn không giao đi một thao tác; bạn giao đi quyền kiểm soát cả quá trình.</p>
+      <p>Xét theo phân loại của Pólya, đây là trợ giúp từ bên ngoài ở dạng thuần khiết và cực đoan nhất. Nó không chỉ chỉ đường — nó đi thay luôn.</p>
+      <p>Giới nghiên cứu gần đây đặt tên cho hiện tượng này, và cái tên rất đắt: <strong>cognitive surrender</strong> — sự đầu hàng nhận thức. Người ta phân biệt nó với <em>cognitive offloading</em> (giảm tải nhận thức) đã có từ lâu: dùng máy tính bỏ túi để tính 47 &times; 83 là giảm tải — bạn giao đi một thao tác hẹp nhưng vẫn giữ toàn bộ cấu trúc lập luận trong tay. Còn chép nguyên lời giải AI đưa ra mà chưa từng tự hỏi &ldquo;cái phải tìm là gì&rdquo; — đó là đầu hàng. Bạn không giao đi một thao tác; bạn giao đi quyền kiểm soát cả quá trình.</p>
       <p>Và điều đáng lo là ranh giới ấy vô hình. Cả hai đều trông như &ldquo;dùng công nghệ hỗ trợ học tập&rdquo;. Cả hai đều cho ra đáp án đúng. Chỉ có một điều khác: một bên vẫn còn người học ở trong đó, một bên thì không.</p>
 
-      <h2>Vậy phải làm gì &mdash; cấm hay dạy?</h2>
+      <h2>Vậy phải làm gì — cấm hay dạy?</h2>
       <p>Tôi không tin vào việc cấm. Không phải vì cấm là sai về đạo lý, mà vì cấm là thua về mặt kỹ thuật: bạn không kiểm soát được chiếc điện thoại trong phòng ngủ của học sinh lúc 10 giờ đêm.</p>
-      <p>Hướng đi khác thực tế hơn, và nó chính là hướng Pólya đã chỉ: nếu học sinh đã nội hóa được bộ câu hỏi, thì em sẽ tự hỏi mình trước khi kịp hỏi AI. Không phải vì em ngoan, mà vì phản xạ đã hình thành &mdash; giống như bạn không thể nhìn một biển báo bằng tiếng Việt mà không đọc nó.</p>
+      <p>Hướng đi khác thực tế hơn, và nó chính là hướng Pólya đã chỉ: nếu học sinh đã nội hóa được bộ câu hỏi, thì em sẽ tự hỏi mình trước khi kịp hỏi AI. Không phải vì em ngoan, mà vì phản xạ đã hình thành — giống như bạn không thể nhìn một biển báo bằng tiếng Việt mà không đọc nó.</p>
       <p>Nội hóa là hàng rào duy nhất nằm bên trong người học. Mọi hàng rào khác đều nằm bên ngoài, và cái gì nằm bên ngoài thì đều có thể đi vòng.</p>
-      <p>Xa hơn nữa: một học sinh đã có bộ câu hỏi trong đầu dùng AI theo cách hoàn toàn khác. Em không hỏi &ldquo;giải hộ bài này&rdquo;, em hỏi &ldquo;bài này giống dạng nào?&rdquo;, &ldquo;cách làm của em sai ở đâu?&rdquo;, &ldquo;còn hướng nào khác không?&rdquo;. Cùng một công cụ, một bên là đầu hàng, một bên là mở rộng năng lực. Khác biệt không nằm ở công cụ &mdash; nó nằm ở việc trong đầu người dùng đã có sẵn câu hỏi hay chưa.</p>
+      <p>Xa hơn nữa: một học sinh đã có bộ câu hỏi trong đầu dùng AI theo cách hoàn toàn khác. Em không hỏi &ldquo;giải hộ bài này&rdquo;, em hỏi &ldquo;bài này giống dạng nào?&rdquo;, &ldquo;cách làm của em sai ở đâu?&rdquo;, &ldquo;còn hướng nào khác không?&rdquo;. Cùng một công cụ, một bên là đầu hàng, một bên là mở rộng năng lực. Khác biệt không nằm ở công cụ — nó nằm ở việc trong đầu người dùng đã có sẵn câu hỏi hay chưa.</p>
 
       <h2>Từ nguyên lý đến việc làm được</h2>
-      <p>Vấn đề còn lại rất thực tế: nói &ldquo;hãy hỏi thay vì chỉ&rdquo; thì dễ, nhưng giữa lúc dạy &mdash; trò bí, cả lớp đợi, trống sắp điểm &mdash; bản năng của người thầy là gỡ cho nhanh. Tôi đã đầu hàng bản năng ấy nhiều lần hơn tôi muốn thừa nhận.</p>
+      <p>Vấn đề còn lại rất thực tế: nói &ldquo;hãy hỏi thay vì chỉ&rdquo; thì dễ, nhưng giữa lúc dạy — trò bí, cả lớp đợi, trống sắp điểm — bản năng của người thầy là gỡ cho nhanh. Tôi đã đầu hàng bản năng ấy nhiều lần hơn tôi muốn thừa nhận.</p>
       <p>Điều tôi nhận ra là: muốn hỏi thay vì chỉ, cần có sẵn bộ câu hỏi trong tay, và cần một trật tự để không bị lạc.</p>
-      <p>Đó là lý do tôi xây dựng khung sáu bước mà tôi gọi là Lasotic &mdash; TO, LO, PO, SO, GO, NGO. Mỗi bước là một chỗ đứng cố định, và ở mỗi chỗ đứng có sẵn vài câu hỏi chuẩn mực, phần lớn rút thẳng từ kho của Pólya:</p>
-      <p><strong>TO</strong> &mdash; Bài toán hỏi gì? Em nói lại bằng lời của mình xem.<br>
-      <strong>LO</strong> &mdash; Đề cho những gì? Còn thiếu gì?<br>
-      <strong>PO</strong> &mdash; Em đã gặp bài nào tương tự chưa? Có cách nào phát biểu khác đi không?<br>
-      <strong>SO</strong> &mdash; Trong mấy hướng đó, em chọn hướng nào? Vì sao?<br>
-      <strong>GO</strong> &mdash; Bước này suy ra từ bước trước thế nào?<br>
-      <strong>NGO</strong> &mdash; Nhìn lại: có cách nào ngắn hơn? Bài này dùng được cho bài nào khác?</p>
-      <p>Không câu nào trong số này nhắc đến tam giác, phương trình hay tỉ lệ. Chúng dùng được cho mọi bài &mdash; và đó chính là điều kiện để chúng có thể được nội hóa.</p>
+      <p>Đó là lý do tôi xây dựng khung sáu bước mà tôi gọi là Lasotic — TO, LO, PO, SO, GO, NGO. Mỗi bước là một chỗ đứng cố định, và ở mỗi chỗ đứng có sẵn vài câu hỏi chuẩn mực, phần lớn rút thẳng từ kho của Pólya:</p>
+      <p><strong>TO</strong> — Bài toán hỏi gì? Em nói lại bằng lời của mình xem.<br>
+      <strong>LO</strong> — Đề cho những gì? Còn thiếu gì?<br>
+      <strong>PO</strong> — Em đã gặp bài nào tương tự chưa? Có cách nào phát biểu khác đi không?<br>
+      <strong>SO</strong> — Trong mấy hướng đó, em chọn hướng nào? Vì sao?<br>
+      <strong>GO</strong> — Bước này suy ra từ bước trước thế nào?<br>
+      <strong>NGO</strong> — Nhìn lại: có cách nào ngắn hơn? Bài này dùng được cho bài nào khác?</p>
+      <p>Không câu nào trong số này nhắc đến tam giác, phương trình hay tỉ lệ. Chúng dùng được cho mọi bài — và đó chính là điều kiện để chúng có thể được nội hóa.</p>
       <p>Điểm mấu chốt: khung này được thiết kế để tự tháo dỡ. Lộ trình có ba chặng:</p>
       <p>1. Thầy hỏi đủ sáu bước, trò trả lời.<br>
       2. Trò tự gọi tên bước mình đang đứng (&ldquo;em đang ở PO, em chưa nghĩ ra hướng nào&rdquo;).<br>
-      3. Trò chỉ dùng khung khi bí &mdash; còn bình thường thì đã thành phản xạ, không cần gọi tên nữa.</p>
-      <p>Nếu sau một năm học sinh vẫn phải bám vào sáu bước mới làm được bài, thì tôi đã thất bại &mdash; tôi chỉ đổi một dạng phụ thuộc này lấy một dạng phụ thuộc khác. Giàn giáo tốt là giàn giáo tháo được.</p>
+      3. Trò chỉ dùng khung khi bí — còn bình thường thì đã thành phản xạ, không cần gọi tên nữa.</p>
+      <p>Nếu sau một năm học sinh vẫn phải bám vào sáu bước mới làm được bài, thì tôi đã thất bại — tôi chỉ đổi một dạng phụ thuộc này lấy một dạng phụ thuộc khác. Giàn giáo tốt là giàn giáo tháo được.</p>
 
       <h2>Điều đáng để kiên nhẫn</h2>
       <p>Cách dạy này chậm. Chậm hơn hẳn.</p>
       <p>Hỏi &ldquo;cái phải tìm là gì&rdquo; mất ba mươi giây và có khi nhận về một cái nhún vai. Chỉ thẳng &ldquo;dùng Pythagoras đi&rdquo; mất năm giây và em làm được ngay. Trong một tiết bốn mươi lăm phút với hai mươi bài cần chữa, bạn biết bản năng sẽ chọn gì.</p>
-      <p>Nhưng có một điều đáng để đánh đổi. Cái ta cho học sinh khi chỉ thẳng phương pháp là một con cá. Cái ta cho khi kiên nhẫn hỏi là một câu hỏi mà em sẽ tự hỏi mình suốt đời &mdash; kể cả rất lâu sau khi em quên mất định lý Pythagoras phát biểu ra sao.</p>
-      <p>Và có lẽ điều này còn đúng ngoài phạm vi môn Toán. Kinh Dịch, ở quẻ Mông &mdash; quẻ nói về việc dạy dỗ người còn mông muội &mdash; có một câu mà tôi nghĩ về mãi:</p>
+      <p>Nhưng có một điều đáng để đánh đổi. Cái ta cho học sinh khi chỉ thẳng phương pháp là một con cá. Cái ta cho khi kiên nhẫn hỏi là một câu hỏi mà em sẽ tự hỏi mình suốt đời — kể cả rất lâu sau khi em quên mất định lý Pythagoras phát biểu ra sao.</p>
+      <p>Và có lẽ điều này còn đúng ngoài phạm vi môn Toán. Kinh Dịch, ở quẻ Mông — quẻ nói về việc dạy dỗ người còn mông muội — có một câu mà tôi nghĩ về mãi:</p>
       <p><em>Sơ phệ cáo, tái tam độc, độc tắc bất cáo.</em> Hỏi lần đầu thì bảo. Hỏi đi hỏi lại là nhàm; nhàm thì không bảo nữa.</p>
       <p>Hơn hai nghìn năm trước, người ta đã biết: cho quá nhiều cũng là một cách lấy đi.</p>
 
-      <p><em>Bài viết này thuộc chuỗi bài về phương pháp Lasotic &mdash; khung sáu bước huấn luyện tư duy giải toán mà tôi đang xây dựng và thử nghiệm trong chính lớp học của mình. Các bài tiếp theo sẽ đi vào từng bước cụ thể, kèm ghi chép thực tế từ học sinh.</em></p>
+      <p><em>Bài viết này thuộc chuỗi bài về phương pháp Lasotic — khung sáu bước huấn luyện tư duy giải toán mà tôi đang xây dựng và thử nghiệm trong chính lớp học của mình. Các bài tiếp theo sẽ đi vào từng bước cụ thể, kèm ghi chép thực tế từ học sinh.</em></p>
     </div>
   </article>
 
@@ -147,11 +155,11 @@
     <p class="section-heading">Khám phá bài viết theo chủ đề</p>
     <ul class="category-pills">
       <li><a href="index.html">Tất cả</a></li>
-      <li><a href="suc-khoe.html">Sức khỏe tinh thần học tập</a></li>
-      <li><a href="song-song.html">Tư duy chủ động</a></li>
-      <li><a href="toan-hoc.html">Chinh phục Toán học</a></li>
-      <li><a href="giao-duc-tinh-thuc.html">Giáo dục tỉnh thức</a></li>
-      <li><a href="sach-toi-yeu.html">Cuốn sách tôi yêu</a></li>
+      <li><a href="tu-duy-chu-dong.html">Tư duy chủ động</a></li>
+      <li><a href="toan-hoc-that-de.html">Toán học thật dễ</a></li>
+      <li><a href="chinh-phuc-toan-hoc.html">Chinh phục Toán học</a></li>
+      <li><a href="toan-stem.html">Toán Stem</a></li>
+      <li><a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a></li>
     </ul>
   </section>
 
@@ -162,7 +170,7 @@
     <div class="wrap">
       <p class="footer-eyebrow">Đừng bỏ lỡ</p>
       <div class="footer-grid">
-        <h2>Nhận email hàng tuần với những insight thực tế về học toán, rèn não và tư duy mà bạn có thể áp dụng ngay.</h2>
+        <h2>Mỗi tuần một email: một cách giúp con tự nghĩ khi học Toán, lấy từ lớp học thật.</h2>
         <div>
           <form class="newsletter-form" id="newsletterForm">
             <input type="email" name="email_address" placeholder="Email của bạn" required aria-label="Email của bạn">
@@ -187,7 +195,7 @@
           <div class="footer-about-inner">
             <img class="footer-avatar" src="assets/images/nguyen-the-van.jpg" alt="Nguyễn Thế Vận" width="110" height="110" loading="lazy">
             <div class="footer-bio">
-              <p>Mình là Nguyễn Thế Vận — giáo viên Toán, người viết blog này. Mình viết về cách bộ não học toán và những công cụ tư duy giúp học đúng, nghĩ đúng.</p>
+              <p>Mình là Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9. Mình dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI.</p>
               <div class="footer-cta">
                 <a href="about.html">Thông tin thêm về tôi</a>
                 <a href="about.html#lien-he">Liên hệ với tôi</a>
@@ -199,18 +207,18 @@
           <h3 class="footer-col-heading">Trang</h3>
           <nav class="footer-nav" aria-label="Liên kết footer">
             <a href="index.html">Gần đây</a>
-            <a href="suc-khoe.html">Sức khỏe tinh thần học tập</a>
-            <a href="song-song.html">Tư duy chủ động</a>
-            <a href="toan-hoc.html">Chinh phục Toán học</a>
-            <a href="giao-duc-tinh-thuc.html">Giáo dục tỉnh thức</a>
-            <a href="sach-toi-yeu.html">Cuốn sách tôi yêu</a>
+            <a href="tu-duy-chu-dong.html">Tư duy chủ động</a>
+            <a href="toan-hoc-that-de.html">Toán học thật dễ</a>
+            <a href="chinh-phuc-toan-hoc.html">Chinh phục Toán học</a>
+            <a href="toan-stem.html">Toán Stem</a>
+            <a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a>
             <a href="about.html">Về tôi</a>
             <a href="membership.html">Thành viên</a>
             <a href="#newsletterForm" class="is-bold">Bản tin miễn phí</a>
           </nav>
         </div>
       </div>
-      <p class="footer-legal-dark">&copy; <span id="footerYear"></span> Blog cá nhân "Huấn luyện tư duy thời đại số". Bảo lưu mọi quyền. Xem <a href="#">Chính sách quyền riêng tư</a>.</p>
+      <p class="footer-legal-dark">&copy; Nguyễn Thế Vận &middot; Học Toán thế nào trong thời đại AI. Bảo lưu mọi quyền. &middot; <a href="chinh-sach-rieng-tu.html">Chính sách quyền riêng tư</a></p>
     </div>
   </section>
 </footer>
@@ -222,8 +230,8 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
     <a href="index.html" class="logo-link">
-      <img src="assets/images/site-icon-logo.svg" alt="Huấn luyện tư duy thời đại số">
-      <span class="logo-wordmark">Huấn luyện tư duy thời đại số</span>
+      <img src="assets/images/site-icon-logo.svg" alt="Học Toán thế nào trong thời đại AI">
+      <span class="logo-wordmark">Học Toán thế nào trong thời đại AI</span>
     </a>
 
     <h1 id="authTitle">Đăng nhập</h1>

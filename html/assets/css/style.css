@@ -86,6 +86,7 @@ body.search-modal-open { overflow: hidden; }
 .hero-eyebrow { margin: 0 0 20px; color: #878787; font: 700 12px/18px var(--sans); letter-spacing: 1.2px; text-transform: uppercase; }
 .hero h1 { max-width: none; font: 700 52px/57.2px var(--sans); letter-spacing: -1.56px; }
 .hero .intro { margin-top: 36px; max-width: 760px; font: 20px/35px var(--serif); }
+.hero .hero-audience { margin-top: 24px; max-width: 760px; color: #555; font: 20px/35px var(--serif); }
 .hero-read-more { display: inline-flex; margin-top: 24px; }
 .press-row { display: none; }
 .topics { padding-top: 80px; }
@@ -106,6 +107,7 @@ body.search-modal-open { overflow: hidden; }
 .post-hero { padding: 60px 0 0; }
 .post-hero .post-meta { margin: 0 0 20px; color: #878787; font: 700 12px/18px var(--sans); letter-spacing: 1.2px; text-transform: uppercase; }
 .post-hero h1 { max-width: 820px; font: 700 44px/50px var(--sans); letter-spacing: -1.2px; }
+.post-hero .post-audience { margin: 16px 0 0; color: #767676; font: 400 15px/22px var(--sans); }
 .post-hero .intro { margin-top: 28px; max-width: 720px; font: 20px/35px var(--serif); }
 .post-body { max-width: 720px; margin: 48px auto 96px; }
 .post-body p { margin: 0 0 28px; font: 20px/35px var(--serif); }
@@ -173,6 +175,7 @@ hr { width: calc(100vw - 10px); border: 0; border-top: 1px solid var(--rule); ma
 .article-item:hover .read-more, .article-item:focus-within .read-more { opacity: 1; }
 .article-item .read-more:hover { color: var(--red-dark); }
 .pagination { height: 107px; margin-top: 24px; display: flex; justify-content: flex-end; padding: 36px 0; }
+.pagination[hidden] { display: none; }
 .pagination-link { display: inline-flex; align-items: center; color: var(--red); font: 18px/28px var(--serif); text-decoration: underline; text-underline-offset: 6px; transition: color .15s ease-in-out; }
 .pagination-link:hover { color: var(--red-dark); }
 
