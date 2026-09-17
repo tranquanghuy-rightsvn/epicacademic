@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Học Toán thế nào trong thời đại AI — Nguyễn Thế Vận</title>
-<meta name="description" content="Cha mẹ có con lớp 4–9: làm sao để con tự nghĩ khi máy đã giải được bài? Blog của thầy Nguyễn Thế Vận, giáo viên Toán đang đứng lớp.">
-<link rel="canonical" href="https://nguyenthevan.com/">
+<title>{{NAME}} — Nguyễn Thế Vận</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="https://nguyenthevan.com/{{SLUG}}.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Học Toán thế nào trong thời đại AI — Nguyễn Thế Vận">
-<meta property="og:description" content="Cha mẹ có con lớp 4–9: làm sao để con tự nghĩ khi máy đã giải được bài? Blog của thầy Nguyễn Thế Vận, giáo viên Toán đang đứng lớp.">
+<meta property="og:title" content="{{NAME}} — Nguyễn Thế Vận">
+<meta property="og:description" content="{{DESCRIPTION}}">
 <meta property="og:image" content="https://nguyenthevan.com/assets/images/nguyen-the-van.jpg">
-<meta property="og:url" content="https://nguyenthevan.com/">
+<meta property="og:url" content="https://nguyenthevan.com/{{SLUG}}.html">
 <link rel="icon" href="assets/images/site-icon-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,11 +32,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <ul class="nav-dropdown">
-          <li><a href="tu-duy-chu-dong.html">Tư duy chủ động</a></li>
-          <li><a href="toan-hoc-that-de.html">Toán học thật dễ</a></li>
-          <li><a href="chinh-phuc-toan-hoc.html">Chinh phục Toán học</a></li>
-          <li><a href="toan-stem.html">Toán Stem</a></li>
-          <li><a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a></li>
+{{NAV_DROPDOWN}}
         </ul>
       </div>
       <a href="about.html">Về tôi</a>
@@ -76,59 +72,27 @@
 <main class="wrap">
 
   <section class="hero">
-    <p class="hero-eyebrow">Lời mở đầu</p>
-    <h1>Làm thế nào để học đúng, nghĩ đúng — trong một thời đại mà máy móc đã tính toán thay ta?</h1>
-    <p class="hero-audience">Viết cho cha mẹ có con lớp 4–9, từ những giờ Toán có thật ở cả tiểu học lẫn THCS.</p>
-    <p class="intro">Blog này bắt đầu từ câu hỏi đó. <a href="about.html">Về mình và blog này &rarr;</a></p>
+    <p class="hero-eyebrow">Chủ đề</p>
+    <h1>{{NAME}}</h1>
+    <p class="intro">{{DESCRIPTION}}</p>
   </section>
 
   <hr>
 
   <section class="recent-articles">
-    <p class="section-heading">Bài viết gần đây</p>
+    <p class="section-heading">Bài viết</p>
 
-    <div class="article-list" id="articleList">
-      <article class="article-item">
-        <a class="article-category" href="tu-duy-chu-dong.html">Tư duy chủ động</a>
-        <h2><a href="su-cam-doan-khi-hoc-toan.html">Sự cấm đoán khi học Toán và hậu quả về tư duy</a></h2>
-        <p class="excerpt">Khi câu hỏi về chân lý (“điều này có đúng không?”) biến thành câu hỏi về sự cho phép (“có được dùng không?”), học sinh đánh mất món quà lớn nhất môn Toán có thể tặng: tự biết mình đúng mà không cần ai cho phép. &hellip;</p>
-        <a href="su-cam-doan-khi-hoc-toan.html" class="read-more">Đọc tiếp</a>
-      </article>
-      <article class="article-item">
-        <a class="article-category" href="tu-duy-chu-dong.html">Tư duy chủ động</a>
-        <h2><a href="luyen-tu-khi-bo-nao-hoc-cach-khong-can-nghi.html">Luyện tủ: khi bộ não học cách không cần nghĩ</a></h2>
-        <p class="excerpt">Một học sinh giải đúng bài hình chỉ vì “giống dạng 7”. Ba lăng kính (điều kiện hóa, tư duy Hy Lạp, chánh tư duy) lý giải vì sao luyện tủ hiệu quả nhưng bào mòn đúng năng lực Toán học sinh ra để rèn. &hellip;</p>
-        <a href="luyen-tu-khi-bo-nao-hoc-cach-khong-can-nghi.html" class="read-more">Đọc tiếp</a>
-      </article>
-      <article class="article-item">
-        <a class="article-category" href="tu-duy-chu-dong.html">Tư duy chủ động</a>
-        <h2><a href="tu-ben-ngoai-vao-ben-trong-polya.html">Từ “bên ngoài” vào “bên trong”: điều Pólya khuyên chúng ta về việc giúp học sinh</a></h2>
-        <p class="excerpt">Pólya phân biệt hai kiểu giúp học sinh: chỉ thẳng phương pháp, và kiên nhẫn hỏi “cái phải tìm là gì?”. Trong thời đại ChatGPT giải hộ trong ba giây, sự khác biệt ấy quyết định ai đang học và ai đang “đầu hàng nhận thức”. &hellip;</p>
-        <a href="tu-ben-ngoai-vao-ben-trong-polya.html" class="read-more">Đọc tiếp</a>
-      </article>
-      <article class="article-item">
-        <a class="article-category" href="tu-duy-chu-dong.html">Tư duy chủ động</a>
-        <h2><a href="bo-thi-vao-lop-10-duc-khuon-ky-nguyen-ai.html">Bỏ thi vào lớp 10: Chúng ta có nên đúc khuôn trong kỷ nguyên AI</a></h2>
-        <p class="excerpt">Nhìn lại đề xuất bỏ thi tuyển sinh lớp 10 bằng đúng khung sáu bước vẫn dùng để gỡ một bài toán khó: bài toán thực sự hỏi gì, đề cho những gì, và chọn hướng nào. &hellip;</p>
-        <a href="bo-thi-vao-lop-10-duc-khuon-ky-nguyen-ai.html" class="read-more">Đọc tiếp</a>
-      </article>
-    </div>
-
-    <div class="pagination" id="pagination" hidden>
-      <a href="#" class="pagination-link" id="loadMoreBtn">Xem bài viết cũ hơn</a>
+    <div class="article-list">
+{{ARTICLE_LIST}}
     </div>
   </section>
 
   <hr>
 
   <section class="category-block">
-    <p class="section-heading">Khám phá bài viết theo chủ đề</p>
-    <ul class="category-pills" id="categoryPills">
-      <li><a href="tu-duy-chu-dong.html">Tư duy chủ động</a></li>
-      <li><a href="toan-hoc-that-de.html">Toán học thật dễ</a></li>
-      <li><a href="chinh-phuc-toan-hoc.html">Chinh phục Toán học</a></li>
-      <li><a href="toan-stem.html">Toán Stem</a></li>
-      <li><a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a></li>
+    <p class="section-heading">Khám phá chủ đề khác</p>
+    <ul class="category-pills">
+{{CATEGORY_PILLS}}
     </ul>
   </section>
 
@@ -175,15 +139,7 @@
         <div class="footer-col-nav">
           <h3 class="footer-col-heading">Trang</h3>
           <nav class="footer-nav" aria-label="Liên kết footer">
-            <a href="index.html">Gần đây</a>
-            <a href="tu-duy-chu-dong.html">Tư duy chủ động</a>
-            <a href="toan-hoc-that-de.html">Toán học thật dễ</a>
-            <a href="chinh-phuc-toan-hoc.html">Chinh phục Toán học</a>
-            <a href="toan-stem.html">Toán Stem</a>
-            <a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a>
-            <a href="about.html">Về tôi</a>
-            <a href="membership.html">Thành viên</a>
-            <a href="#newsletterForm" class="is-bold">Bản tin miễn phí</a>
+{{FOOTER_NAV}}
           </nav>
         </div>
       </div>

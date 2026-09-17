@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "tu-duy-chu-dong",
+    "name": "Tư duy chủ động",
+    "description": "Vì sao con phải tự nghĩ, khi máy đã giải được bài — và điều gì đang khiến con thôi nghĩ.",
+    "order": 1
+  },
+  {
+    "slug": "toan-hoc-that-de",
+    "name": "Toán học thật dễ",
+    "description": "Hiểu đúng, hiểu đơn giản — cho mọi học sinh, từ em đang vấp đến em đang giỏi.",
+    "order": 2
+  },
+  {
+    "slug": "chinh-phuc-toan-hoc",
+    "name": "Chinh phục Toán học",
+    "description": "Học thế nào cho hiệu quả — các kỹ thuật học và sáu bước Lasotic để tự giải một bài toán.",
+    "order": 3
+  },
+  {
+    "slug": "toan-stem",
+    "name": "Toán Stem",
+    "description": "Toán dùng vào việc gì trong đời thật — từ những tình huống quanh con.",
+    "order": 4
+  },
+  {
+    "slug": "cau-chuyen-toan-hoc",
+    "name": "Câu chuyện Toán học",
+    "description": "Các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.",
+    "order": 5
+  }
+]

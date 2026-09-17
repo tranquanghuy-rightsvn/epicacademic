@@ -115,6 +115,11 @@ body.search-modal-open { overflow: hidden; }
 .post-figure { margin: 32px 0 36px; }
 .post-figure img { width: 220px; height: auto; margin: 0 auto; border-radius: 6px; box-shadow: 0 20px 50px rgba(0, 0, 0, .12); }
 .post-figure figcaption { margin-top: 14px; text-align: center; color: #767676; font: 400 15px/22px var(--sans); }
+
+/* Ảnh chèn trong nội dung bài viết (TinyMCE quickimage, xem CMS gas/) */
+.post-body figure { margin: 40px 0; }
+.post-body figure img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 20px 50px rgba(0, 0, 0, .12); }
+.post-body figcaption { margin-top: 14px; text-align: center; color: #767676; font: 400 15px/22px var(--sans); }
 @media (max-width: 767px) {
   .post-hero { padding-top: 29.6px; }
   .post-hero h1 { font-size: 28px; line-height: 32px; letter-spacing: -0.84px; }

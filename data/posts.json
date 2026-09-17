@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "su-cam-doan-khi-hoc-toan",
+    "title": "Sự cấm đoán khi học Toán và hậu quả về tư duy",
+    "category": "tu-duy-chu-dong",
+    "description": "Khi câu hỏi về chân lý (“điều này có đúng không?”) biến thành câu hỏi về sự cho phép (“có được dùng không?”), học sinh đánh mất món quà lớn nhất môn Toán có thể tặng: tự biết mình đúng mà không cần ai cho phép.",
+    "audience": "",
+    "date": "2026-09-12",
+    "updated_at": "2026-09-12T00:00:00Z"
+  },
+  {
+    "slug": "luyen-tu-khi-bo-nao-hoc-cach-khong-can-nghi",
+    "title": "Luyện tủ: khi bộ não học cách không cần nghĩ",
+    "category": "tu-duy-chu-dong",
+    "description": "Một học sinh giải đúng bài hình chỉ vì “giống dạng 7”. Ba lăng kính (điều kiện hóa, tư duy Hy Lạp, chánh tư duy) lý giải vì sao luyện tủ hiệu quả nhưng bào mòn đúng năng lực Toán học sinh ra để rèn.",
+    "audience": "",
+    "date": "2026-09-08",
+    "updated_at": "2026-09-08T00:00:00Z"
+  },
+  {
+    "slug": "tu-ben-ngoai-vao-ben-trong-polya",
+    "title": "Từ “bên ngoài” vào “bên trong”: điều Pólya khuyên chúng ta về việc giúp học sinh",
+    "category": "tu-duy-chu-dong",
+    "description": "Pólya phân biệt hai kiểu giúp học sinh: chỉ thẳng phương pháp, và kiên nhẫn hỏi “cái phải tìm là gì?”. Trong thời đại ChatGPT giải hộ trong ba giây, sự khác biệt ấy quyết định ai đang học và ai đang “đầu hàng nhận thức”.",
+    "audience": "",
+    "date": "2026-09-03",
+    "updated_at": "2026-09-03T00:00:00Z"
+  },
+  {
+    "slug": "bo-thi-vao-lop-10-duc-khuon-ky-nguyen-ai",
+    "title": "Bỏ thi vào lớp 10: Chúng ta có nên đúc khuôn trong kỷ nguyên AI",
+    "category": "tu-duy-chu-dong",
+    "description": "Nhìn lại đề xuất bỏ thi tuyển sinh lớp 10 bằng đúng khung sáu bước vẫn dùng để gỡ một bài toán khó: bài toán thực sự hỏi gì, đề cho những gì, và chọn hướng nào.",
+    "audience": "",
+    "date": "2026-08-28",
+    "updated_at": "2026-08-28T00:00:00Z"
+  }
+]
