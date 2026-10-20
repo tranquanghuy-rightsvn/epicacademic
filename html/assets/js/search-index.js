@@ -15,9 +15,9 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
-    title: "Chinh phục Toán học",
+    title: "Đánh thức tài năng Toán học",
     url: "chinh-phuc-toan-hoc.html",
-    tags: ["chinh phục toán học", "chủ đề"]
+    tags: ["đánh thức tài năng toán học", "chủ đề"]
   },
   {
     type: "Chủ đề",
