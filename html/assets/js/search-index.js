@@ -33,6 +33,13 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Bài viết",
+    title: "Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò",
+    url: "han-tin-diem-binh-phan-1.html",
+    pillar: "Đánh thức tài năng Toán học",
+    tags: ["đánh thức tài năng toán học"]
+  },
+  {
+    type: "Bài viết",
     title: "Sự cấm đoán khi học Toán và hậu quả về tư duy",
     url: "su-cam-doan-khi-hoc-toan.html",
     pillar: "Tư duy chủ động",

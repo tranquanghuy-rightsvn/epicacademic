@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò — Nguyễn Thế Vận</title>
+<meta name="description" content="Bài toán Hàn Tín điểm binh: chia 3 dư 2, chia 5 dư 3, chia 7 dư 2. Vì sao lại là 70 – 21 – 15? Đọc chậm bốn trang vở học trò, tự chứng minh định lý phần dư Trung Hoa.">
+<link rel="canonical" href="https://nguyenthevan.com/han-tin-diem-binh-phan-1.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò — Nguyễn Thế Vận">
+<meta property="og:description" content="Bài toán Hàn Tín điểm binh: chia 3 dư 2, chia 5 dư 3, chia 7 dư 2. Vì sao lại là 70 – 21 – 15? Đọc chậm bốn trang vở học trò, tự chứng minh định lý phần dư Trung Hoa.">
+<meta property="og:image" content="https://nguyenthevan.com/assets/images/nguyen-the-van.jpg">
+<meta property="og:url" content="https://nguyenthevan.com/han-tin-diem-binh-phan-1.html">
+<link rel="icon" href="assets/images/site-icon-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="blog">
+
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="logo-link">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav">
+      <div class="nav-item">
+        <a href="index.html" class="is-active">Bài viết</a>
+        <button type="button" class="nav-caret" aria-label="Mở danh mục Bài viết" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="tu-duy-chu-dong.html">Tư duy chủ động</a></li>
+          <li><a href="toan-hoc-that-de.html">Toán học thật dễ</a></li>
+          <li><a href="chinh-phuc-toan-hoc.html">Đánh thức tài năng Toán học</a></li>
+          <li><a href="toan-stem.html">Toán Stem</a></li>
+          <li><a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a></li>
+        </ul>
+      </div>
+      <a href="about.html">Về tôi</a>
+      <a href="#newsletterForm">Newsletter</a>
+      <button class="search-toggle desktop-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      </button>
+      <a href="login.html" class="nav-login">Đăng nhập</a>
+      <a href="membership.html" class="button">Trở thành thành viên</a>
+    </nav>
+
+    <button class="search-toggle mobile-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+      <svg viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
+    </button>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="search-modal" id="searchModal" hidden>
+  <div class="search-modal-overlay" id="searchModalOverlay"></div>
+  <div class="search-modal-dialog" role="dialog" aria-modal="true" aria-label="Tìm kiếm bài viết">
+    <form class="search-modal-form" id="searchForm" role="search">
+      <svg class="search-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      <label class="screen-reader-text" for="siteSearch">Tìm kiếm bài viết</label>
+      <input id="siteSearch" type="search" placeholder="Tìm theo tiêu đề hoặc thẻ&hellip;" autocomplete="off">
+      <kbd class="search-modal-key">Esc</kbd>
+    </form>
+    <ul class="search-modal-results" id="searchResults"></ul>
+    <p class="search-modal-empty" id="searchEmpty" hidden>Không tìm thấy bài viết phù hợp.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <article>
+    <section class="post-hero">
+      <p class="post-meta">Đánh thức tài năng Toán học</p>
+      <h1>Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò</h1>
+      <p class="post-audience">Dành cho: Học sinh khá giỏi THCS tự học</p>
+      <p class="intro">Bài viết đi kèm video "Hàn Tín đếm 1073 quân mà không cần đếm — bí mật nằm trong vở học trò (Phần 1)". Đọc chậm, cầm bút, và dừng lại ở mỗi chỗ có dấu ✋ để tự làm trước khi đọc tiếp.</p>
+    </section>
+
+    <div class="post-body">
+<p><strong>Video:</strong> <a href="https://youtu.be/6ynrImNq2Uk" target="_blank" rel="noopener">H&agrave;n T&iacute;n đếm 1073 qu&acirc;n m&agrave; kh&ocirc;ng cần đếm &mdash; b&iacute; mật nằm trong vở học tr&ograve; (Phần 1)</a> &middot; <a href="#english-version">English version &darr;</a></p>
+<hr>
+<h3>1. Một c&acirc;u chuyện v&agrave; một c&acirc;u hỏi</h3>
+<p>Truyện d&acirc;n gian Trung Hoa kể rằng, sau một trận đ&aacute;nh, đại tướng <strong>H&agrave;n T&iacute;n</strong> cho qu&acirc;n xếp h&agrave;ng:</p>
+<ul>
+<li>xếp h&agrave;ng 3 th&igrave; thừa 2 người,</li>
+<li>xếp h&agrave;ng 5 th&igrave; thừa 3 người,</li>
+<li>xếp h&agrave;ng 7 th&igrave; thừa 2 người.</li>
+</ul>
+<p>Chỉ nh&igrave;n ba con số lẻ ấy, &ocirc;ng n&oacute;i ngay: <em>"Qu&acirc;n ta c&ograve;n 1073 người."</em></p>
+<p><strong>Cần n&oacute;i r&otilde;:</strong> H&agrave;n T&iacute;n (231&ndash;196 TCN) l&agrave; đại tướng c&oacute; thật của Lưu Bang. C&ograve;n chuyện "H&agrave;n T&iacute;n điểm binh" l&agrave; <strong>truyện d&acirc;n gian</strong> kể về &ocirc;ng, kh&ocirc;ng phải sử ch&eacute;p. Nhưng <strong>b&agrave;i to&aacute;n trong truyện th&igrave; ho&agrave;n to&agrave;n thật</strong>. N&oacute; xuất hiện lần đầu trong s&aacute;ch <em>T&ocirc;n Tử to&aacute;n kinh</em>, viết khoảng thế kỷ 3&ndash;5: <em>"C&oacute; một số vật kh&ocirc;ng biết bao nhi&ecirc;u. Đếm ba ba c&ograve;n hai, đếm năm năm c&ograve;n ba, đếm bảy bảy c&ograve;n hai. Hỏi bao nhi&ecirc;u vật?"</em></p>
+<p>(T&ocirc;n Tử ở đ&acirc;y l&agrave; một nh&agrave; to&aacute;n học, <strong>kh&ocirc;ng phải</strong> T&ocirc;n Vũ, t&aacute;c giả <em>Binh ph&aacute;p T&ocirc;n Tử</em>.)</p>
+<p>V&agrave; h&ocirc;m nay, b&agrave;i to&aacute;n ấy nằm ngay trong vở học tr&ograve;.</p>
+<hr>
+<h3>2. B&agrave;i to&aacute;n trong vở</h3>
+<blockquote>
+<p><strong>Đề:</strong> T&igrave;m số tự nhi&ecirc;n nhỏ nhất lớn hơn 10, biết số đ&oacute; chia 5 dư 3, chia 6 dư 2, chia 7 dư 1.</p>
+</blockquote>
+<p>Bốn trang vở cho ba đ&aacute;p số: <strong>197, 209, 218</strong>. Chỉ một số đ&uacute;ng.</p>
+<p>✋ <em>Chưa cần giải. Chỉ cần một ph&eacute;p chia để loại hai đ&aacute;p số. Bạn thử trước.</em></p>
+<ul>
+<li>197 chia 5 dư 2. Sai.</li>
+<li>209 chia 5 dư 4. Sai.</li>
+<li>218 chia 5 dư 3, chia 6 dư 2, chia 7 dư 1. Đ&uacute;ng cả ba.</li>
+</ul>
+<p><strong>B&agrave;i học đầu ti&ecirc;n:</strong> <em>chọn xong, kiểm tra.</em> Một ph&eacute;p chia lật được hai trong ba đ&aacute;p số.</p>
+<h4>Trang thứ nhất (ra 197): &yacute; hay, nhưng "thấy ph&ugrave; hợp"</h4>
+<p>Em nh&igrave;n <strong>phần c&ograve;n thiếu</strong>: th&ecirc;m 2 th&igrave; chia hết cho 5, th&ecirc;m 4 th&igrave; chia hết cho 6, th&ecirc;m 6 th&igrave; chia hết cho 7. &Yacute; n&agrave;y đ&uacute;ng hướng, v&igrave; b&ugrave; cho đủ l&agrave; một c&aacute;ch nh&igrave;n hay.</p>
+<p>Nhưng ba số b&ugrave; kh&aacute;c nhau (2, 4, 6). Em viết "thấy 13 ph&ugrave; hợp", rồi lập luận N + 13 chia hết cho 5, 6, 7. Kiểm lại th&igrave; 13 chia 5 dư 3 chứ kh&ocirc;ng dư 2, n&ecirc;n 13 chỉ khớp với 7. Số b&ugrave; chung thật l&agrave; 202, v&agrave; muốn t&igrave;m n&oacute; ta phải giải lại ch&iacute;nh b&agrave;i to&aacute;n ban đầu.</p>
+<h4>Trang thứ hai (ra 209): muốn c&oacute; điểm chung qu&aacute; n&ecirc;n tự tạo ra n&oacute;</h4>
+<p>Em đi một nước hay: nếu x &minus; 3 chia hết cho 5 th&igrave; cộng th&ecirc;m 5 vẫn chia hết cho 5. Nhưng &minus;3 + 5 = 2, &minus;2 + 6 = 4, &minus;1 + 7 = 6, n&ecirc;n ba biểu thức thật l&agrave; x + 2, x + 4, x + 6, kh&aacute;c nhau. Vậy m&agrave; em viết cả ba th&agrave;nh x + 1.</p>
+<p>Nếu x + 1 chia hết cho 5, 6, 7 th&igrave; x chia 5 dư 4, chia 6 dư 5, chia 7 dư 6. Số 209 đ&uacute;ng l&agrave; c&oacute; c&aacute;c số dư ấy, nhưng n&oacute; l&agrave; đ&aacute;p số của <strong>một b&agrave;i to&aacute;n kh&aacute;c</strong>.</p>
+<p>Nước đi của em chỉ cần đổi dấu: <strong>trừ</strong> số chia chứ kh&ocirc;ng cộng. Khi đ&oacute; cả ba c&ugrave;ng ra <strong>x &minus; 8</strong>.</p>
+<h4>Trang thứ ba (ra 218): đ&uacute;ng đ&aacute;p số, nhưng đ&uacute;ng nhờ may</h4>
+<p>Em viết: "v&igrave; ƯCLN(5, 6, 7) = 1 n&ecirc;n BCNN(5, 6, 7) = 5&middot;6&middot;7". <strong>L&yacute; do n&agrave;y sai.</strong></p>
+<p>Phản v&iacute; dụ: 4, 8, 3 c&oacute; ƯCLN bằng 1, nhưng BCNN(4, 8, 3) = 24, kh&ocirc;ng phải 96.</p>
+<p>Điều cần l&agrave; <strong>đ&ocirc;i một nguy&ecirc;n tố c&ugrave;ng nhau</strong>, tức từng cặp: (5, 6), (5, 7), (6, 7). Ở b&agrave;i n&agrave;y điều đ&oacute; đ&uacute;ng, n&ecirc;n kết quả vẫn đ&uacute;ng, nhưng l&agrave; đ&uacute;ng nhờ may chứ kh&ocirc;ng nhờ l&yacute; do.</p>
+<h4>Lời giải mực đỏ</h4>
+<ul>
+<li>x &minus; 3 &minus; 5, x &minus; 2 &minus; 6, x &minus; 1 &minus; 7 đều chia hết cho số chia tương ứng, tức l&agrave; x &minus; 8 chia hết cho 5, 6, 7.</li>
+<li>Nh&igrave;n kỹ: 3 + 5 = 2 + 6 = 1 + 7 = 8. Phần thiếu kh&aacute;c nhau, phần dư kh&aacute;c nhau, nhưng <strong>dư + chia</strong> th&igrave; như nhau. Đ&oacute; l&agrave; điểm chung thật.</li>
+<li>Vậy x &minus; 8 l&agrave; bội chung của 5, 6, 7, tức x &minus; 8 &isin; {0, 210, 420, &hellip;}.</li>
+<li><strong>Ch&uacute; &yacute;:</strong> 0 cũng l&agrave; một bội chung. V&igrave; sao kh&ocirc;ng lấy x = 8? V&igrave; đề đ&ograve;i x &gt; 10. <em>Mỗi giả thiết c&oacute; việc của n&oacute;.</em> N&ecirc;n x = 218.</li>
+</ul>
+<hr>
+<h3>3. Hai ngh&igrave;n năm của một b&agrave;i to&aacute;n</h3>
+<p>B&agrave;i của H&agrave;n T&iacute;n kh&oacute; hơn: dư 2, dư 3, dư 2. Kh&ocirc;ng thấy điểm chung n&agrave;o lộ sẵn. Người xưa l&agrave;m thế n&agrave;o?</p>
+<p>Năm <strong>1592</strong>, <strong>Tr&igrave;nh Đại Vị</strong> viết s&aacute;ch <em>To&aacute;n ph&aacute;p thống t&ocirc;ng</em> v&agrave; g&oacute;i c&aacute;ch giải v&agrave;o bốn c&acirc;u thơ. Đại &yacute;:</p>
+<blockquote>
+<p>Ba người c&ugrave;ng đi, bảy mươi hiếm; năm c&acirc;y mai, hai mươi mốt c&agrave;nh; bảy người đo&agrave;n vi&ecirc;n, vừa nửa th&aacute;ng; bớt trăm linh năm, l&agrave; biết ngay.</p>
+</blockquote>
+<p>Nghĩa l&agrave;:</p>
+<p><strong>x &equiv; (dư khi chia 3) &times; 70 + (dư khi chia 5) &times; 21 + (dư khi chia 7) &times; 15, rồi bớt dần 105.</strong></p>
+<p>Với H&agrave;n T&iacute;n: 2&middot;70 + 3&middot;21 + 2&middot;15 = 233. Bớt 2 lần 105 th&igrave; c&ograve;n <strong>23</strong>. V&agrave; 23 + 10&middot;105 = <strong>1073</strong>.</p>
+<p>✋ <em>V&igrave; sao lại l&agrave; 70? Thử t&igrave;m một số chia 3 dư 1 v&agrave; chia hết cho cả 5 lẫn 7.</em></p>
+<table>
+<thead>
+<tr>
+<th>Số</th>
+<th>Chia 3</th>
+<th>Chia 5</th>
+<th>Chia 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>70</td>
+<td>dư <strong>1</strong></td>
+<td>dư 0</td>
+<td>dư 0</td>
+</tr>
+<tr>
+<td>21</td>
+<td>dư 0</td>
+<td>dư <strong>1</strong></td>
+<td>dư 0</td>
+</tr>
+<tr>
+<td>15</td>
+<td>dư 0</td>
+<td>dư 0</td>
+<td>dư <strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Mỗi số l&agrave; một <strong>c&ocirc;ng tắc</strong>: bật đ&uacute;ng một điều kiện, tắt hai điều kiện kia. Nh&acirc;n mỗi c&ocirc;ng tắc với số dư cần c&oacute; rồi cộng lại, ta được một số thỏa cả ba điều kiện.</p>
+<p><strong>T&igrave;m 70 thế n&agrave;o?</strong> Lấy 35 (chia hết cho 5 v&agrave; 7). 35 chia 3 dư 2, n&ecirc;n cần nh&acirc;n th&ecirc;m một số để c&ograve;n dư 1: nh&acirc;n 2 được 70. Năm <strong>1247</strong>, <strong>Tần Cửu Thiều</strong> (s&aacute;ch <em>Số thư cửu chương</em>) gọi bước n&agrave;y l&agrave; <strong>"cầu nhất"</strong>, tức t&igrave;m số nh&acirc;n v&agrave;o để c&ograve;n dư 1, v&agrave; l&agrave;m được cho mọi bộ số chia.</p>
+<p>Năm <strong>1801</strong>, <strong>Gauss</strong> t&igrave;m lại phương ph&aacute;p n&agrave;y v&agrave; đặt ra k&yacute; hiệu đồng dư "&equiv;" ta d&ugrave;ng đến nay. Phương T&acirc;y gọi n&oacute; l&agrave; <strong>định l&yacute; phần dư Trung Hoa</strong>.</p>
+<hr>
+<h3>4. Hộp c&ocirc;ng cụ: bốn bổ đề v&agrave; chứng minh</h3>
+<p><strong>Bổ đề 1.</strong> a v&agrave; b c&oacute; c&ugrave;ng số dư khi chia cho m &hArr; a &minus; b chia hết cho m.</p>
+<p><em>Chứng minh.</em> Nếu a = mq₁ + r v&agrave; b = mq₂ + r th&igrave; a &minus; b = m(q₁ &minus; q₂). Ngược lại, nếu a &minus; b = mk v&agrave; b = mq + r (0 &le; r &lt; m), th&igrave; a = m(q + k) + r. Do số dư l&agrave; duy nhất, a cũng dư r. ∎</p>
+<p><strong>Bổ đề 2.</strong> Nếu x chia hết cho m v&agrave; cho n th&igrave; x chia hết cho BCNN(m, n). Đặc biệt, <strong>BCNN của nhiều số bằng t&iacute;ch của ch&uacute;ng khi v&agrave; chỉ khi ch&uacute;ng đ&ocirc;i một nguy&ecirc;n tố c&ugrave;ng nhau.</strong></p>
+<p><em>Chứng minh.</em> Gọi L = BCNN(m, n) v&agrave; chia x cho L: x = Lq + r, 0 &le; r &lt; L. V&igrave; m v&agrave; n đều chia hết x v&agrave; L n&ecirc;n chia hết r. Vậy r l&agrave; một bội chung nhỏ hơn L, do đ&oacute; r = 0. Phần "đặc biệt": với hai số, BCNN &middot; ƯCLN = m &middot; n. Với ba số, phải x&eacute;t từng cặp, xem phản v&iacute; dụ 4, 8, 3 ở tr&ecirc;n. ∎</p>
+<p><strong>Bổ đề 3 ("cầu nhất").</strong> Nếu ƯCLN(a, m) = 1 th&igrave; lu&ocirc;n c&oacute; số k để a&middot;k chia m dư 1.</p>
+<p><em>Chứng minh (nguy&ecirc;n l&yacute; Dirichlet).</em> X&eacute;t m số a&middot;1, a&middot;2, &hellip;, a&middot;m. Giả sử hai số a&middot;i v&agrave; a&middot;j (i &ne; j) c&oacute; c&ugrave;ng số dư khi chia m. Theo Bổ đề 1, m chia hết a(i &minus; j). V&igrave; ƯCLN(a, m) = 1 n&ecirc;n m chia hết i &minus; j, m&agrave; 0 &lt; |i &minus; j| &lt; m, v&ocirc; l&yacute;. Vậy m số đ&oacute; cho đủ m số dư kh&aacute;c nhau 0, 1, &hellip;, m &minus; 1, trong đ&oacute; c&oacute; số dư 1. ∎</p>
+<p><strong>Bổ đề 4.</strong> Hệ "x chia m dư a, x chia n dư b" c&oacute; nghiệm khi v&agrave; chỉ khi a &minus; b chia hết cho d = ƯCLN(m, n). Khi c&oacute; nghiệm, c&aacute;c nghiệm lặp lại sau mỗi BCNN(m, n).</p>
+<p><em>Chứng minh.</em> (&rArr;) d chia hết cả x &minus; a v&agrave; x &minus; b, n&ecirc;n chia hết hiệu của ch&uacute;ng l&agrave; a &minus; b. (&lArr;) Viết x = a + mt. Cần mt &equiv; b &minus; a (mod n). Chia cả hai vế v&agrave; m&ocirc;-đun cho d: (m/d)&middot;t &equiv; (b &minus; a)/d (mod n/d), với ƯCLN(m/d, n/d) = 1. Theo Bổ đề 3 lu&ocirc;n t&igrave;m được t. Hai nghiệm bất kỳ c&oacute; hiệu chia hết cho cả m v&agrave; n, n&ecirc;n theo Bổ đề 2 chia hết cho BCNN. ∎</p>
+<blockquote>
+<p>Bổ đề 4 sẽ giải th&iacute;ch ở Phần 2 v&igrave; sao <strong>kh&ocirc;ng bao giờ c&oacute; năm Gi&aacute;p Sửu</strong>.</p>
+</blockquote>
+<hr>
+<h3>5. Kh&aacute;i qu&aacute;t: c&aacute;ch giải chung</h3>
+<p><strong>B&agrave;i to&aacute;n chung.</strong> T&igrave;m x, biết x chia m₁ dư r₁, chia m₂ dư r₂, chia m₃ dư r₃, với m₁, m₂, m₃ đ&ocirc;i một nguy&ecirc;n tố c&ugrave;ng nhau.</p>
+<p><strong>Bước 1: nh&igrave;n trước khi l&agrave;m.</strong> T&igrave;m một "đại diện chung" c, tức một số chia mỗi mᵢ dư đ&uacute;ng rᵢ. Ba dấu hiệu để thấy c ngay:</p>
+<table>
+<thead>
+<tr>
+<th>Dấu hiệu</th>
+<th>c bằng</th>
+<th>V&iacute; dụ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Số dư bằng nhau (= r)</td>
+<td>r</td>
+<td>chia 3 dư 2, chia 7 dư 2 &rarr; c = 2</td>
+</tr>
+<tr>
+<td>Phần thiếu mᵢ &minus; rᵢ bằng nhau (= k)</td>
+<td>&minus;k</td>
+<td>chia 3 dư 2, chia 4 dư 3 &rarr; c = &minus;1</td>
+</tr>
+<tr>
+<td>Dư + chia bằng nhau</td>
+<td>dư + chia</td>
+<td>b&agrave;i trong vở &rarr; c = 8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bước 2: nếu kh&ocirc;ng thấy dấu hiệu n&agrave;o,</strong> c&oacute; hai đường:</p>
+<ul>
+<li><strong>C&aacute;ch c&ocirc;ng tắc (Tr&igrave;nh Đại Vị):</strong> dựng c&aacute;c số eᵢ chia mᵢ dư 1 v&agrave; chia hết cho c&aacute;c số chia c&ograve;n lại, rồi lấy x &equiv; r₁e₁ + r₂e₂ + r₃e₃.</li>
+<li><strong>C&aacute;ch gộp từng cặp:</strong> gộp hai điều kiện th&agrave;nh một, mỗi lần d&ugrave;ng "cầu nhất" thay v&igrave; thử. <em>(Phần 2 đi đường n&agrave;y.)</em></li>
+</ul>
+<p><strong>Bước 3:</strong> x = c + BCNN&middot;k. D&ugrave;ng điều kiện chặn của đề (lớn hơn 10, nằm trong khoảng n&agrave;o đ&oacute;&hellip;) để chọn k.</p>
+<p><strong>Chọn c&aacute;ch n&agrave;o?</strong> C&oacute; điểm chung lộ sẵn th&igrave; d&ugrave;ng Bước 1. Gặp đề lạ, chỉ giải một lần th&igrave; gộp từng cặp. Số chia cố định m&agrave; phải t&iacute;nh nhiều lần, như H&agrave;n T&iacute;n điểm binh mỗi ng&agrave;y, th&igrave; d&ugrave;ng c&ocirc;ng tắc. <em>Kh&ocirc;ng c&oacute; c&aacute;ch n&agrave;o hay tuyệt đối, chỉ c&oacute; c&acirc;u hỏi: c&aacute;ch n&agrave;o lợi nhất cho việc n&agrave;y?</em></p>
+<hr>
+<h3>6. B&agrave;i to&aacute;n thực tế</h3>
+<blockquote>
+<p>Một đo&agrave;n học sinh c&oacute; từ 200 đến 300 em. Xếp h&agrave;ng 3 thừa 2 em, h&agrave;ng 5 thừa 3 em, h&agrave;ng 7 thừa 2 em. Đo&agrave;n c&oacute; bao nhi&ecirc;u em?</p>
+</blockquote>
+<p>✋ <em>Thử d&ugrave;ng thơ Tr&igrave;nh Đại Vị trước khi đọc tiếp.</em></p>
+<p>2&middot;70 + 3&middot;21 + 2&middot;15 = <strong>233</strong>, v&agrave; lần n&agrave;y kh&ocirc;ng cần bớt v&igrave; 233 đ&atilde; nằm trong khoảng 200&ndash;300. Nếu thiếu điều kiện "từ 200 đến 300", b&agrave;i to&aacute;n c&oacute; v&ocirc; số đ&aacute;p số: 23, 128, 233, 338, &hellip;</p>
+<hr>
+<h3>7. C&acirc;u hỏi mở v&agrave; b&agrave;i luyện tay</h3>
+<ol>
+<li><strong>C&acirc;u hỏi mở:</strong> ba số 3, 5, 7 chỉ ph&acirc;n biệt được 105 số liền nhau. V&igrave; thế trong truyện, H&agrave;n T&iacute;n phải biết trước qu&acirc;n m&igrave;nh chừng 1000&ndash;1100 người. Nếu qu&acirc;n c&oacute; khoảng <strong>một vạn</strong> người, &ocirc;ng n&ecirc;n xếp h&agrave;ng mấy kiểu, mỗi kiểu bao nhi&ecirc;u người, để chỉ nh&igrave;n số người thừa l&agrave; biết chắc qu&acirc;n số?</li>
+<li><strong>Luyện tay:</strong> t&igrave;m số nhỏ nhất lớn hơn 10, chia 4 dư 1, chia 5 dư 2, chia 6 dư 3. Đại diện chung nằm ở đ&acirc;u? BCNN c&oacute; c&ograve;n bằng t&iacute;ch kh&ocirc;ng?</li>
+</ol>
+<p>Gửi lời giải của bạn v&agrave;o phần b&igrave;nh luận video hoặc Fanpage <em>Lasotic &ndash; To&aacute;n Tư Duy</em>.</p>
+<p><strong>Phần 2 (thứ Ba tuần sau):</strong> b&agrave;i 7, 17, 23 kh&ocirc;ng c&oacute; điểm chung n&agrave;o lộ sẵn; lời ph&ecirc; "nh&acirc;n 5" trong vở học tr&ograve;; v&agrave; v&igrave; sao kh&ocirc;ng bao giờ c&oacute; năm Gi&aacute;p Sửu.</p>
+<hr>
+<h2 id="english-version">English version</h2>
+<p><em>(Phi&ecirc;n bản tiếng Anh &mdash; English translation below)</em></p>
+<blockquote>
+<p>This article accompanies the video "Han Xin Counted 1,073 Soldiers Without Counting &mdash; The Secret in a Student's Notebook (Part 1)". It is written for strong lower-secondary students learning on their own. Read slowly, keep a pen in hand, and <strong>stop at every ✋</strong> to try it yourself before reading on.</p>
+</blockquote>
+<h3>1. A story and a question</h3>
+<p>A Chinese folk tale says that after a battle, General <strong>Han Xin</strong> had his troops line up:</p>
+<ul>
+<li>in rows of 3: 2 soldiers left over;</li>
+<li>in rows of 5: 3 left over;</li>
+<li>in rows of 7: 2 left over.</li>
+</ul>
+<p>From those three leftovers alone he announced: <em>"We have 1,073 men."</em></p>
+<p><strong>To be clear:</strong> Han Xin (231&ndash;196 BC) was a real general under Liu Bang. "Han Xin counts his soldiers" is a <strong>folk tale</strong> about him, not recorded history. But <strong>the problem in the tale is entirely real</strong>. It first appears in the <em>Sunzi Suanjing</em> (c. 3rd&ndash;5th century): <em>"There are things whose number is unknown. Counted by threes, two remain; by fives, three remain; by sevens, two remain. How many things?"</em></p>
+<p>(This "Master Sun" was a mathematician, <strong>not</strong> Sun Wu, the author of <em>The Art of War</em>.)</p>
+<h3>2. The problem in the notebook</h3>
+<blockquote>
+<p><strong>Problem:</strong> Find the smallest natural number greater than 10 that leaves remainder 3 when divided by 5, remainder 2 when divided by 6, and remainder 1 when divided by 7.</p>
+</blockquote>
+<p>Four notebook pages gave three answers: <strong>197, 209, 218</strong>. Only one is right.</p>
+<p>✋ <em>No need to solve it yet. One division is enough to rule out two answers.</em></p>
+<ul>
+<li>197 &divide; 5 leaves 2. Wrong.</li>
+<li>209 &divide; 5 leaves 4. Wrong.</li>
+<li>218 leaves 3 mod 5, 2 mod 6, 1 mod 7. Correct.</li>
+</ul>
+<p><strong>Lesson one:</strong> <em>once you choose, check.</em></p>
+<p><strong>Page 1 (197): a good idea, then "13 seems to fit".</strong> The student looked at what was missing: add 2 to get a multiple of 5, add 4 for 6, add 6 for 7. That is a good way of seeing it. But the three top-ups differ, and "13 seems to fit" fails the check: 13 leaves 3 mod 5, not 2. The real common top-up is 202, and finding it means solving the original problem again.</p>
+<p><strong>Page 2 (209): wanting a common expression so badly that it gets invented.</strong> If x &minus; 3 is divisible by 5, so is x &minus; 3 + 5 = x + 2. Likewise x + 4 and x + 6. These differ, yet the student wrote all three as x + 1, and 209 answers <em>a different problem</em> (remainders 4, 5, 6). The move only needed a sign change: subtract the divisor instead, and all three become <strong>x &minus; 8</strong>.</p>
+<p><strong>Page 3 (218): right answer, wrong reason.</strong> "Since gcd(5, 6, 7) = 1, lcm = 5&middot;6&middot;7." That reason is false. Counterexample: gcd(4, 8, 3) = 1, but lcm(4, 8, 3) = 24, not 96. What is needed is <strong>pairwise coprime</strong>. It holds here, so the result is right, but by luck, not by reason.</p>
+<p><strong>The red-ink solution.</strong> 3 + 5 = 2 + 6 = 1 + 7 = 8, so x &minus; 8 is a common multiple of 5, 6, 7: x &minus; 8 &isin; {0, 210, 420, &hellip;}. Note that 0 is also a common multiple. Why not x = 8? Because the problem demands x &gt; 10. <em>Every condition has a job.</em> So x = 218.</p>
+<h3>3. Two thousand years of one problem</h3>
+<p>Han Xin's problem has no visible common point (remainders 2, 3, 2). How did the ancients do it?</p>
+<p>In <strong>1592</strong>, <strong>Cheng Dawei</strong> (<em>Suanfa Tongzong</em>) put the method into a four-line poem, roughly: <em>"Three walk together, seventy is rare; five plum trees, twenty-one branches; seven reunite at half a month; take away one hundred and five."</em> In other words:</p>
+<p><strong>x &equiv; (remainder mod 3) &times; 70 + (remainder mod 5) &times; 21 + (remainder mod 7) &times; 15, then subtract 105 repeatedly.</strong></p>
+<p>For Han Xin: 2&middot;70 + 3&middot;21 + 2&middot;15 = 233; subtract 105 twice to get <strong>23</strong>; and 23 + 10&middot;105 = <strong>1,073</strong>.</p>
+<p>✋ <em>Why 70? Find a number that leaves 1 mod 3 and is divisible by both 5 and 7.</em></p>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>mod 3</th>
+<th>mod 5</th>
+<th>mod 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>70</td>
+<td><strong>1</strong></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>21</td>
+<td>0</td>
+<td><strong>1</strong></td>
+<td>0</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0</td>
+<td>0</td>
+<td><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Each number is a <strong>switch</strong>: it turns on exactly one condition and turns off the other two.</p>
+<p><strong>How do you find 70?</strong> 35 is divisible by 5 and 7 but leaves 2 mod 3; multiply by 2 to get 70, which leaves 1. In <strong>1247</strong>, <strong>Qin Jiushao</strong> (<em>Shushu Jiuzhang</em>) called this step <strong>"seeking one"</strong>, finding the multiplier that leaves remainder 1, and did it for any set of divisors. In <strong>1801</strong>, <strong>Gauss</strong> rediscovered the method and introduced the congruence notation "&equiv;". The West calls it the <strong>Chinese Remainder Theorem</strong>.</p>
+<h3>4. Toolbox: four lemmas with proofs</h3>
+<p><strong>Lemma 1.</strong> a and b have the same remainder mod m &hArr; m divides a &minus; b.<br><em>Proof.</em> If a = mq₁ + r and b = mq₂ + r, then a &minus; b = m(q₁ &minus; q₂). Conversely, if a &minus; b = mk and b = mq + r (0 &le; r &lt; m), then a = m(q + k) + r. Remainders are unique, so a also leaves r. ∎</p>
+<p><strong>Lemma 2.</strong> If m | x and n | x, then lcm(m, n) | x. In particular, <strong>the lcm of several numbers equals their product iff they are pairwise coprime.</strong><br><em>Proof.</em> Let L = lcm(m, n) and divide: x = Lq + r, 0 &le; r &lt; L. Since m and n divide x and L, they divide r. So r is a common multiple smaller than L, hence r = 0. For two numbers, lcm &middot; gcd = m &middot; n. For three, check each pair (see 4, 8, 3). ∎</p>
+<p><strong>Lemma 3 ("seeking one").</strong> If gcd(a, m) = 1, then some k gives a&middot;k &equiv; 1 (mod m).<br><em>Proof (pigeonhole).</em> Consider a&middot;1, a&middot;2, &hellip;, a&middot;m. If a&middot;i and a&middot;j (i &ne; j) had the same remainder, then m | a(i &minus; j); as gcd(a, m) = 1, m | i &minus; j with 0 &lt; |i &minus; j| &lt; m, which is impossible. So these m numbers give all m remainders, including 1. ∎</p>
+<p><strong>Lemma 4.</strong> The system "x &equiv; a (mod m), x &equiv; b (mod n)" has a solution iff d = gcd(m, n) divides a &minus; b. Solutions repeat every lcm(m, n).<br><em>Proof.</em> (&rArr;) d divides x &minus; a and x &minus; b, hence their difference. (&lArr;) Write x = a + mt; we need mt &equiv; b &minus; a (mod n). Divide through by d: (m/d)t &equiv; (b &minus; a)/d (mod n/d), with gcd(m/d, n/d) = 1, which is solvable by Lemma 3. Two solutions differ by a multiple of m and n, hence of the lcm (Lemma 2). ∎</p>
+<h3>5. Generalization: a general method</h3>
+<p><strong>General problem.</strong> x &equiv; r₁ (mod m₁), x &equiv; r₂ (mod m₂), x &equiv; r₃ (mod m₃), with m₁, m₂, m₃ pairwise coprime.</p>
+<p><strong>Step 1: look before you compute.</strong> Find a "common representative" c with c &equiv; rᵢ (mod mᵢ) for all i. Three signs:</p>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>c =</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equal remainders r</td>
+<td>r</td>
+<td>2 mod 3, 2 mod 7 &rarr; c = 2</td>
+</tr>
+<tr>
+<td>Equal shortfalls mᵢ &minus; rᵢ = k</td>
+<td>&minus;k</td>
+<td>2 mod 3, 3 mod 4 &rarr; c = &minus;1</td>
+</tr>
+<tr>
+<td>Equal remainder + divisor</td>
+<td>remainder + divisor</td>
+<td>the notebook problem &rarr; c = 8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2: if no sign appears</strong>, either build the switches eᵢ (Cheng Dawei) and take x &equiv; r₁e₁ + r₂e₂ + r₃e₃, or merge the conditions in pairs using "seeking one" instead of trial (Part 2 takes this road).</p>
+<p><strong>Step 3:</strong> x = c + lcm &middot; k; use the problem's bounds to choose k.</p>
+<p><em>No method is best in an absolute sense; the question is which one serves best for this task.</em></p>
+<h3>6. A real-life problem</h3>
+<blockquote>
+<p>A group of 200&ndash;300 students lines up in rows of 3 (2 left over), rows of 5 (3 left over) and rows of 7 (2 left over). How many students are there?</p>
+</blockquote>
+<p>✋ <em>Try Cheng Dawei's poem first.</em></p>
+<p>2&middot;70 + 3&middot;21 + 2&middot;15 = <strong>233</strong>, already between 200 and 300. Without that bound there would be infinitely many answers: 23, 128, 233, 338, &hellip;</p>
+<h3>7. Open question and practice</h3>
+<ol>
+<li><strong>Open question:</strong> 3, 5, 7 only distinguish 105 consecutive numbers, so in the tale Han Xin must already have known he had about 1,000&ndash;1,100 men. With an army of about <strong>10,000</strong>, how many row sizes should he use, and which ones?</li>
+<li><strong>Practice:</strong> find the smallest number greater than 10 that leaves 1 mod 4, 2 mod 5 and 3 mod 6. Where is the common representative? Is the lcm still the product?</li>
+</ol>
+<p><strong>Part 2 (next Tuesday):</strong> the 7, 17, 23 problem, the "multiply by 5" note in a student's notebook, and why there is never a Gi&aacute;p Sửu year.</p>
+<hr>
+<p><strong>Nguồn tham khảo / References</strong></p>
+<ul>
+<li>Han Xin, Wikipedia: tiểu sử v&agrave; ghi ch&uacute; truyện d&acirc;n gian "H&agrave;n T&iacute;n điểm binh".</li>
+<li>Cheng Dawei, Wikipedia: <em>Suanfa Tongzong</em> (1592) v&agrave; b&agrave;i thơ giải b&agrave;i to&aacute;n số dư.</li>
+<li>Qin Jiushao, MacTutor History of Mathematics: <em>Shushu Jiuzhang</em> (1247).</li>
+<li>Chinese remainder theorem, Wikipedia: b&agrave;i to&aacute;n gốc trong <em>Sunzi Suanjing</em>.</li>
+</ul>
+<p><em>To&aacute;n tư duy Lasotic &middot; Đ&aacute;nh thức t&agrave;i năng To&aacute;n học &middot; nguyenthevan.com &middot; 0813 615 333</em></p>
+    </div>
+  </article>
+
+  <hr>
+
+  <section class="category-block">
+    <p class="section-heading">Khám phá bài viết theo chủ đề</p>
+    <ul class="category-pills">
+      <li><a href="index.html">Tất cả</a></li>
+      <li><a href="tu-duy-chu-dong.html">Tư duy chủ động</a></li>
+      <li><a href="toan-hoc-that-de.html">Toán học thật dễ</a></li>
+      <li><a href="chinh-phuc-toan-hoc.html">Đánh thức tài năng Toán học</a></li>
+      <li><a href="toan-stem.html">Toán Stem</a></li>
+      <li><a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <section class="footer-top">
+    <div class="wrap">
+      <p class="footer-eyebrow">Đừng bỏ lỡ</p>
+      <div class="footer-grid">
+        <h2>Mỗi tuần một email: một cách giúp con tự nghĩ khi học Toán, lấy từ lớp học thật.</h2>
+        <div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" name="email_address" placeholder="Email của bạn" required aria-label="Email của bạn">
+            <button type="submit">Đăng ký</button>
+          </form>
+          <p class="newsletter-note" id="newsletterNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-col-follow">
+          <h3 class="footer-col-heading">Theo</h3>
+          <div class="footer-follow-grid" aria-label="Mạng xã hội">
+            <a href="mailto:vannt.lateral@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col-about">
+          <h3 class="footer-col-heading">Về tôi</h3>
+          <div class="footer-about-inner">
+            <img class="footer-avatar" src="assets/images/nguyen-the-van.jpg" alt="Nguyễn Thế Vận" width="110" height="110" loading="lazy">
+            <div class="footer-bio">
+              <p>Mình là Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9. Mình dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI.</p>
+              <div class="footer-cta">
+                <a href="about.html">Thông tin thêm về tôi</a>
+                <a href="about.html#lien-he">Liên hệ với tôi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-nav">
+          <h3 class="footer-col-heading">Trang</h3>
+          <nav class="footer-nav" aria-label="Liên kết footer">
+            <a href="index.html">Gần đây</a>
+            <a href="tu-duy-chu-dong.html">Tư duy chủ động</a>
+            <a href="toan-hoc-that-de.html">Toán học thật dễ</a>
+            <a href="chinh-phuc-toan-hoc.html">Đánh thức tài năng Toán học</a>
+            <a href="toan-stem.html">Toán Stem</a>
+            <a href="cau-chuyen-toan-hoc.html">Câu chuyện Toán học</a>
+            <a href="about.html">Về tôi</a>
+            <a href="membership.html">Thành viên</a>
+            <a href="#newsletterForm" class="is-bold">Bản tin miễn phí</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer-legal-dark">&copy; Nguyễn Thế Vận &middot; Phát triển tư duy qua Toán: Vững gốc, vươn xa. Bảo lưu mọi quyền. &middot; <a href="chinh-sach-rieng-tu.html">Chính sách quyền riêng tư</a></p>
+    </div>
+  </section>
+</footer>
+
+<div class="auth-modal" id="authModal">
+  <div class="auth-modal-backdrop" id="authModalBackdrop"></div>
+  <div class="auth-card auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button type="button" class="auth-modal-close" id="authModalClose" aria-label="Đóng">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/site-icon-logo.svg" alt="Nguyễn Thế Vận · Phát triển tư duy qua Toán: Vững gốc, vươn xa.">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <h1 id="authTitle">Đăng nhập</h1>
+    <p class="auth-sub" id="authSub">Chào mừng bạn quay lại. Truy cập nội dung thành viên bên dưới.</p>
+
+    <div class="auth-error" id="authError">Vui lòng điền đầy đủ thông tin để tiếp tục.</div>
+
+    <form id="authForm">
+      <div class="auth-field" id="nameField" style="display:none;">
+        <label for="fullName">Họ và tên</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A" autocomplete="name">
+      </div>
+      <div class="auth-field">
+        <label for="email">Địa chỉ email</label>
+        <input type="email" id="email" name="email" placeholder="ban@vidu.com" autocomplete="email" required>
+      </div>
+      <div class="auth-field">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required>
+      </div>
+      <p class="auth-forgot" id="forgotRow"><a href="#">Quên mật khẩu?</a></p>
+
+      <div class="auth-submit">
+        <button type="submit" class="button" id="authSubmit" style="width:100%;">Đăng nhập</button>
+      </div>
+    </form>
+
+    <p class="auth-switch" id="authSwitch">
+      Chưa có tài khoản? <a href="#" id="switchToSignup">Đăng ký</a>
+    </p>
+
+    <div class="auth-divider">hoặc</div>
+    <p class="auth-switch">
+      Chưa là thành viên? <a href="membership.html">Khám phá gói thành viên</a>
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
