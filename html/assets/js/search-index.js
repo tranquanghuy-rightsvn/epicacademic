@@ -9,18 +9,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
-    title: "STEM Toán học",
-    url: "toan-stem.html",
-    tags: ["stem toán học", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
-    title: "STEM Toán học",
-    url: "stem-toan-hoc.html",
-    tags: ["stem toán học", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
     title: "Toán chuyên sâu",
     url: "chinh-phuc-toan-hoc.html",
     tags: ["toán chuyên sâu", "chủ đề"]
