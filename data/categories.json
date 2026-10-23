@@ -52,5 +52,11 @@
     "name": "Não bộ học Toán",
     "description": "Não học Toán thế nào: vì sao học xong là quên, vì sao sợ Toán không phải vì dốt, và vì sao con phải tự nghĩ khi máy đã giải được bài.",
     "order": 6
+  },
+  {
+    "slug": "nao-bo-hoc-toan",
+    "name": "Não bộ học Toán",
+    "description": "Não học Toán thế nào: vì sao học xong là quên, vì sao sợ Toán không phải vì dốt, và vì sao con phải tự nghĩ khi máy đã giải được bài.",
+    "order": 6
   }
 ]
