@@ -27,12 +27,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
-    title: "ZZ cu tu-duy-chu-dong",
-    url: "tu-duy-chu-dong.html",
-    tags: ["zz cu tu-duy-chu-dong", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
     title: "Não bộ học Toán",
     url: "nao-bo-hoc-toan.html",
     tags: ["não bộ học toán", "chủ đề"]
