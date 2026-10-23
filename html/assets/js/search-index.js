@@ -3,6 +3,12 @@
 window.SITE_SEARCH_INDEX = [
   {
     type: "Chủ đề",
+    title: "STEM Toán học",
+    url: "toan-stem.html",
+    tags: ["stem toán học", "chủ đề"]
+  },
+  {
+    type: "Chủ đề",
     title: "Toán chuyên sâu",
     url: "chinh-phuc-toan-hoc.html",
     tags: ["toán chuyên sâu", "chủ đề"]
@@ -12,12 +18,6 @@ window.SITE_SEARCH_INDEX = [
     title: "Học Toán hằng ngày",
     url: "toan-hoc-that-de.html",
     tags: ["học toán hằng ngày", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
-    title: "Toán Stem",
-    url: "toan-stem.html",
-    tags: ["toán stem", "chủ đề"]
   },
   {
     type: "Chủ đề",
