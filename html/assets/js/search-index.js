@@ -9,12 +9,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
-    title: "ZZ cu chinh-phuc-toan-hoc",
-    url: "chinh-phuc-toan-hoc.html",
-    tags: ["zz cu chinh-phuc-toan-hoc", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
     title: "Toán chuyên sâu",
     url: "toan-chuyen-sau.html",
     tags: ["toán chuyên sâu", "chủ đề"]
