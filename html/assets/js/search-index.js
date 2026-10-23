@@ -48,8 +48,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Sự cấm đoán khi học Toán và hậu quả về tư duy",
     url: "su-cam-doan-khi-hoc-toan.html",
-    pillar: "ZZ cu tu-duy-chu-dong",
-    tags: ["zz cu tu-duy-chu-dong"]
+    pillar: "Não bộ học Toán",
+    tags: ["não bộ học toán"]
   },
   {
     type: "Bài viết",
