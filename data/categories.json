@@ -24,6 +24,12 @@
     "order": 3
   },
   {
+    "slug": "toan-chuyen-sau",
+    "name": "Toán chuyên sâu",
+    "description": "Chuyên đề học sinh giỏi Toán THCS: cách nghĩ, không phải mẹo. Lời giải đầy đủ, song ngữ, đi kèm video thứ Ba trên YouTube.",
+    "order": 3
+  },
+  {
     "slug": "toan-hoc-that-de",
     "name": "Học Toán hằng ngày",
     "description": "Các vấn đề cơ bản và các định lý đẹp của Toán học, kể đơn giản và lý thú để ai cũng có thể học mỗi ngày.",
