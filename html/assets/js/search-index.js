@@ -62,8 +62,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Từ “bên ngoài” vào “bên trong”: điều Pólya khuyên chúng ta về việc giúp học sinh",
     url: "tu-ben-ngoai-vao-ben-trong-polya.html",
-    pillar: "ZZ cu tu-duy-chu-dong",
-    tags: ["zz cu tu-duy-chu-dong"]
+    pillar: "Não bộ học Toán",
+    tags: ["não bộ học toán"]
   },
   {
     type: "Bài viết",
