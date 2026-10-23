@@ -69,8 +69,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Bỏ thi vào lớp 10: Chúng ta có nên đúc khuôn trong kỷ nguyên AI",
     url: "bo-thi-vao-lop-10-duc-khuon-ky-nguyen-ai.html",
-    pillar: "ZZ cu tu-duy-chu-dong",
-    tags: ["zz cu tu-duy-chu-dong"]
+    pillar: "Não bộ học Toán",
+    tags: ["não bộ học toán"]
   },
   {
     type: "Trang",
