@@ -6,12 +6,6 @@
     "order": 1
   },
   {
-    "slug": "stem-toan-hoc",
-    "name": "STEM Toán học",
-    "description": "Những bài toán thật ngoài đời, nơi Toán là món chính: đoán trước, đo, dựng mô hình, tính, rồi tự đặt câu hỏi tiếp theo.",
-    "order": 2
-  },
-  {
     "slug": "chinh-phuc-toan-hoc",
     "name": "Toán chuyên sâu",
     "description": "Chuyên đề học sinh giỏi Toán THCS: cách nghĩ, không phải mẹo. Lời giải đầy đủ, song ngữ, đi kèm video thứ Ba trên YouTube.",
