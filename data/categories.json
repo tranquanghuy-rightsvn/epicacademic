@@ -1,15 +1,15 @@
 [
   {
-    "slug": "toan-hoc-that-de",
-    "name": "Toán học thật dễ",
-    "description": "Hiểu đúng, hiểu đơn giản — cho mọi học sinh, từ em đang vấp đến em đang giỏi.",
-    "order": 2
-  },
-  {
     "slug": "chinh-phuc-toan-hoc",
     "name": "Đánh thức tài năng Toán học",
     "description": "Học thế nào cho hiệu quả — các kỹ thuật học và sáu bước Lasotic để tự giải một bài toán.",
     "order": 3
+  },
+  {
+    "slug": "toan-hoc-that-de",
+    "name": "Học Toán hằng ngày",
+    "description": "Các vấn đề cơ bản và các định lý đẹp của Toán học, kể đơn giản và lý thú để ai cũng có thể học mỗi ngày.",
+    "order": 4
   },
   {
     "slug": "toan-stem",
