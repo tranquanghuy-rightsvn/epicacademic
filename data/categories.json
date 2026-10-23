@@ -6,12 +6,6 @@
     "order": 1
   },
   {
-    "slug": "toan-stem",
-    "name": "STEM Toán học",
-    "description": "Những bài toán thật ngoài đời, nơi Toán là món chính: đoán trước, đo, dựng mô hình, tính, rồi tự đặt câu hỏi tiếp theo.",
-    "order": 2
-  },
-  {
     "slug": "stem-toan-hoc",
     "name": "STEM Toán học",
     "description": "Những bài toán thật ngoài đời, nơi Toán là món chính: đoán trước, đo, dựng mô hình, tính, rồi tự đặt câu hỏi tiếp theo.",
