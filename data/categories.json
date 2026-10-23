@@ -18,12 +18,6 @@
     "order": 3
   },
   {
-    "slug": "toan-hoc-that-de",
-    "name": "ZZ cu toan-hoc-that-de",
-    "description": "Các vấn đề cơ bản và các định lý đẹp của Toán học, kể đơn giản và lý thú để ai cũng có thể học mỗi ngày.",
-    "order": 4
-  },
-  {
     "slug": "bai-giang-on-luyen-toan",
     "name": "Bài giảng ôn luyện Toán",
     "description": "Bài giảng ôn luyện Toán lớp 6–9, ôn thi vào lớp 6 và vào lớp 10: đi từ lời giải thật của học trò đến cách nghĩ đúng.",
