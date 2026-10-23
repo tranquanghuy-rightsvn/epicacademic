@@ -21,12 +21,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
-    title: "ZZ cu toan-hoc-that-de",
-    url: "toan-hoc-that-de.html",
-    tags: ["zz cu toan-hoc-that-de", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
     title: "Bài giảng ôn luyện Toán",
     url: "bai-giang-on-luyen-toan.html",
     tags: ["bài giảng ôn luyện toán", "chủ đề"]
