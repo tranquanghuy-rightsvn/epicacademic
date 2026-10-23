@@ -1,5 +1,11 @@
 [
   {
+    "slug": "toan-stem",
+    "name": "STEM Toán học",
+    "description": "Những bài toán thật ngoài đời, nơi Toán là món chính: đoán trước, đo, dựng mô hình, tính, rồi tự đặt câu hỏi tiếp theo.",
+    "order": 2
+  },
+  {
     "slug": "chinh-phuc-toan-hoc",
     "name": "Toán chuyên sâu",
     "description": "Chuyên đề học sinh giỏi Toán THCS: cách nghĩ, không phải mẹo. Lời giải đầy đủ, song ngữ, đi kèm video thứ Ba trên YouTube.",
@@ -9,12 +15,6 @@
     "slug": "toan-hoc-that-de",
     "name": "Học Toán hằng ngày",
     "description": "Các vấn đề cơ bản và các định lý đẹp của Toán học, kể đơn giản và lý thú để ai cũng có thể học mỗi ngày.",
-    "order": 4
-  },
-  {
-    "slug": "toan-stem",
-    "name": "Toán Stem",
-    "description": "Toán dùng vào việc gì trong đời thật — từ những tình huống quanh con.",
     "order": 4
   },
   {
