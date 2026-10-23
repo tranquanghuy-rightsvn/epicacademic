@@ -3,15 +3,15 @@
 window.SITE_SEARCH_INDEX = [
   {
     type: "Chủ đề",
-    title: "Toán học thật dễ",
-    url: "toan-hoc-that-de.html",
-    tags: ["toán học thật dễ", "chủ đề"]
-  },
-  {
-    type: "Chủ đề",
     title: "Đánh thức tài năng Toán học",
     url: "chinh-phuc-toan-hoc.html",
     tags: ["đánh thức tài năng toán học", "chủ đề"]
+  },
+  {
+    type: "Chủ đề",
+    title: "Học Toán hằng ngày",
+    url: "toan-hoc-that-de.html",
+    tags: ["học toán hằng ngày", "chủ đề"]
   },
   {
     type: "Chủ đề",
