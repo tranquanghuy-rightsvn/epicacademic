@@ -9,6 +9,12 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
+    title: "Toán học thú vị",
+    url: "toan-hoc-thu-vi.html",
+    tags: ["toán học thú vị", "chủ đề"]
+  },
+  {
+    type: "Chủ đề",
     title: "STEM Toán học",
     url: "toan-stem.html",
     tags: ["stem toán học", "chủ đề"]
