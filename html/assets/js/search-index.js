@@ -39,6 +39,12 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
+    title: "Học Toán hằng ngày",
+    url: "hoc-toan-hang-ngay.html",
+    tags: ["học toán hằng ngày", "chủ đề"]
+  },
+  {
+    type: "Chủ đề",
     title: "Bài giảng ôn luyện Toán",
     url: "bai-giang-on-luyen-toan.html",
     tags: ["bài giảng ôn luyện toán", "chủ đề"]
