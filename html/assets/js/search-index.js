@@ -41,8 +41,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò",
     url: "han-tin-diem-binh-phan-1.html",
-    pillar: "ZZ cu chinh-phuc-toan-hoc",
-    tags: ["zz cu chinh-phuc-toan-hoc"]
+    pillar: "Toán chuyên sâu",
+    tags: ["toán chuyên sâu"]
   },
   {
     type: "Bài viết",
