@@ -24,6 +24,12 @@
     "order": 4
   },
   {
+    "slug": "bai-giang-on-luyen-toan",
+    "name": "Bài giảng ôn luyện Toán",
+    "description": "Bài giảng ôn luyện Toán lớp 6–9, ôn thi vào lớp 6 và vào lớp 10: đi từ lời giải thật của học trò đến cách nghĩ đúng.",
+    "order": 5
+  },
+  {
     "slug": "tu-duy-chu-dong",
     "name": "Não bộ học Toán",
     "description": "Não học Toán thế nào: vì sao học xong là quên, vì sao sợ Toán không phải vì dốt, và vì sao con phải tự nghĩ khi máy đã giải được bài.",
