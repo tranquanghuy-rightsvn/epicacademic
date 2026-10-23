@@ -3,9 +3,9 @@
 window.SITE_SEARCH_INDEX = [
   {
     type: "Chủ đề",
-    title: "Đánh thức tài năng Toán học",
+    title: "Toán chuyên sâu",
     url: "chinh-phuc-toan-hoc.html",
-    tags: ["đánh thức tài năng toán học", "chủ đề"]
+    tags: ["toán chuyên sâu", "chủ đề"]
   },
   {
     type: "Chủ đề",
@@ -35,8 +35,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò",
     url: "han-tin-diem-binh-phan-1.html",
-    pillar: "Đánh thức tài năng Toán học",
-    tags: ["đánh thức tài năng toán học"]
+    pillar: "Toán chuyên sâu",
+    tags: ["toán chuyên sâu"]
   },
   {
     type: "Bài viết",
