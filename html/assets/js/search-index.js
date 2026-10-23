@@ -9,9 +9,9 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
-    title: "Toán chuyên sâu",
+    title: "ZZ cu chinh-phuc-toan-hoc",
     url: "chinh-phuc-toan-hoc.html",
-    tags: ["toán chuyên sâu", "chủ đề"]
+    tags: ["zz cu chinh-phuc-toan-hoc", "chủ đề"]
   },
   {
     type: "Chủ đề",
@@ -41,8 +41,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Hàn Tín điểm binh (Phần 1): 1073 quân, ba con số 70 – 21 – 15 và bốn trang vở học trò",
     url: "han-tin-diem-binh-phan-1.html",
-    pillar: "Toán chuyên sâu",
-    tags: ["toán chuyên sâu"]
+    pillar: "ZZ cu chinh-phuc-toan-hoc",
+    tags: ["zz cu chinh-phuc-toan-hoc"]
   },
   {
     type: "Bài viết",
