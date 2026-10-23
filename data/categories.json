@@ -1,11 +1,5 @@
 [
   {
-    "slug": "cau-chuyen-toan-hoc",
-    "name": "Toán học thú vị",
-    "description": "Những con người và ý tưởng làm nên Toán học: các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.",
-    "order": 1
-  },
-  {
     "slug": "toan-hoc-thu-vi",
     "name": "Toán học thú vị",
     "description": "Những con người và ý tưởng làm nên Toán học: các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.",
