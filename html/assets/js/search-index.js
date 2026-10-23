@@ -27,6 +27,12 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
+    title: "Bài giảng ôn luyện Toán",
+    url: "bai-giang-on-luyen-toan.html",
+    tags: ["bài giảng ôn luyện toán", "chủ đề"]
+  },
+  {
+    type: "Chủ đề",
     title: "Não bộ học Toán",
     url: "tu-duy-chu-dong.html",
     tags: ["não bộ học toán", "chủ đề"]
