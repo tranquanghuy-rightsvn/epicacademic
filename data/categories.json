@@ -1,11 +1,5 @@
 [
   {
-    "slug": "tu-duy-chu-dong",
-    "name": "Tư duy chủ động",
-    "description": "Vì sao con phải tự nghĩ, khi máy đã giải được bài — và điều gì đang khiến con thôi nghĩ.",
-    "order": 1
-  },
-  {
     "slug": "toan-hoc-that-de",
     "name": "Toán học thật dễ",
     "description": "Hiểu đúng, hiểu đơn giản — cho mọi học sinh, từ em đang vấp đến em đang giỏi.",
@@ -28,5 +22,11 @@
     "name": "Câu chuyện Toán học",
     "description": "Các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.",
     "order": 5
+  },
+  {
+    "slug": "tu-duy-chu-dong",
+    "name": "Não bộ học Toán",
+    "description": "Não học Toán thế nào: vì sao học xong là quên, vì sao sợ Toán không phải vì dốt, và vì sao con phải tự nghĩ khi máy đã giải được bài.",
+    "order": 6
   }
 ]
