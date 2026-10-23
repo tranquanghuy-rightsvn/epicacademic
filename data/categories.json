@@ -1,5 +1,11 @@
 [
   {
+    "slug": "cau-chuyen-toan-hoc",
+    "name": "Toán học thú vị",
+    "description": "Những con người và ý tưởng làm nên Toán học: các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.",
+    "order": 1
+  },
+  {
     "slug": "toan-stem",
     "name": "STEM Toán học",
     "description": "Những bài toán thật ngoài đời, nơi Toán là món chính: đoán trước, đo, dựng mô hình, tính, rồi tự đặt câu hỏi tiếp theo.",
@@ -16,12 +22,6 @@
     "name": "Học Toán hằng ngày",
     "description": "Các vấn đề cơ bản và các định lý đẹp của Toán học, kể đơn giản và lý thú để ai cũng có thể học mỗi ngày.",
     "order": 4
-  },
-  {
-    "slug": "cau-chuyen-toan-hoc",
-    "name": "Câu chuyện Toán học",
-    "description": "Các nhà Toán học đã nghĩ, đã vấp và đã phát minh thế nào.",
-    "order": 5
   },
   {
     "slug": "tu-duy-chu-dong",
