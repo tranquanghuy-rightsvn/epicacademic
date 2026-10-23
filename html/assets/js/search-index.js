@@ -55,8 +55,8 @@ window.SITE_SEARCH_INDEX = [
     type: "Bài viết",
     title: "Luyện tủ: khi bộ não học cách không cần nghĩ",
     url: "luyen-tu-khi-bo-nao-hoc-cach-khong-can-nghi.html",
-    pillar: "ZZ cu tu-duy-chu-dong",
-    tags: ["zz cu tu-duy-chu-dong"]
+    pillar: "Não bộ học Toán",
+    tags: ["não bộ học toán"]
   },
   {
     type: "Bài viết",
