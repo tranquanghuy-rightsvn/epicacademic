@@ -27,6 +27,12 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Chủ đề",
+    title: "Toán chuyên sâu",
+    url: "toan-chuyen-sau.html",
+    tags: ["toán chuyên sâu", "chủ đề"]
+  },
+  {
+    type: "Chủ đề",
     title: "Học Toán hằng ngày",
     url: "toan-hoc-that-de.html",
     tags: ["học toán hằng ngày", "chủ đề"]
