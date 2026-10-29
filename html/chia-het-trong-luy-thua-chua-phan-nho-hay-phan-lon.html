@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chia hết trong lũy thừa: chừa phần nhỏ hay chừa phần lớn? — Nguyễn Thế Vận</title>
+<meta name="description" content="A = 3 + 3² + … + 3²⁰²⁴ chia 13 dư bao nhiêu? So hai cách nhóm số hạng: chừa phần nhỏ thì xong trong một bước, chừa phần lớn phải leo thêm một dốc. Kèm bài luyện dạng đề kiểm tra Toán 6, lời giải và bản tiếng Anh.">
+<link rel="canonical" href="https://nguyenthevan.com/chia-het-trong-luy-thua-chua-phan-nho-hay-phan-lon.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chia hết trong lũy thừa: chừa phần nhỏ hay chừa phần lớn? — Nguyễn Thế Vận">
+<meta property="og:description" content="A = 3 + 3² + … + 3²⁰²⁴ chia 13 dư bao nhiêu? So hai cách nhóm số hạng: chừa phần nhỏ thì xong trong một bước, chừa phần lớn phải leo thêm một dốc. Kèm bài luyện dạng đề kiểm tra Toán 6, lời giải và bản tiếng Anh.">
+<meta property="og:image" content="https://nguyenthevan.com/assets/images/nguyen-the-van.jpg">
+<meta property="og:url" content="https://nguyenthevan.com/chia-het-trong-luy-thua-chua-phan-nho-hay-phan-lon.html">
+<link rel="icon" href="assets/images/site-icon-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="blog">
+
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="logo-link">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav">
+      <div class="nav-item">
+        <a href="index.html" class="is-active">Bài viết</a>
+        <button type="button" class="nav-caret" aria-label="Mở danh mục Bài viết" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="toan-hoc-thu-vi.html">Toán học thú vị</a></li>
+          <li><a href="stem-toan-hoc.html">STEM Toán học</a></li>
+          <li><a href="toan-chuyen-sau.html">Toán chuyên sâu</a></li>
+          <li><a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a></li>
+          <li><a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a></li>
+          <li><a href="nao-bo-hoc-toan.html">Não bộ học Toán</a></li>
+        </ul>
+      </div>
+      <a href="about.html">Về tôi</a>
+      <a href="#newsletterForm">Newsletter</a>
+      <button class="search-toggle desktop-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      </button>
+      <a href="login.html" class="nav-login">Đăng nhập</a>
+      <a href="membership.html" class="button">Trở thành thành viên</a>
+    </nav>
+
+    <button class="search-toggle mobile-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+      <svg viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
+    </button>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="search-modal" id="searchModal" hidden>
+  <div class="search-modal-overlay" id="searchModalOverlay"></div>
+  <div class="search-modal-dialog" role="dialog" aria-modal="true" aria-label="Tìm kiếm bài viết">
+    <form class="search-modal-form" id="searchForm" role="search">
+      <svg class="search-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      <label class="screen-reader-text" for="siteSearch">Tìm kiếm bài viết</label>
+      <input id="siteSearch" type="search" placeholder="Tìm theo tiêu đề hoặc thẻ&hellip;" autocomplete="off">
+      <kbd class="search-modal-key">Esc</kbd>
+    </form>
+    <ul class="search-modal-results" id="searchResults"></ul>
+    <p class="search-modal-empty" id="searchEmpty" hidden>Không tìm thấy bài viết phù hợp.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <article>
+    <section class="post-hero">
+      <p class="post-meta">Toán chuyên sâu</p>
+      <h1>Chia hết trong lũy thừa: chừa phần nhỏ hay chừa phần lớn?</h1>
+      <p class="post-audience">Dành cho: Học sinh lớp 6 đang ôn thi, học sinh khá giỏi lớp 7</p>
+      <p class="intro">Bài 15 trên bảng lớp thầy: một bạn lớp 6 nhóm từng ba số hạng và để riêng hai số hạng đầu. Để riêng phần nào thì lợi hơn, phần nhỏ hay phần lớn? Phần chừa lại là phần mình phải tự tính, nên hãy chừa phần mình tính được.</p>
+    </section>
+
+    <div class="post-body">
+<p><strong>Theo d&otilde;i:</strong> ▶ <a href="https://www.youtube.com/channel/UC0XKQmKJlPRA6KqshaDxBVQ" target="_blank" rel="noopener">YouTube Lasotic &ndash; To&aacute;n Tư Duy</a> &middot; <a href="https://www.facebook.com/lasoticvn" target="_blank" rel="noopener">Fanpage Facebook</a></p>
+<p><strong>Video:</strong> <a href="https://youtu.be/DKQeAs_XCKI" target="_blank" rel="noopener">To&aacute;n chuy&ecirc;n s&acirc;u: Chia hết trong lũy thừa, chừa phần nhỏ hay phần lớn?</a> (18:30 thứ Năm 29/10, video ngắn l&uacute;c 6:30 s&aacute;ng c&ugrave;ng ng&agrave;y) &middot; <a href="#english-version">English version &darr;</a></p>
+<p><strong>B&agrave;i to&aacute;n.</strong> A = 3 + 3&sup2; + 3&sup3; + &hellip; + 3&sup2;⁰&sup2;⁴. A chia cho 13 dư bao nhi&ecirc;u?</p>
+<p>✋ <em>Đo&aacute;n trước: A chia hết cho 13, hay kh&ocirc;ng? Ghi dự đo&aacute;n ra giấy rồi đọc tiếp.</em></p>
+<p>Đ&acirc;y l&agrave; B&agrave;i 15 tr&ecirc;n bảng lớp thầy, b&agrave;i l&agrave;m của một bạn lớp 6. Bạn ấy nh&oacute;m c&aacute;c số hạng th&agrave;nh từng nh&oacute;m ba v&agrave; để ri&ecirc;ng hai số hạng đầu. C&acirc;u hỏi của b&agrave;i viết: <strong>để ri&ecirc;ng phần n&agrave;o th&igrave; lợi hơn, phần nhỏ hay phần lớn?</strong> B&agrave;i n&agrave;y tiếp nối <a href="https://youtu.be/r1p7zoM5Kk8" target="_blank" rel="noopener">b&agrave;i ước lượng v&agrave; so s&aacute;nh lũy thừa</a> (thứ Ba 27/10), d&agrave;nh cho c&aacute;c bạn lớp 6 đang &ocirc;n thi.</p>
+<hr>
+<h3>1. Vi&ecirc;n gạch 13</h3>
+<p>V&igrave; sao lại l&agrave; 13? Cộng ba lũy thừa li&ecirc;n tiếp nhỏ nhất của 3: <strong>1 + 3 + 3&sup2; = 1 + 3 + 9 = 13</strong>. Mỗi nh&oacute;m ba lũy thừa li&ecirc;n tiếp đều l&agrave; vi&ecirc;n gạch ấy nh&acirc;n với một lũy thừa của 3:</p>
+<p style="text-align: center;">3&sup3; + 3⁴ + 3⁵ = 3&sup3;(1 + 3 + 3&sup2;) = 3&sup3; &middot; 13.</p>
+<p>Nh&oacute;m n&agrave;o cũng chia hết cho 13.</p>
+<hr>
+<h3>2. Đếm trước khi nh&oacute;m</h3>
+<p>Đ&acirc;y l&agrave; bước ước lượng m&agrave; nhiều bạn bỏ qua. Từ 3&sup1; đến 3&sup2;⁰&sup2;⁴ c&oacute; <strong>2024 số hạng</strong>, v&agrave; 2024 = 3 &middot; 674 + 2. Nh&oacute;m thế n&agrave;o cũng thừa ra <strong>hai số hạng</strong>. C&acirc;u hỏi thật sự l&agrave; để hai số hạng ấy ở đ&acirc;u: ở đầu, chỗ c&aacute;c số nhỏ, hay ở cuối, chỗ c&aacute;c số khổng lồ?</p>
+<hr>
+<h3>3. C&aacute;ch 1: chừa phần nhỏ (c&aacute;ch của bạn tr&ecirc;n bảng)</h3>
+<p style="text-align: center;">A = 3 + 3&sup2; + (3&sup3; + 3⁴ + 3⁵) + &hellip; + (3&sup2;⁰&sup2;&sup2; + 3&sup2;⁰&sup2;&sup3; + 3&sup2;⁰&sup2;⁴)<br>= 3 + 9 + 3&sup3; &middot; 13 + 3⁶ &middot; 13 + &hellip; + 3&sup2;⁰&sup2;&sup2; &middot; 13<br>= 12 + 13 &middot; (3&sup3; + 3⁶ + &hellip; + 3&sup2;⁰&sup2;&sup2;).</p>
+<p>Phần sau chia hết cho 13; 12 &lt; 13 n&ecirc;n <strong>A chia 13 dư 12</strong>. Một bước l&agrave; xong.</p>
+<hr>
+<h3>4. C&aacute;ch 2: chừa phần lớn</h3>
+<p style="text-align: center;">A = (3 + 3&sup2; + 3&sup3;) + &hellip; + (3&sup2;⁰&sup2;⁰ + 3&sup2;⁰&sup2;&sup1; + 3&sup2;⁰&sup2;&sup2;) + 3&sup2;⁰&sup2;&sup3; + 3&sup2;⁰&sup2;⁴<br>= 13 &middot; (&hellip;) + 3&sup2;⁰&sup2;&sup3;(1 + 3) = 13 &middot; (&hellip;) + 4 &middot; 3&sup2;⁰&sup2;&sup3;.</p>
+<p>C&aacute;c nh&oacute;m vẫn chia hết cho 13, nhưng phần chừa lại l&agrave; 4 &middot; 3&sup2;⁰&sup2;&sup3;, một số c&oacute; gần 1000 chữ số. Muốn biết n&oacute; chia 13 dư bao nhi&ecirc;u, phải <strong>leo th&ecirc;m một dốc</strong>:</p>
+<ul>
+<li>3&sup3; = 27 = 2 &middot; 13 + 1, tức 27 chia 13 dư 1.</li>
+<li>2023 = 3 &middot; 674 + 1, n&ecirc;n 3&sup2;⁰&sup2;&sup3; = 27⁶⁷⁴ &middot; 3.</li>
+<li>T&iacute;ch của những số chia 13 dư 1 th&igrave; vẫn chia 13 dư 1, n&ecirc;n 27⁶⁷⁴ chia 13 dư 1 v&agrave; 3&sup2;⁰&sup2;&sup3; chia 13 dư 3.</li>
+<li>4 &middot; 3 = 12: lại dư 12.</li>
+</ul>
+<hr>
+<h3>5. So s&aacute;nh v&agrave; quy tắc</h3>
+<p>Hai c&aacute;ch c&ugrave;ng một đ&aacute;p số 12. Kh&aacute;c nhau ở <strong>phần chừa lại</strong>: chừa phần nhỏ th&igrave; phần chừa lại l&agrave; 12, nhẩm được ngay; chừa phần lớn th&igrave; phần chừa lại l&agrave; một số khổng lồ, phải giải th&ecirc;m một b&agrave;i.</p>
+<p><strong>Quy tắc mang theo:</strong> phần chừa lại l&agrave; phần m&igrave;nh phải tự t&iacute;nh, n&ecirc;n <strong>h&atilde;y chừa phần m&igrave;nh t&iacute;nh được</strong>. Trước khi nh&oacute;m, h&atilde;y ước xem phần chừa lại sẽ nhỏ hay khổng lồ.</p>
+<p>D&ograve;ng đầu bảng viết ngược chiều: (3&sup2;⁰&sup2;⁴ + 3&sup2;⁰&sup2;&sup3; + 3&sup2;⁰&sup2;&sup2;) + &hellip; + (3⁵ + 3⁴ + 3&sup3;) + 3&sup2; + 3. Viết từ tr&ecirc;n xuống, nhưng vẫn l&agrave; <strong>chừa phần nhỏ</strong>. Thứ tự viết kh&ocirc;ng quan trọng, phần để ri&ecirc;ng mới quan trọng.</p>
+<hr>
+<h3>6. Kiểm bằng trường hợp nhỏ</h3>
+<p>Lấy 5 số hạng (5 cũng chia 3 dư 2, giống 2024): 3 + 9 + 27 + 81 + 243 = 363 = 13 &middot; 27 + 12. Dư 12, khớp. Số dư phải nhỏ hơn 13, v&agrave; 12 l&agrave; hợp l&yacute;.</p>
+<p>Bảng số dư của 3 + 3&sup2; + &hellip; + 3ⁿ khi chia cho 13:</p>
+<table>
+<tbody>
+<tr>
+<td><strong>n</strong></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>dư</strong></td>
+<td>3</td>
+<td>12</td>
+<td>0</td>
+<td>3</td>
+<td>12</td>
+<td>0</td>
+<td>3</td>
+<td>12</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>7. Luyện tay (dạng đề kiểm tra To&aacute;n 6)</h3>
+<ol>
+<li><strong>B = 2 + 2&sup2; + &hellip; + 2&sup1;⁰⁰ chia 7 dư bao nhi&ecirc;u?</strong> Vi&ecirc;n gạch 1 + 2 + 4 = 7; 100 = 3 &middot; 33 + 1, n&ecirc;n chừa số 2 ở đầu: B = 2 + 7 &middot; (2&sup2; + 2⁵ + &hellip; + 2⁹⁸). <strong>B chia 7 dư 2.</strong></li>
+<li><strong>C = 5 + 5&sup2; + &hellip; + 5&sup2;⁰&sup2;⁵ chia 6 dư bao nhi&ecirc;u?</strong> Vi&ecirc;n gạch hai vi&ecirc;n 1 + 5 = 6; 2025 lẻ n&ecirc;n nh&oacute;m đ&ocirc;i thừa một. Chừa số 5 ở đầu: C = 5 + 6 &middot; (5&sup2; + 5⁴ + &hellip; + 5&sup2;⁰&sup2;⁴). <strong>C chia 6 dư 5.</strong></li>
+<li><strong>D = 1 + 4 + 4&sup2; + &hellip; + 4&sup2;⁰&sup2;⁴ c&oacute; chia hết cho 21 kh&ocirc;ng?</strong> 1 + 4 + 16 = 21; D c&oacute; 2025 số hạng, 2025 = 3 &middot; 675, kh&ocirc;ng phải chừa g&igrave;. <strong>D chia hết cho 21.</strong></li>
+</ol>
+<hr>
+<h3>8. Lịch sử: v&ograve;ng lặp của số dư</h3>
+<p>V&igrave; sao cứ ba bước lại lặp? V&igrave; 27 chia 13 dư 1: số dư của 3, 9, 27, 81, &hellip; khi chia 13 l&agrave; 3, 9, 1, 3, 9, 1, &hellip; Ng&agrave;y 18/10/1640, Pierre de Fermat viết thư cho bạn l&agrave; Fr&eacute;nicle de Bessy, n&ecirc;u điều m&agrave; ng&agrave;y nay gọi l&agrave; <strong>định l&yacute; nhỏ Fermat</strong>, về ch&iacute;nh những v&ograve;ng lặp như thế. Năm 1801, Carl Friedrich Gauss, 24 tuổi, in cuốn <em>Disquisitiones Arithmeticae</em> (Nghi&ecirc;n cứu số học), đặt ra c&aacute;ch viết đồng dư m&agrave; học sinh chuy&ecirc;n to&aacute;n d&ugrave;ng đến h&ocirc;m nay: 3&sup3; &equiv; 1 (mod 13), A &equiv; 12 (mod 13).</p>
+<hr>
+<h3>9. Tự l&agrave;m</h3>
+<ol>
+<li>E = 7 + 7&sup2; + &hellip; + 7&sup1;⁰&sup1; chia 8 dư bao nhi&ecirc;u?</li>
+<li>Với A = 3 + 3&sup2; + &hellip; + 3ⁿ, khi chia cho 13 th&igrave; số dư c&oacute; thể l&agrave; những gi&aacute; trị n&agrave;o? A chia hết cho 13 khi n&agrave;o?</li>
+<li>Chứng minh 2 + 2&sup2; + &hellip; + 2⁶⁰ chia hết cho cả 3 v&agrave; 7.</li>
+<li>Chứng minh 1 + 5 + 5&sup2; + &hellip; + 5&sup2;⁰&sup2;&sup3; chia hết cho 6.</li>
+</ol>
+<details>
+<summary><strong>Đ&aacute;p số v&agrave; gợi &yacute;</strong></summary>
+<ol>
+<li>1 + 7 = 8; 101 số hạng, nh&oacute;m đ&ocirc;i thừa một, chừa số 7 ở đầu: <strong>dư 7</strong>.</li>
+<li>Số dư chỉ c&oacute; thể l&agrave; 3, 12 hoặc 0 (xem bảng ở mục 6). A chia hết cho 13 khi v&agrave; chỉ khi <strong>n chia hết cho 3</strong>.</li>
+<li>Nh&oacute;m đ&ocirc;i: 2 + 2&sup2; = 6 chia hết cho 3, v&agrave; 60 số hạng chia đ&ocirc;i vừa đủ. Nh&oacute;m ba: 2 + 2&sup2; + 2&sup3; = 14 chia hết cho 7, v&agrave; 60 = 3 &middot; 20.</li>
+<li>Nh&oacute;m đ&ocirc;i: 1 + 5 = 6; 2024 số hạng chia đ&ocirc;i vừa đủ.</li>
+</ol>
+</details>
+<p><strong>C&acirc;u chốt:</strong> phần chừa lại l&agrave; phần m&igrave;nh phải tự t&iacute;nh, n&ecirc;n h&atilde;y chừa phần m&igrave;nh t&iacute;nh được.</p>
+<p><em>Nguồn:</em> B&agrave;i 15 l&agrave; b&agrave;i l&agrave;m tr&ecirc;n bảng của một học sinh lớp 6 lớp thầy, kh&ocirc;ng n&ecirc;u t&ecirc;n. <a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem" target="_blank" rel="noopener">Fermat's little theorem &ndash; Wikipedia</a> (thư gửi Fr&eacute;nicle de Bessy ng&agrave;y 18/10/1640); <a href="https://en.wikipedia.org/wiki/Disquisitiones_Arithmeticae" target="_blank" rel="noopener">Disquisitiones Arithmeticae &ndash; Wikipedia</a> (Gauss, 1801). Mọi số dư trong b&agrave;i đ&atilde; kiểm bằng m&aacute;y.</p>
+<hr>
+<h2 id="english-version">English version</h2>
+<p><strong>The problem.</strong> A = 3 + 3&sup2; + &hellip; + 3^2024. What is the remainder when A is divided by 13? This is problem 15 on the board in our class, worked by a Grade 6 student.</p>
+<p><strong>The brick:</strong> 1 + 3 + 9 = 13, so every group of three consecutive powers of 3 is a multiple of 13. <strong>Count before grouping:</strong> 2024 = 3&middot;674 + 2, so two terms are always left over. <strong>Leave the small part aside</strong> (the student's way): A = 12 + 13&middot;(3&sup3; + 3⁶ + &hellip; + 3^2022), so the remainder is 12, in one step. <strong>Leave the large part aside:</strong> A = 13&middot;(&hellip;) + 4&middot;3^2023, a leftover with almost 1000 digits; since 27 leaves remainder 1 when divided by 13, 3^2023 = 27^674&middot;3 leaves remainder 3, and 4&middot;3 = 12 again, but only after one more hill. <strong>The rule:</strong> the part you leave aside is the part you must compute yourself, so leave aside the part you can compute.</p>
+<p><strong>Check with a small case:</strong> 3 + 9 + 27 + 81 + 243 = 363 = 13&middot;27 + 12. <strong>Practice:</strong> 2 + &hellip; + 2^100 leaves 2 when divided by 7; 5 + &hellip; + 5^2025 leaves 5 when divided by 6; 1 + 4 + &hellip; + 4^2024 is divisible by 21. <strong>History:</strong> Fermat's letter to Fr&eacute;nicle (1640) and Gauss's <em>Disquisitiones Arithmeticae</em> (1801), which introduced congruence notation.</p>
+<p><strong>Video:</strong> <a href="https://youtu.be/DKQeAs_XCKI" target="_blank" rel="noopener">https://youtu.be/DKQeAs_XCKI</a> (in Vietnamese, with English subtitles).</p>
+<p><strong>Theo d&otilde;i Lasotic &ndash; To&aacute;n Tư Duy / Follow:</strong> ▶ <a href="https://www.youtube.com/channel/UC0XKQmKJlPRA6KqshaDxBVQ" target="_blank" rel="noopener">YouTube Lasotic &ndash; To&aacute;n Tư Duy</a> &middot; <a href="https://www.facebook.com/lasoticvn" target="_blank" rel="noopener">Fanpage Facebook</a></p>
+    </div>
+  </article>
+
+  <hr>
+
+  <section class="category-block">
+    <p class="section-heading">Khám phá bài viết theo chủ đề</p>
+    <ul class="category-pills">
+      <li><a href="index.html">Tất cả</a></li>
+      <li><a href="toan-hoc-thu-vi.html">Toán học thú vị</a></li>
+      <li><a href="stem-toan-hoc.html">STEM Toán học</a></li>
+      <li><a href="toan-chuyen-sau.html">Toán chuyên sâu</a></li>
+      <li><a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a></li>
+      <li><a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a></li>
+      <li><a href="nao-bo-hoc-toan.html">Não bộ học Toán</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <section class="footer-top">
+    <div class="wrap">
+      <p class="footer-eyebrow">Đừng bỏ lỡ</p>
+      <div class="footer-grid">
+        <h2>Mỗi tuần một email: một cách giúp con tự nghĩ khi học Toán, lấy từ lớp học thật.</h2>
+        <div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" name="email_address" placeholder="Email của bạn" required aria-label="Email của bạn">
+            <button type="submit">Đăng ký</button>
+          </form>
+          <p class="newsletter-note" id="newsletterNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-col-follow">
+          <h3 class="footer-col-heading">Theo</h3>
+          <div class="footer-follow-grid" aria-label="Mạng xã hội">
+            <a href="mailto:vannt.lateral@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col-about">
+          <h3 class="footer-col-heading">Về tôi</h3>
+          <div class="footer-about-inner">
+            <img class="footer-avatar" src="assets/images/nguyen-the-van.jpg" alt="Nguyễn Thế Vận" width="110" height="110" loading="lazy">
+            <div class="footer-bio">
+              <p>Mình là Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9. Mình dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI.</p>
+              <div class="footer-cta">
+                <a href="about.html">Thông tin thêm về tôi</a>
+                <a href="about.html#lien-he">Liên hệ với tôi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-nav">
+          <h3 class="footer-col-heading">Trang</h3>
+          <nav class="footer-nav" aria-label="Liên kết footer">
+            <a href="index.html">Gần đây</a>
+            <a href="toan-hoc-thu-vi.html">Toán học thú vị</a>
+            <a href="stem-toan-hoc.html">STEM Toán học</a>
+            <a href="toan-chuyen-sau.html">Toán chuyên sâu</a>
+            <a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a>
+            <a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a>
+            <a href="nao-bo-hoc-toan.html">Não bộ học Toán</a>
+            <a href="about.html">Về tôi</a>
+            <a href="membership.html">Thành viên</a>
+            <a href="#newsletterForm" class="is-bold">Bản tin miễn phí</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer-legal-dark">&copy; Nguyễn Thế Vận &middot; Phát triển tư duy qua Toán: Vững gốc, vươn xa. Bảo lưu mọi quyền. &middot; <a href="chinh-sach-rieng-tu.html">Chính sách quyền riêng tư</a></p>
+    </div>
+  </section>
+</footer>
+
+<div class="auth-modal" id="authModal">
+  <div class="auth-modal-backdrop" id="authModalBackdrop"></div>
+  <div class="auth-card auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button type="button" class="auth-modal-close" id="authModalClose" aria-label="Đóng">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/site-icon-logo.svg" alt="Nguyễn Thế Vận · Phát triển tư duy qua Toán: Vững gốc, vươn xa.">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <h1 id="authTitle">Đăng nhập</h1>
+    <p class="auth-sub" id="authSub">Chào mừng bạn quay lại. Truy cập nội dung thành viên bên dưới.</p>
+
+    <div class="auth-error" id="authError">Vui lòng điền đầy đủ thông tin để tiếp tục.</div>
+
+    <form id="authForm">
+      <div class="auth-field" id="nameField" style="display:none;">
+        <label for="fullName">Họ và tên</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A" autocomplete="name">
+      </div>
+      <div class="auth-field">
+        <label for="email">Địa chỉ email</label>
+        <input type="email" id="email" name="email" placeholder="ban@vidu.com" autocomplete="email" required>
+      </div>
+      <div class="auth-field">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required>
+      </div>
+      <p class="auth-forgot" id="forgotRow"><a href="#">Quên mật khẩu?</a></p>
+
+      <div class="auth-submit">
+        <button type="submit" class="button" id="authSubmit" style="width:100%;">Đăng nhập</button>
+      </div>
+    </form>
+
+    <p class="auth-switch" id="authSwitch">
+      Chưa có tài khoản? <a href="#" id="switchToSignup">Đăng ký</a>
+    </p>
+
+    <div class="auth-divider">hoặc</div>
+    <p class="auth-switch">
+      Chưa là thành viên? <a href="membership.html">Khám phá gói thành viên</a>
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
