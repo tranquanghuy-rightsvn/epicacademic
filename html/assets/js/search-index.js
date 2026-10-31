@@ -39,6 +39,13 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Bài viết",
+    title: "Đúng kết luận mà vẫn sai: 6 cách chứng minh 3 điểm thẳng hàng",
+    url: "dung-ket-luan-ma-van-sai-ba-diem-thang-hang.html",
+    pillar: "Toán chuyên sâu",
+    tags: ["toán chuyên sâu"]
+  },
+  {
+    type: "Bài viết",
     title: "Chia hết trong lũy thừa: chừa phần nhỏ hay chừa phần lớn?",
     url: "chia-het-trong-luy-thua-chua-phan-nho-hay-phan-lon.html",
     pillar: "Toán chuyên sâu",
