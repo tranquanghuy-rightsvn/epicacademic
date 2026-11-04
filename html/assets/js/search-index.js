@@ -39,6 +39,13 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Bài viết",
+    title: "Hàn Tín điểm binh (Phần 2): lời phê “nhân 5” có từ năm 1247 — và vì sao không bao giờ có năm Giáp Sửu",
+    url: "han-tin-diem-binh-phan-2.html",
+    pillar: "Toán chuyên sâu",
+    tags: ["toán chuyên sâu"]
+  },
+  {
+    type: "Bài viết",
     title: "Đúng kết luận mà vẫn sai: 6 cách chứng minh 3 điểm thẳng hàng",
     url: "dung-ket-luan-ma-van-sai-ba-diem-thang-hang.html",
     pillar: "Toán chuyên sâu",
