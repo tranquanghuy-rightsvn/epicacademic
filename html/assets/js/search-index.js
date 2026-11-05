@@ -39,6 +39,13 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Bài viết",
+    title: "Âm 5 hay âm 2, số nào lớn hơn? Dựng số nguyên từ một cái mốc",
+    url: "so-nguyen-am-5-hay-am-2.html",
+    pillar: "Bài giảng ôn luyện Toán",
+    tags: ["bài giảng ôn luyện toán"]
+  },
+  {
+    type: "Bài viết",
     title: "Hàn Tín điểm binh (Phần 2): lời phê “nhân 5” có từ năm 1247 — và vì sao không bao giờ có năm Giáp Sửu",
     url: "han-tin-diem-binh-phan-2.html",
     pillar: "Toán chuyên sâu",
