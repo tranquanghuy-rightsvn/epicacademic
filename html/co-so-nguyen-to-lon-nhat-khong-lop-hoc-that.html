@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Có số nguyên tố lớn nhất không? Một buổi học thật lớp 6 — Nguyễn Thế Vận</title>
+<meta name="description" content="Càng đi xa số nguyên tố càng thưa, vậy có cạn không? Sàng Eratosthenes, 1000 hợp số liên tiếp, hai bài làm thật của học trò, lập luận Euclid IX.20 và bài toán p, 8p − 1, 8p + 1.">
+<link rel="canonical" href="https://nguyenthevan.com/co-so-nguyen-to-lon-nhat-khong-lop-hoc-that.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Có số nguyên tố lớn nhất không? Một buổi học thật lớp 6 — Nguyễn Thế Vận">
+<meta property="og:description" content="Càng đi xa số nguyên tố càng thưa, vậy có cạn không? Sàng Eratosthenes, 1000 hợp số liên tiếp, hai bài làm thật của học trò, lập luận Euclid IX.20 và bài toán p, 8p − 1, 8p + 1.">
+<meta property="og:image" content="https://nguyenthevan.com/assets/images/nguyen-the-van.jpg">
+<meta property="og:url" content="https://nguyenthevan.com/co-so-nguyen-to-lon-nhat-khong-lop-hoc-that.html">
+<link rel="icon" href="assets/images/site-icon-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="blog">
+
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="logo-link">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav">
+      <div class="nav-item">
+        <a href="index.html" class="is-active">Bài viết</a>
+        <button type="button" class="nav-caret" aria-label="Mở danh mục Bài viết" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="toan-hoc-thu-vi.html">Toán học thú vị</a></li>
+          <li><a href="stem-toan-hoc.html">STEM Toán học</a></li>
+          <li><a href="toan-chuyen-sau.html">Toán chuyên sâu</a></li>
+          <li><a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a></li>
+          <li><a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a></li>
+          <li><a href="nao-bo-hoc-toan.html">Não bộ học Toán</a></li>
+        </ul>
+      </div>
+      <a href="about.html">Về tôi</a>
+      <a href="#newsletterForm">Newsletter</a>
+      <button class="search-toggle desktop-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      </button>
+      <a href="login.html" class="nav-login">Đăng nhập</a>
+      <a href="membership.html" class="button">Trở thành thành viên</a>
+    </nav>
+
+    <button class="search-toggle mobile-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+      <svg viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
+    </button>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="search-modal" id="searchModal" hidden>
+  <div class="search-modal-overlay" id="searchModalOverlay"></div>
+  <div class="search-modal-dialog" role="dialog" aria-modal="true" aria-label="Tìm kiếm bài viết">
+    <form class="search-modal-form" id="searchForm" role="search">
+      <svg class="search-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      <label class="screen-reader-text" for="siteSearch">Tìm kiếm bài viết</label>
+      <input id="siteSearch" type="search" placeholder="Tìm theo tiêu đề hoặc thẻ&hellip;" autocomplete="off">
+      <kbd class="search-modal-key">Esc</kbd>
+    </form>
+    <ul class="search-modal-results" id="searchResults"></ul>
+    <p class="search-modal-empty" id="searchEmpty" hidden>Không tìm thấy bài viết phù hợp.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <article>
+    <section class="post-hero">
+      <p class="post-meta">Toán chuyên sâu</p>
+      <h1>Có số nguyên tố lớn nhất không? Một buổi học thật lớp 6</h1>
+      <p class="post-audience">Dành cho: Học sinh lớp 6 và học sinh khá giỏi THCS</p>
+      <p class="intro"></p>
+    </section>
+
+    <div class="post-body">
+<p><strong>Theo d&otilde;i:</strong> ▶ <a href="https://www.youtube.com/channel/UC0XKQmKJlPRA6KqshaDxBVQ" target="_blank" rel="noopener">YouTube Lasotic &ndash; To&aacute;n Tư Duy</a> &middot; <a href="https://www.facebook.com/lasoticvn" target="_blank" rel="noopener">Fanpage Facebook</a></p>
+<p><strong>Video:</strong> <a href="https://youtu.be/0PohA6mo_AE" target="_blank" rel="noopener">C&oacute; số nguy&ecirc;n tố lớn nhất kh&ocirc;ng? Lớp học thật | To&aacute;n 6</a> (18:30 thứ Tư 28/10, video ngắn l&uacute;c 6:30 s&aacute;ng c&ugrave;ng ng&agrave;y) &middot; <a href="#english-version">English version &darr;</a></p>
+<p><strong>C&acirc;u hỏi.</strong> Từ 1 đến 100 c&oacute; 25 số nguy&ecirc;n tố, trăm thứ hai c&ograve;n 21, trăm thứ ba c&ograve;n 16. Ngh&igrave;n đầu ti&ecirc;n c&oacute; 168 số nguy&ecirc;n tố, ngh&igrave;n thứ hai chỉ c&ograve;n 135. C&agrave;ng đi xa, số nguy&ecirc;n tố c&agrave;ng thưa. Vậy cứ đi m&atilde;i, số nguy&ecirc;n tố c&oacute; cạn hẳn kh&ocirc;ng? <strong>C&oacute; số nguy&ecirc;n tố lớn nhất kh&ocirc;ng?</strong></p>
+<p>✋ <em>Đo&aacute;n trước: C&Oacute;, hay KH&Ocirc;NG? Ghi dự đo&aacute;n ra giấy rồi đọc tiếp.</em></p>
+<p>B&agrave;i viết đi theo buổi học online lớp 6 của thầy tối thứ Hai 26/10, chuy&ecirc;n đề Số nguy&ecirc;n tố &ndash; Hợp số. Video giữ lời thầy giảng v&agrave; chữa b&agrave;i thật; học tr&ograve; được ẩn t&ecirc;n v&agrave; h&igrave;nh. B&agrave;i viết n&agrave;y đi s&acirc;u hơn: viết lại lời giải cho chặt, soi hai b&agrave;i l&agrave;m của học tr&ograve;, v&agrave; kể phần lịch sử c&oacute; kiểm chứng.</p>
+<hr>
+<h3>1. V&igrave; sao lại hỏi c&acirc;u n&agrave;y?</h3>
+<p>Mọi số tự nhi&ecirc;n lớn hơn 1 đều l&agrave; t&iacute;ch của c&aacute;c số nguy&ecirc;n tố. Số nguy&ecirc;n tố l&agrave; những &ldquo;vi&ecirc;n gạch&rdquo; dựng n&ecirc;n mọi số. Nếu gạch c&oacute; hạn, chỉ cần một danh s&aacute;ch hữu hạn l&agrave; dựng được mọi số. C&acirc;u hỏi &ldquo;c&oacute; số nguy&ecirc;n tố lớn nhất kh&ocirc;ng&rdquo; thật ra l&agrave; c&acirc;u hỏi: <strong>kho gạch của số học c&oacute; đ&aacute;y kh&ocirc;ng?</strong></p>
+<table>
+<tbody>
+<tr>
+<td><strong>Khoảng</strong></td>
+<td>1&ndash;100</td>
+<td>101&ndash;200</td>
+<td>201&ndash;300</td>
+<td>1&ndash;1000</td>
+<td>1001&ndash;2000</td>
+<td>2001&ndash;3000</td>
+</tr>
+<tr>
+<td><strong>Số nguy&ecirc;n tố</strong></td>
+<td>25</td>
+<td>21</td>
+<td>16</td>
+<td>168</td>
+<td>135</td>
+<td>127</td>
+</tr>
+</tbody>
+</table>
+<p><em>Đ&iacute;nh ch&iacute;nh:</em> phiếu in &ldquo;ngh&igrave;n thứ hai c&oacute; 145 số nguy&ecirc;n tố&rdquo;; đ&uacute;ng l&agrave; <strong>135</strong>, v&igrave; từ 1 đến 2000 c&oacute; 303 số nguy&ecirc;n tố.</p>
+<hr>
+<h3>2. C&aacute;i s&agrave;ng: t&igrave;m mọi số nguy&ecirc;n tố đến 100</h3>
+<p>Gạch số 1. Giữ 2, gạch mọi bội của 2 lớn hơn 2. Giữ 3, gạch c&aacute;c bội của 3. Giữ 5, rồi 7, l&agrave;m tương tự. Đến đ&acirc;y <strong>dừng được</strong>: nếu một hợp số n nhỏ hơn 100 c&oacute; ước a lớn hơn 10 th&igrave; thương n : a nhỏ hơn 10, n&ecirc;n n đ&atilde; c&oacute; một ước nhỏ hơn 10 v&agrave; đ&atilde; bị gạch từ trước. C&ograve;n lại đ&uacute;ng 25 số nguy&ecirc;n tố.</p>
+<p><strong>Kiểm tra một số.</strong> Số nhỏ hơn 10 000 chỉ cần thử chia cho c&aacute;c số nguy&ecirc;n tố kh&ocirc;ng qu&aacute; 100, v&igrave; 100 &middot; 100 = 10 000. V&iacute; dụ 259 = 7 &middot; 37 l&agrave; hợp số. Với 353: 18&sup2; = 324 &lt; 353 &lt; 361 = 19&sup2;, n&ecirc;n chỉ cần thử 2, 3, 5, 7, 11, 13, 17. Kh&ocirc;ng số n&agrave;o chia hết, vậy 353 l&agrave; số nguy&ecirc;n tố. Đ&acirc;y l&agrave; c&aacute;ch một bạn trong lớp viết, gọn v&agrave; đ&uacute;ng.</p>
+<p><em>Sử v&agrave; truyện.</em> C&aacute;i s&agrave;ng mang t&ecirc;n Eratosthenes (thế kỷ III TCN). S&aacute;ch của &ocirc;ng kh&ocirc;ng c&ograve;n; ta biết đến c&aacute;i s&agrave;ng qua <em>Nhập m&ocirc;n Số học</em> của Nicomachus, viết khoảng năm 100 (sử). Chuyện &ocirc;ng viết số l&ecirc;n giấy c&oacute;i rồi d&ugrave;i thủng c&aacute;c hợp số l&agrave; giai thoại hay được kể, chưa c&oacute; sử liệu x&aacute;c nhận (truyện).</p>
+<hr>
+<h3>3. Một ngh&igrave;n hợp số liền nhau</h3>
+<p><strong>V&iacute; dụ 2.</strong> C&oacute; tồn tại 1000 số tự nhi&ecirc;n li&ecirc;n tiếp đều l&agrave; hợp số kh&ocirc;ng? Đặt x = 1 &middot; 2 &middot; 3 &middot; &hellip; &middot; 1001 = 1001! (đọc l&agrave; &ldquo;1001 giai thừa&rdquo;). x chia hết cho mọi số từ 2 đến 1001, n&ecirc;n</p>
+<p style="text-align: center;">x + 2 chia hết cho 2, x + 3 chia hết cho 3, &hellip;, x + 1001 chia hết cho 1001.</p>
+<p>Đ&oacute; l&agrave; 1000 hợp số li&ecirc;n tiếp. Thầy mở rộng ngay trong lớp: thay 1001 bằng một triệu, một tỉ cũng được. Khoảng trống giữa hai số nguy&ecirc;n tố c&oacute; thể d&agrave;i t&ugrave;y &yacute;.</p>
+<p>1001! c&oacute; 2571 chữ số, rất xa. Nhưng khoảng trống d&agrave;i kh&ocirc;ng chỉ ở những nơi xa như thế. Năm 1999, Bertil Nyman t&igrave;m thấy một khoảng trống d&agrave;i 1132 giữa hai số nguy&ecirc;n tố li&ecirc;n tiếp 1 693 182 318 746 371 v&agrave; 1 693 182 318 747 503: 1131 hợp số liền nhau, ngay sau một số nguy&ecirc;n tố c&oacute; 16 chữ số.</p>
+<hr>
+<h3>4. V&ocirc; số số nguy&ecirc;n tố: soi hai b&agrave;i l&agrave;m thật</h3>
+<p><strong>V&iacute; dụ 3.</strong> Chứng minh c&oacute; v&ocirc; số số nguy&ecirc;n tố. Hai bạn gửi b&agrave;i, cả hai c&ugrave;ng một &yacute;: giả sử chỉ c&oacute; hữu hạn số nguy&ecirc;n tố p₁, p₂, &hellip;, pₙ, x&eacute;t A = p₁ &middot; p₂ &middot; &hellip; &middot; pₙ + 1.</p>
+<ul>
+<li><strong>B&agrave;i l&agrave;m 1</strong> viết: A lớn hơn mọi pᵢ n&ecirc;n A l&agrave; số nguy&ecirc;n tố mới, m&acirc;u thuẫn. <strong>Chỗ hở:</strong> A chưa chắc l&agrave; số nguy&ecirc;n tố. Lấy s&aacute;u số nguy&ecirc;n tố đầu: 2 &middot; 3 &middot; 5 &middot; 7 &middot; 11 &middot; 13 + 1 = 30 031 = 59 &middot; 509, một hợp số.</li>
+<li><strong>B&agrave;i l&agrave;m 2</strong> n&oacute;i được điều then chốt: A chia cho mỗi pᵢ đều dư 1, n&ecirc;n <strong>mọi ước nguy&ecirc;n tố của A đều nằm ngo&agrave;i danh s&aacute;ch</strong>. Với 30 031, hai ước 59 v&agrave; 509 quả thật kh&ocirc;ng c&oacute; trong {2, 3, 5, 7, 11, 13}.</li>
+</ul>
+<p><strong>Lời giải viết chặt.</strong> A &gt; 1 n&ecirc;n A c&oacute; &iacute;t nhất một ước nguy&ecirc;n tố q. Nếu q l&agrave; một trong p₁, &hellip;, pₙ th&igrave; q chia hết t&iacute;ch p₁ &middot; &hellip; &middot; pₙ, m&agrave; q cũng chia hết A, n&ecirc;n q chia hết hiệu A &minus; p₁ &middot; &hellip; &middot; pₙ = 1. V&ocirc; l&yacute;, v&igrave; q &ge; 2. Vậy q l&agrave; số nguy&ecirc;n tố kh&ocirc;ng c&oacute; trong danh s&aacute;ch. Kh&ocirc;ng danh s&aacute;ch hữu hạn n&agrave;o chứa hết số nguy&ecirc;n tố: <strong>kh&ocirc;ng c&oacute; số nguy&ecirc;n tố lớn nhất</strong>.</p>
+<p>Lời thầy nhận x&eacute;t trong lớp đ&aacute;ng mang theo: hai bạn c&ugrave;ng một &yacute; tưởng, nhưng <strong>tr&igrave;nh b&agrave;y r&otilde; hay kh&ocirc;ng r&otilde; th&igrave; th&agrave;nh hai c&acirc;u chuyện kh&aacute;c nhau</strong>. Chỗ &ldquo;v&igrave; sao m&acirc;u thuẫn, m&acirc;u thuẫn với điều g&igrave;&rdquo; phải viết ra, kh&ocirc;ng để người đọc tự đo&aacute;n.</p>
+<hr>
+<h3>5. Lịch sử: hơn 2300 năm của một lập luận</h3>
+<ul>
+<li><strong>Euclid, <em>Cơ sở</em>, quyển IX, mệnh đề 20</strong> (khoảng 300 TCN): &ldquo;Số nguy&ecirc;n tố nhiều hơn bất kỳ một nh&oacute;m số nguy&ecirc;n tố n&agrave;o cho trước.&rdquo; Điều th&uacute; vị: Euclid <strong>kh&ocirc;ng d&ugrave;ng phản chứng</strong>. &Ocirc;ng n&oacute;i thẳng: cho một nh&oacute;m số nguy&ecirc;n tố bất kỳ, ta lu&ocirc;n t&igrave;m được một số nguy&ecirc;n tố nằm ngo&agrave;i nh&oacute;m đ&oacute;. C&aacute;ch viết phản chứng như trong s&aacute;ch gi&aacute;o khoa l&agrave; c&aacute;ch người đời sau quen d&ugrave;ng.</li>
+<li><strong>Thưa đến mức n&agrave;o?</strong> Năm 1845, Joseph Bertrand dự đo&aacute;n: với mọi n &gt; 1, giữa n v&agrave; 2n lu&ocirc;n c&oacute; một số nguy&ecirc;n tố. Năm 1852, Pafnuty Chebyshev chứng minh được. Năm 1932, Paul Erdős, 19 tuổi, đưa ra một chứng minh ngắn v&agrave; sơ cấp hơn nhiều.</li>
+<li><strong>Số nguy&ecirc;n tố lớn nhất đ&atilde; biết</strong> l&agrave; 2&sup1;&sup3;⁶ &sup2;⁷⁹ ⁸⁴&sup1; &minus; 1, c&oacute; 41 024 320 chữ số, t&igrave;m ra th&aacute;ng 10/2024 trong dự &aacute;n GIMPS. Nhờ lập luận của Euclid, ta biết chắc vẫn c&ograve;n những số nguy&ecirc;n tố lớn hơn n&oacute;.</li>
+</ul>
+<hr>
+<h3>6. B&agrave;i to&aacute;n 1: số dư l&agrave; c&ocirc;ng cụ để loại</h3>
+<p><strong>Đề (đ&atilde; sửa chỗ đ&aacute;nh m&aacute;y nhầm trong phiếu).</strong> Cho p l&agrave; số nguy&ecirc;n tố v&agrave; một trong hai số 8p &minus; 1, 8p + 1 l&agrave; số nguy&ecirc;n tố. Số c&ograve;n lại l&agrave; số nguy&ecirc;n tố hay hợp số?</p>
+<p><strong>C&aacute;ch chia trường hợp (c&aacute;ch hai b&agrave;i l&agrave;m trong lớp).</strong> X&eacute;t số dư của p khi chia cho 3. Nếu p = 3: 8p &minus; 1 = 23 l&agrave; số nguy&ecirc;n tố, 8p + 1 = 25 l&agrave; hợp số. Nếu p = 3k + 1: 8p + 1 = 24k + 9 chia hết cho 3 v&agrave; lớn hơn 3, l&agrave; hợp số. Nếu p = 3k + 2: 8p &minus; 1 = 24k + 15 chia hết cho 3 v&agrave; lớn hơn 3, l&agrave; hợp số. Thầy nhắc: p = 2 thuộc trường hợp dư 2, kh&ocirc;ng cần x&eacute;t ri&ecirc;ng; c&ograve;n c&acirc;u &ldquo;v&igrave; c&aacute;c số n&agrave;y kh&ocirc;ng chia hết cho 3 n&ecirc;n c&oacute; một số chia hết cho 3&rdquo; l&agrave; <strong>chưa chặt</strong>, phải chỉ ra số n&agrave;o.</p>
+<p><strong>C&aacute;ch nh&igrave;n gọn hơn.</strong> 8p &minus; 1, 8p, 8p + 1 l&agrave; ba số tự nhi&ecirc;n li&ecirc;n tiếp, n&ecirc;n c&oacute; đ&uacute;ng một số chia hết cho 3. Nếu p &ne; 3 th&igrave; 8p kh&ocirc;ng chia hết cho 3, vậy số chia hết cho 3 l&agrave; 8p &minus; 1 hoặc 8p + 1; n&oacute; lớn hơn 3 n&ecirc;n l&agrave; hợp số, v&agrave; đ&oacute; ch&iacute;nh l&agrave; &ldquo;số c&ograve;n lại&rdquo;. Nếu p = 3 th&igrave; 8p + 1 = 25. Kết luận: <strong>số c&ograve;n lại lu&ocirc;n l&agrave; hợp số</strong>. Đ&acirc;y l&agrave; t&iacute;nh chất đầu ti&ecirc;n trong phiếu: trong n số nguy&ecirc;n li&ecirc;n tiếp c&oacute; một v&agrave; chỉ một số chia hết cho n.</p>
+<p><strong>C&acirc;u chốt của buổi học:</strong> c&aacute;i s&agrave;ng để <em>t&igrave;m</em> số nguy&ecirc;n tố, số dư để <em>loại</em> những số kh&ocirc;ng thể l&agrave; số nguy&ecirc;n tố.</p>
+<hr>
+<h3>7. C&acirc;u hỏi để đi tiếp</h3>
+<p>C&oacute; v&ocirc; số cặp số nguy&ecirc;n tố sinh đ&ocirc;i, c&aacute;ch nhau đ&uacute;ng 2 đơn vị như 11 v&agrave; 13, 17 v&agrave; 19, hay kh&ocirc;ng? Đ&acirc;y l&agrave; c&acirc;u hỏi <strong>chưa ai trả lời được</strong>. Năm 2013, Trương &Iacute;ch Đường (Yitang Zhang) chứng minh c&oacute; v&ocirc; số cặp số nguy&ecirc;n tố c&aacute;ch nhau kh&ocirc;ng qu&aacute; 70 triệu; nh&oacute;m Polymath sau đ&oacute; hạ con số ấy xuống 246. Từ 246 về 2 vẫn l&agrave; một khoảng c&aacute;ch chưa ai vượt qua.</p>
+<hr>
+<h3>8. Tự luyện</h3>
+<ol>
+<li>✋ T&igrave;m số nguy&ecirc;n tố p sao cho p + 10 v&agrave; p + 14 cũng l&agrave; số nguy&ecirc;n tố.</li>
+<li>✋ T&igrave;m số nguy&ecirc;n tố p sao cho p + 2 v&agrave; p + 4 cũng l&agrave; số nguy&ecirc;n tố.</li>
+<li>Viết 5 hợp số li&ecirc;n tiếp theo c&aacute;ch của V&iacute; dụ 2 (d&ugrave;ng 6!). Rồi t&igrave;m 5 hợp số li&ecirc;n tiếp <em>nhỏ nhất</em>.</li>
+<li>Ph&acirc;n t&iacute;ch 2 &middot; 3 &middot; 5 &middot; 7 &middot; 11 &middot; 13 &middot; 17 + 1 ra thừa số nguy&ecirc;n tố. C&aacute;c ước c&oacute; nằm ngo&agrave;i danh s&aacute;ch kh&ocirc;ng?</li>
+<li>✋ Chứng minh nếu p l&agrave; số nguy&ecirc;n tố lớn hơn 3 th&igrave; p&sup2; + 2 l&agrave; hợp số.</li>
+<li>✋ Chứng minh nếu p l&agrave; số nguy&ecirc;n tố lớn hơn 3 th&igrave; p&sup2; &minus; 1 chia hết cho 24.</li>
+</ol>
+<details>
+<summary><strong>Đ&aacute;p số v&agrave; gợi &yacute;</strong></summary>
+<ol>
+<li>p = 3 (được 3, 13, 17). Nếu p &ne; 3: p dư 1 khi chia 3 th&igrave; p + 14 chia hết cho 3; p dư 2 th&igrave; p + 10 chia hết cho 3.</li>
+<li>p = 3 (được 3, 5, 7). Trong ba số p, p + 2, p + 4 lu&ocirc;n c&oacute; một số chia hết cho 3.</li>
+<li>722, 723, 724, 725, 726 (từ 6! = 720). Năm hợp số li&ecirc;n tiếp nhỏ nhất: 24, 25, 26, 27, 28.</li>
+<li>510 511 = 19 &middot; 97 &middot; 277. Cả ba ước đều lớn hơn 17, nằm ngo&agrave;i danh s&aacute;ch.</li>
+<li>p kh&ocirc;ng chia hết cho 3 n&ecirc;n p&sup2; chia 3 dư 1, do đ&oacute; p&sup2; + 2 chia hết cho 3 v&agrave; lớn hơn 3.</li>
+<li>p&sup2; &minus; 1 = (p &minus; 1)(p + 1): t&iacute;ch hai số chẵn li&ecirc;n tiếp chia hết cho 8, v&agrave; một trong hai số chia hết cho 3.</li>
+</ol>
+</details>
+<p>▶ B&agrave;i trước: <a href="https://nguyenthevan.com/uoc-luong-so-sanh-luy-thua-31-mu-11-17-mu-14.html" target="_blank" rel="noopener">31 mũ 11 hay 17 mũ 14: ước lượng, thử v&agrave; bỏ đ&uacute;ng l&uacute;c</a> &middot; B&agrave;i tiếp theo: <a href="https://nguyenthevan.com/chia-het-trong-luy-thua-chua-phan-nho-hay-phan-lon.html" target="_blank" rel="noopener">Chia hết trong lũy thừa: chừa phần nhỏ hay chừa phần lớn?</a></p>
+<p><em>Nguồn:</em> phiếu Chuy&ecirc;n đề Số nguy&ecirc;n tố &ndash; Hợp số v&agrave; buổi học online lớp 6 của thầy tối 26/10/2026, học tr&ograve; kh&ocirc;ng n&ecirc;u t&ecirc;n. <a href="https://en.wikipedia.org/wiki/Euclid%27s_theorem" target="_blank" rel="noopener">Euclid's theorem &ndash; Wikipedia</a> (Cơ sở IX.20, lập luận kh&ocirc;ng phản chứng); <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" target="_blank" rel="noopener">Sieve of Eratosthenes &ndash; Wikipedia</a> (Nicomachus); <a href="https://en.wikipedia.org/wiki/Bertrand%27s_postulate" target="_blank" rel="noopener">Bertrand's postulate &ndash; Wikipedia</a>; T. Nicely, <em>First occurrence prime gaps</em> (khoảng trống 1132, B. Nyman, 1999); <a href="https://en.wikipedia.org/wiki/Largest_known_prime_number" target="_blank" rel="noopener">Largest known prime number &ndash; Wikipedia</a>; <a href="https://en.wikipedia.org/wiki/Twin_prime" target="_blank" rel="noopener">Twin prime &ndash; Wikipedia</a> (Zhang 2013, Polymath). Mọi con số trong b&agrave;i đ&atilde; kiểm bằng m&aacute;y.</p>
+<hr>
+<h2 id="english-version">English version</h2>
+<p><strong>The question.</strong> From 1 to 100 there are 25 primes; the second thousand has only 135. The further you go, the sparser the primes. So is there a largest prime? This post follows a real Grade 6 online lesson in our class (Monday 26 Oct), on prime and composite numbers; students' names and faces are hidden.</p>
+<p><strong>The sieve.</strong> Cross out 1, keep 2, 3, 5, 7 and cross out their multiples: a composite number below 100 always has a divisor below 10, so 25 primes remain. To test a number below 10,000, try only the primes up to 100: 259 = 7&middot;37 is composite; 18&sup2; &lt; 353 &lt; 19&sup2;, and none of 2, 3, 5, 7, 11, 13, 17 divides 353, so it is prime. The sieve is known through Nicomachus (around AD 100); the papyrus story is an anecdote, not history.</p>
+<p><strong>A thousand composites in a row.</strong> With x = 1001!, the numbers x + 2, &hellip;, x + 1001 are 1000 consecutive composites. In 1999 Bertil Nyman found a real gap of 1132 between two consecutive 16-digit primes.</p>
+<p><strong>Two real solutions.</strong> Both students formed A = p₁&middot;p₂&middot;&hellip;&middot;pₙ + 1. Solution 1 claimed A is prime, but 2&middot;3&middot;5&middot;7&middot;11&middot;13 + 1 = 30031 = 59&middot;509 is composite. Solution 2 found the key: A leaves remainder 1 on division by every pᵢ, so every prime factor of A lies outside the list. That is Euclid's argument (Elements IX.20, around 300 BC), which he stated directly, without contradiction. Bertrand (1845) conjectured, Chebyshev (1852) proved, and Erdős (1932, aged 19) simplified: there is always a prime between n and 2n. The largest known prime, 2^136,279,841 &minus; 1, has 41,024,320 digits (GIMPS, October 2024), and Euclid tells us there are larger ones.</p>
+<p><strong>Problem 1.</strong> If p is prime and one of 8p &minus; 1, 8p + 1 is prime, the other is composite: 8p &minus; 1, 8p, 8p + 1 are three consecutive numbers, so one is a multiple of 3; for p &ne; 3 it is 8p &plusmn; 1, and for p = 3, 8p + 1 = 25. <strong>Open question:</strong> are there infinitely many twin primes? Zhang (2013) and Polymath reduced the gap to 246; nobody has reached 2. <strong>Practice answers:</strong> p = 3 for both p, p + 10, p + 14 and p, p + 2, p + 4; 510511 = 19&middot;97&middot;277.</p>
+<p><strong>Video:</strong> <a href="https://youtu.be/0PohA6mo_AE" target="_blank" rel="noopener">https://youtu.be/0PohA6mo_AE</a> (in Vietnamese, with English subtitles).</p>
+<p><strong>Theo d&otilde;i Lasotic &ndash; To&aacute;n Tư Duy / Follow:</strong> ▶ <a href="https://www.youtube.com/channel/UC0XKQmKJlPRA6KqshaDxBVQ" target="_blank" rel="noopener">YouTube Lasotic &ndash; To&aacute;n Tư Duy</a> &middot; <a href="https://www.facebook.com/lasoticvn" target="_blank" rel="noopener">Fanpage Facebook</a></p>
+    </div>
+  </article>
+
+  <hr>
+
+  <section class="category-block">
+    <p class="section-heading">Khám phá bài viết theo chủ đề</p>
+    <ul class="category-pills">
+      <li><a href="index.html">Tất cả</a></li>
+      <li><a href="toan-hoc-thu-vi.html">Toán học thú vị</a></li>
+      <li><a href="stem-toan-hoc.html">STEM Toán học</a></li>
+      <li><a href="toan-chuyen-sau.html">Toán chuyên sâu</a></li>
+      <li><a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a></li>
+      <li><a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a></li>
+      <li><a href="nao-bo-hoc-toan.html">Não bộ học Toán</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <section class="footer-top">
+    <div class="wrap">
+      <p class="footer-eyebrow">Đừng bỏ lỡ</p>
+      <div class="footer-grid">
+        <h2>Mỗi tuần một email: một cách giúp con tự nghĩ khi học Toán, lấy từ lớp học thật.</h2>
+        <div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" name="email_address" placeholder="Email của bạn" required aria-label="Email của bạn">
+            <button type="submit">Đăng ký</button>
+          </form>
+          <p class="newsletter-note" id="newsletterNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-col-follow">
+          <h3 class="footer-col-heading">Theo</h3>
+          <div class="footer-follow-grid" aria-label="Mạng xã hội">
+            <a href="mailto:vannt.lateral@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col-about">
+          <h3 class="footer-col-heading">Về tôi</h3>
+          <div class="footer-about-inner">
+            <img class="footer-avatar" src="assets/images/nguyen-the-van.jpg" alt="Nguyễn Thế Vận" width="110" height="110" loading="lazy">
+            <div class="footer-bio">
+              <p>Mình là Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9. Mình dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI.</p>
+              <div class="footer-cta">
+                <a href="about.html">Thông tin thêm về tôi</a>
+                <a href="about.html#lien-he">Liên hệ với tôi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-nav">
+          <h3 class="footer-col-heading">Trang</h3>
+          <nav class="footer-nav" aria-label="Liên kết footer">
+            <a href="index.html">Gần đây</a>
+            <a href="toan-hoc-thu-vi.html">Toán học thú vị</a>
+            <a href="stem-toan-hoc.html">STEM Toán học</a>
+            <a href="toan-chuyen-sau.html">Toán chuyên sâu</a>
+            <a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a>
+            <a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a>
+            <a href="nao-bo-hoc-toan.html">Não bộ học Toán</a>
+            <a href="about.html">Về tôi</a>
+            <a href="membership.html">Thành viên</a>
+            <a href="#newsletterForm" class="is-bold">Bản tin miễn phí</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer-legal-dark">&copy; Nguyễn Thế Vận &middot; Phát triển tư duy qua Toán: Vững gốc, vươn xa. Bảo lưu mọi quyền. &middot; <a href="chinh-sach-rieng-tu.html">Chính sách quyền riêng tư</a></p>
+    </div>
+  </section>
+</footer>
+
+<div class="auth-modal" id="authModal">
+  <div class="auth-modal-backdrop" id="authModalBackdrop"></div>
+  <div class="auth-card auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button type="button" class="auth-modal-close" id="authModalClose" aria-label="Đóng">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/site-icon-logo.svg" alt="Nguyễn Thế Vận · Phát triển tư duy qua Toán: Vững gốc, vươn xa.">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <h1 id="authTitle">Đăng nhập</h1>
+    <p class="auth-sub" id="authSub">Chào mừng bạn quay lại. Truy cập nội dung thành viên bên dưới.</p>
+
+    <div class="auth-error" id="authError">Vui lòng điền đầy đủ thông tin để tiếp tục.</div>
+
+    <form id="authForm">
+      <div class="auth-field" id="nameField" style="display:none;">
+        <label for="fullName">Họ và tên</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A" autocomplete="name">
+      </div>
+      <div class="auth-field">
+        <label for="email">Địa chỉ email</label>
+        <input type="email" id="email" name="email" placeholder="ban@vidu.com" autocomplete="email" required>
+      </div>
+      <div class="auth-field">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required>
+      </div>
+      <p class="auth-forgot" id="forgotRow"><a href="#">Quên mật khẩu?</a></p>
+
+      <div class="auth-submit">
+        <button type="submit" class="button" id="authSubmit" style="width:100%;">Đăng nhập</button>
+      </div>
+    </form>
+
+    <p class="auth-switch" id="authSwitch">
+      Chưa có tài khoản? <a href="#" id="switchToSignup">Đăng ký</a>
+    </p>
+
+    <div class="auth-divider">hoặc</div>
+    <p class="auth-switch">
+      Chưa là thành viên? <a href="membership.html">Khám phá gói thành viên</a>
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

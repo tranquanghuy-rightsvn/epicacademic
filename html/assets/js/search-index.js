@@ -39,6 +39,13 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Bài viết",
+    title: "Có số nguyên tố lớn nhất không? Một buổi học thật lớp 6",
+    url: "co-so-nguyen-to-lon-nhat-khong-lop-hoc-that.html",
+    pillar: "Toán chuyên sâu",
+    tags: ["toán chuyên sâu"]
+  },
+  {
+    type: "Bài viết",
     title: "31 mũ 11 hay 17 mũ 14: ước lượng, thử và bỏ đúng lúc",
     url: "uoc-luong-so-sanh-luy-thua-31-mu-11-17-mu-14.html",
     pillar: "Toán chuyên sâu",
