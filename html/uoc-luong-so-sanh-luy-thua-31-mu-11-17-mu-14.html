@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>31 mũ 11 hay 17 mũ 14: ước lượng, thử và bỏ đúng lúc — Nguyễn Thế Vận</title>
+<meta name="description" content="Một bạn lớp 6 thử hai hướng so sánh 31 mũ 11 và 17 mũ 14, tự bỏ hướng có dấu đổi chiều: ước lượng theo Jo Boaler, quy tắc nắn A lên nắn B xuống, ba bài luyện và Người đếm cát của Archimedes.">
+<link rel="canonical" href="https://nguyenthevan.com/uoc-luong-so-sanh-luy-thua-31-mu-11-17-mu-14.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="31 mũ 11 hay 17 mũ 14: ước lượng, thử và bỏ đúng lúc — Nguyễn Thế Vận">
+<meta property="og:description" content="Một bạn lớp 6 thử hai hướng so sánh 31 mũ 11 và 17 mũ 14, tự bỏ hướng có dấu đổi chiều: ước lượng theo Jo Boaler, quy tắc nắn A lên nắn B xuống, ba bài luyện và Người đếm cát của Archimedes.">
+<meta property="og:image" content="https://nguyenthevan.com/assets/images/nguyen-the-van.jpg">
+<meta property="og:url" content="https://nguyenthevan.com/uoc-luong-so-sanh-luy-thua-31-mu-11-17-mu-14.html">
+<link rel="icon" href="assets/images/site-icon-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="blog">
+
+<header class="site-header">
+  <div class="header-top">
+    <a href="index.html" class="logo-link">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav">
+      <div class="nav-item">
+        <a href="index.html" class="is-active">Bài viết</a>
+        <button type="button" class="nav-caret" aria-label="Mở danh mục Bài viết" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="toan-hoc-thu-vi.html">Toán học thú vị</a></li>
+          <li><a href="stem-toan-hoc.html">STEM Toán học</a></li>
+          <li><a href="toan-chuyen-sau.html">Toán chuyên sâu</a></li>
+          <li><a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a></li>
+          <li><a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a></li>
+          <li><a href="nao-bo-hoc-toan.html">Não bộ học Toán</a></li>
+        </ul>
+      </div>
+      <a href="about.html">Về tôi</a>
+      <a href="#newsletterForm">Newsletter</a>
+      <button class="search-toggle desktop-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      </button>
+      <a href="login.html" class="nav-login">Đăng nhập</a>
+      <a href="membership.html" class="button">Trở thành thành viên</a>
+    </nav>
+
+    <button class="search-toggle mobile-search-toggle" aria-label="Tìm kiếm" aria-expanded="false">
+      <svg viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
+    </button>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="search-modal" id="searchModal" hidden>
+  <div class="search-modal-overlay" id="searchModalOverlay"></div>
+  <div class="search-modal-dialog" role="dialog" aria-modal="true" aria-label="Tìm kiếm bài viết">
+    <form class="search-modal-form" id="searchForm" role="search">
+      <svg class="search-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+      <label class="screen-reader-text" for="siteSearch">Tìm kiếm bài viết</label>
+      <input id="siteSearch" type="search" placeholder="Tìm theo tiêu đề hoặc thẻ&hellip;" autocomplete="off">
+      <kbd class="search-modal-key">Esc</kbd>
+    </form>
+    <ul class="search-modal-results" id="searchResults"></ul>
+    <p class="search-modal-empty" id="searchEmpty" hidden>Không tìm thấy bài viết phù hợp.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <article>
+    <section class="post-hero">
+      <p class="post-meta">Toán chuyên sâu</p>
+      <h1>31 mũ 11 hay 17 mũ 14: ước lượng, thử và bỏ đúng lúc</h1>
+      <p class="post-audience">Dành cho: Học sinh lớp 6–7 và học sinh khá giỏi THCS</p>
+      <p class="intro"></p>
+    </section>
+
+    <div class="post-body">
+<p><strong>Theo d&otilde;i:</strong> ▶ <a href="https://www.youtube.com/channel/UC0XKQmKJlPRA6KqshaDxBVQ" target="_blank" rel="noopener">YouTube Lasotic &ndash; To&aacute;n Tư Duy</a> &middot; <a href="https://www.facebook.com/lasoticvn" target="_blank" rel="noopener">Fanpage Facebook</a></p>
+<p><strong>Video:</strong> <a href="https://youtu.be/r1p7zoM5Kk8" target="_blank" rel="noopener">To&aacute;n chuy&ecirc;n s&acirc;u: 31 mũ 11 hay 17 mũ 14 lớn hơn? Ước lượng v&agrave; bỏ đ&uacute;ng l&uacute;c</a> (18:30 thứ Ba 27/10, video ngắn l&uacute;c 6:30 s&aacute;ng c&ugrave;ng ng&agrave;y) &middot; <a href="#english-version">English version &darr;</a></p>
+<p>31&sup1;&sup1; v&agrave; 17&sup1;⁴: số n&agrave;o lớn hơn? Cả hai đều c&oacute; 17, 18 chữ số, m&aacute;y t&iacute;nh bỏ t&uacute;i chỉ hiện gần đ&uacute;ng. Tr&ecirc;n bảng lớp thầy, một bạn lớp 6 thử hai hướng. Hướng đầu, ch&iacute;nh bạn ấy khoanh lại v&agrave; tự bỏ. Hướng sau, bạn ấy giữ. B&agrave;i viết n&agrave;y kể lại v&igrave; sao bỏ, v&igrave; sao giữ, v&agrave; v&igrave; sao <strong>thử, soi, bỏ đ&uacute;ng l&uacute;c</strong> l&agrave; một bước tư duy chứ kh&ocirc;ng phải một lần thất bại.</p>
+<p>✋ <em>Trước khi đọc tiếp: em đo&aacute;n số n&agrave;o lớn hơn? Ghi dự đo&aacute;n ra giấy.</em></p>
+<hr>
+<h3>1. Ước lượng l&agrave; g&igrave;?</h3>
+<p>Gi&aacute;o sư Jo Boaler (Đại học Stanford) gọi đ&oacute; l&agrave; nghĩ theo kiểu <strong>"khoảng chừng"</strong> (math-ish): nh&agrave; c&aacute;ch đ&acirc;y chừng 10 ph&uacute;t, bạn ấy chừng 12 tuổi. Ngo&agrave;i đời, phần lớn con số ta d&ugrave;ng l&agrave; con số khoảng chừng. B&agrave; cho rằng biết một đ&aacute;p số c&oacute; hợp l&yacute; hay kh&ocirc;ng c&oacute; thể l&agrave; kỹ năng to&aacute;n học qu&yacute; nhất m&agrave; một người c&oacute; thể r&egrave;n.</p>
+<p>V&iacute; dụ b&agrave; hay kể: trong một kỳ thi to&agrave;n quốc ở Mỹ, học sinh 13 tuổi được hỏi 12/13 + 7/8 xấp xỉ bao nhi&ecirc;u, với c&aacute;c lựa chọn 1, 2, 19, 21. C&acirc;u được chọn nhiều nhất l&agrave; <strong>19</strong>, nhiều thứ hai l&agrave; 21. Trong khi mỗi ph&acirc;n số đều gần bằng 1, n&ecirc;n tổng chỉ gần bằng <strong>2</strong>. Ước lượng trước khi t&iacute;nh gi&uacute;p ta biết kết quả ch&iacute;nh x&aacute;c c&oacute; đ&aacute;ng tin hay kh&ocirc;ng. Với b&agrave;i so s&aacute;nh lũy thừa, ước lượng c&ograve;n l&agrave;m được nhiều hơn: <strong>n&oacute; chỉ đường cho lời giải</strong>.</p>
+<hr>
+<h3>2. Hai c&ocirc;ng cụ chắc chắn</h3>
+<ul>
+<li><strong>C&ugrave;ng cơ số</strong> (lớn hơn 1): số mũ lớn hơn th&igrave; lũy thừa lớn hơn. V&iacute; dụ 31&sup1;⁰ &lt; 31&sup1;&sup1;.</li>
+<li><strong>C&ugrave;ng số mũ</strong>: cơ số lớn hơn th&igrave; lũy thừa lớn hơn. V&iacute; dụ 961⁵ &lt; 4913⁵.</li>
+</ul>
+<p>31&sup1;&sup1; v&agrave; 17&sup1;⁴ kh&aacute;c nhau cả cơ số lẫn số mũ, n&ecirc;n kh&ocirc;ng d&ugrave;ng thẳng được c&ocirc;ng cụ n&agrave;o. Việc của ta l&agrave; t&igrave;m <strong>số trung gian</strong> đứng xen giữa hai số ấy.</p>
+<hr>
+<h3>3. Hướng I: l&agrave;m cho số mũ bằng nhau</h3>
+<p style="text-align: center;">31&sup1;&sup1; &gt; 31&sup1;⁰ = (31&sup2;)⁵ = 961⁵ &lt; 4913⁵ = (17&sup3;)⁵ = 17&sup1;⁵ &gt; 17&sup1;⁴</p>
+<p>Từng bước đều đ&uacute;ng. Nhưng khi viết th&agrave;nh một chuỗi, bạn ấy dừng lại nh&igrave;n: <strong>lớn hơn, rồi nhỏ hơn, rồi lại lớn hơn</strong>. Bạn ấy khoanh dấu "&lt;" ở giữa, ghi chữ "ngược" v&agrave; hỏi: bỏ?</p>
+<p><strong>V&igrave; sao phải bỏ?</strong> Thử với số nhỏ: 5 &gt; 2 &lt; 7 v&agrave; 5 &lt; 7; nhưng 5 &gt; 2 &lt; 4 th&igrave; 5 &gt; 4. Khi c&aacute;c dấu ngược chiều nhau, đầu chuỗi v&agrave; cuối chuỗi sắp thế n&agrave;o cũng được. Chuỗi ấy kh&ocirc;ng kết luận được g&igrave;.</p>
+<hr>
+<h3>4. Hướng II: đưa về c&ugrave;ng một cơ số</h3>
+<p>31 gần 32 = 2⁵, c&ograve;n 17 gần 16 = 2⁴. Bạn ấy <strong>nắn 31 l&ecirc;n 32</strong> v&agrave; <strong>nắn 17 xuống 16</strong>:</p>
+<p style="text-align: center;">31&sup1;&sup1; &lt; 32&sup1;&sup1; = 2⁵⁵ &lt; 2⁵⁶ = 16&sup1;⁴ &lt; 17&sup1;⁴</p>
+<p>Mọi dấu c&ugrave;ng một chiều. Kết luận: <strong>31&sup1;&sup1; &lt; 17&sup1;⁴</strong>. Kiểm bằng m&aacute;y: 31&sup1;&sup1; &asymp; 2,54 &middot; 10&sup1;⁶ (17 chữ số), 17&sup1;⁴ &asymp; 1,68 &middot; 10&sup1;⁷ (18 chữ số), số sau gấp khoảng 6,6 lần số trước.</p>
+<hr>
+<h3>5. Thử, soi, bỏ đ&uacute;ng l&uacute;c</h3>
+<p>Hướng I kh&ocirc;ng ph&iacute; c&ocirc;ng. Nhờ thử n&oacute;, bạn ấy thấy r&otilde; điều m&agrave; lời giải cần: <strong>c&aacute;c dấu phải c&ugrave;ng chiều</strong>. C&acirc;u n&ecirc;n hỏi kh&ocirc;ng phải "hướng n&agrave;o sai?" m&agrave; l&agrave; "hướng n&agrave;y d&ugrave;ng được khi n&agrave;o?".</p>
+<p><strong>Quy tắc mang theo:</strong> muốn chứng minh A &lt; B, h&atilde;y <strong>nắn A l&ecirc;n</strong> v&agrave; <strong>nắn B xuống</strong>: A &lt; A' &le; &hellip; &le; B' &lt; B. Nắn &iacute;t th&igrave; số trung gian kh&ocirc;ng vượt qua số cần so: 31 &rarr; 32 chỉ lệch khoảng 3%, 17 &rarr; 16 lệch khoảng 6%.</p>
+<p>Nh&igrave;n 31 th&agrave;nh 32 &minus; 1 v&agrave; 17 th&agrave;nh 16 + 1 l&agrave; thứ m&agrave; Gray v&agrave; Tall (1994) gọi l&agrave; <strong>sự linh hoạt với con số</strong>: một con số, nhiều c&aacute;ch nh&igrave;n.</p>
+<hr>
+<h3>6. Luyện tay</h3>
+<ol>
+<li><strong>2&sup3;⁰⁰ v&agrave; 3&sup2;⁰⁰.</strong> Đưa về số mũ 100: 2&sup3;⁰⁰ = 8&sup1;⁰⁰ &lt; 9&sup1;⁰⁰ = 3&sup2;⁰⁰.</li>
+<li><strong>5&sup3;⁶ v&agrave; 11&sup2;⁴.</strong> Đưa về số mũ 12: 5&sup3;⁶ = 125&sup1;&sup2; &gt; 121&sup1;&sup2; = 11&sup2;⁴. S&aacute;t n&uacute;t, nhưng đ&uacute;ng chiều.</li>
+<li><strong>199&sup2;⁰ v&agrave; 2003&sup1;⁵.</strong> Nắn 199 l&ecirc;n 200, nắn 2003 xuống 2000: 199&sup2;⁰ &lt; 200&sup2;⁰ = 2⁶⁰ &middot; 5⁴⁰ &lt; 2⁶⁰ &middot; 5⁴⁵ = 2000&sup1;⁵ &lt; 2003&sup1;⁵.</li>
+</ol>
+<hr>
+<h3>7. Lịch sử: ước lượng số khổng lồ</h3>
+<p>Hơn 2 200 năm trước, Archimedes viết cuốn <em>Người đếm c&aacute;t</em> (The Sand Reckoner). &Ocirc;ng ước lượng số hạt c&aacute;t lấp đầy vũ trụ theo h&igrave;nh dung thời ấy v&agrave; kết luận: <strong>&iacute;t hơn 10⁶&sup3;</strong>. Ng&agrave;y nay, người lập tr&igrave;nh nhẩm 2&sup1;⁰ = 1024 &asymp; 10&sup3;. Từ đ&oacute; 2⁵⁵ = 2⁵ &middot; (2&sup1;⁰)⁵ &asymp; 32 &middot; 10&sup1;⁵, n&ecirc;n chỉ một ph&eacute;p nhẩm đ&atilde; cho biết 31&sup1;&sup1; (nhỏ hơn 2⁵⁵) c&oacute; khoảng 17 chữ số.</p>
+<hr>
+<h3>8. Tự l&agrave;m</h3>
+<ol>
+<li>2⁹&sup1; v&agrave; 5&sup3;⁵: số n&agrave;o lớn hơn? Gợi &yacute;: 2&sup1;⁸ = 262 144, 5⁷ = 78 125.</li>
+<li>3⁵⁰⁰ v&agrave; 7&sup3;⁰⁰: số n&agrave;o lớn hơn?</li>
+<li>Kh&oacute; hơn: tự đặt một cặp lũy thừa m&agrave; hướng I chạy được c&ograve;n hướng II th&igrave; g&atilde;y.</li>
+</ol>
+<details>
+<summary><strong>Đ&aacute;p số c&acirc;u 1 v&agrave; 2</strong></summary>
+<ol>
+<li>2⁹&sup1; &gt; 2⁹⁰ = (2&sup1;⁸)⁵ &gt; (5⁷)⁵ = 5&sup3;⁵, mọi dấu c&ugrave;ng chiều.</li>
+<li>3⁵⁰⁰ = (3⁵)&sup1;⁰⁰ = 243&sup1;⁰⁰ &lt; 343&sup1;⁰⁰ = (7&sup3;)&sup1;⁰⁰ = 7&sup3;⁰⁰.</li>
+</ol>
+</details>
+<p><strong>C&acirc;u chốt:</strong> ước lượng chỉ đường, c&ograve;n chuỗi xu&ocirc;i chiều mới l&agrave; lời giải.</p>
+<p>▶ B&agrave;i tiếp theo: <a href="https://nguyenthevan.com/chia-het-trong-luy-thua-chua-phan-nho-hay-phan-lon.html" target="_blank" rel="noopener">Chia hết trong lũy thừa: chừa phần nhỏ hay chừa phần lớn?</a> (video: <a href="https://youtu.be/DKQeAs_XCKI" target="_blank" rel="noopener">https://youtu.be/DKQeAs_XCKI</a>)</p>
+<p><em>Nguồn:</em> Jo Boaler, <em>Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics</em> (HarperOne, 2024); C. Spector, <a href="https://news.stanford.edu/stories/2024/05/the-case-for-math-ish-thinking" target="_blank" rel="noopener">"The case for 'math-ish' thinking"</a>, Stanford Report, 15/5/2024; E. Gray &amp; D. Tall (1994), "Duality, Ambiguity, and Flexibility: A 'Proceptual' View of Simple Arithmetic", <em>Journal for Research in Mathematics Education</em> 25(2); Archimedes, <a href="https://en.wikipedia.org/wiki/The_Sand_Reckoner" target="_blank" rel="noopener">The Sand Reckoner &ndash; Wikipedia</a>. B&agrave;i l&agrave;m tr&ecirc;n bảng của một học sinh lớp thầy, kh&ocirc;ng n&ecirc;u t&ecirc;n. Mọi ph&eacute;p so s&aacute;nh đ&atilde; kiểm bằng m&aacute;y.</p>
+<hr>
+<h2 id="english-version">English version</h2>
+<p><strong>31^11 or 17^14?</strong> Both have 17 or 18 digits. On the board in our class, one Grade 6 student tried two approaches. The first, making the exponents equal, gave 31^11 &gt; 961^5 &lt; 4913^5 &gt; 17^14: every step is true, but the signs flip, so the chain proves nothing (5 &gt; 2 &lt; 7 and 5 &gt; 2 &lt; 4 lead to opposite conclusions). The student circled the flip and dropped it. The second approach pushed 31 up to 32 and 17 down to 16: 31^11 &lt; 32^11 = 2^55 &lt; 2^56 = 16^14 &lt; 17^14. Every sign points the same way, so 31^11 is smaller.</p>
+<p><strong>Estimation</strong>, in Stanford professor Jo Boaler's words "math-ish" thinking, tells us whether an answer is reasonable (her favourite example: most 13-year-olds estimated 12/13 + 7/8 as 19, not 2). Here it does more: it shows the way. The rule to take away: to prove A &lt; B, push A up and push B down, and keep every sign pointing the same way. Trying, checking and dropping at the right moment is a thinking step, not a failure.</p>
+<p><strong>Practice:</strong> 2^300 = 8^100 &lt; 9^100 = 3^200; 5^36 = 125^12 &gt; 121^12 = 11^24; 199^20 &lt; 200^20 = 2^60&middot;5^40 &lt; 2^60&middot;5^45 = 2000^15 &lt; 2003^15. <strong>History:</strong> Archimedes' <em>Sand Reckoner</em> estimated fewer than 10^63 grains of sand to fill the universe; programmers use 2^10 &asymp; 10^3. <strong>Your turn:</strong> 2^91 vs 5^35, and 3^500 vs 7^300 (answers in the Vietnamese section above).</p>
+<p><strong>Video:</strong> <a href="https://youtu.be/r1p7zoM5Kk8" target="_blank" rel="noopener">https://youtu.be/r1p7zoM5Kk8</a> (in Vietnamese, with English subtitles).</p>
+<p><strong>Theo d&otilde;i Lasotic &ndash; To&aacute;n Tư Duy / Follow:</strong> ▶ <a href="https://www.youtube.com/channel/UC0XKQmKJlPRA6KqshaDxBVQ" target="_blank" rel="noopener">YouTube Lasotic &ndash; To&aacute;n Tư Duy</a> &middot; <a href="https://www.facebook.com/lasoticvn" target="_blank" rel="noopener">Fanpage Facebook</a></p>
+    </div>
+  </article>
+
+  <hr>
+
+  <section class="category-block">
+    <p class="section-heading">Khám phá bài viết theo chủ đề</p>
+    <ul class="category-pills">
+      <li><a href="index.html">Tất cả</a></li>
+      <li><a href="toan-hoc-thu-vi.html">Toán học thú vị</a></li>
+      <li><a href="stem-toan-hoc.html">STEM Toán học</a></li>
+      <li><a href="toan-chuyen-sau.html">Toán chuyên sâu</a></li>
+      <li><a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a></li>
+      <li><a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a></li>
+      <li><a href="nao-bo-hoc-toan.html">Não bộ học Toán</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <section class="footer-top">
+    <div class="wrap">
+      <p class="footer-eyebrow">Đừng bỏ lỡ</p>
+      <div class="footer-grid">
+        <h2>Mỗi tuần một email: một cách giúp con tự nghĩ khi học Toán, lấy từ lớp học thật.</h2>
+        <div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" name="email_address" placeholder="Email của bạn" required aria-label="Email của bạn">
+            <button type="submit">Đăng ký</button>
+          </form>
+          <p class="newsletter-note" id="newsletterNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-col-follow">
+          <h3 class="footer-col-heading">Theo</h3>
+          <div class="footer-follow-grid" aria-label="Mạng xã hội">
+            <a href="mailto:vannt.lateral@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col-about">
+          <h3 class="footer-col-heading">Về tôi</h3>
+          <div class="footer-about-inner">
+            <img class="footer-avatar" src="assets/images/nguyen-the-van.jpg" alt="Nguyễn Thế Vận" width="110" height="110" loading="lazy">
+            <div class="footer-bio">
+              <p>Mình là Nguyễn Thế Vận — giáo viên Toán lớp 4 đến lớp 9. Mình dạy Toán tư duy và phát triển tư duy cho học sinh thông qua học Toán, trong thời đại bùng nổ của AI.</p>
+              <div class="footer-cta">
+                <a href="about.html">Thông tin thêm về tôi</a>
+                <a href="about.html#lien-he">Liên hệ với tôi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-nav">
+          <h3 class="footer-col-heading">Trang</h3>
+          <nav class="footer-nav" aria-label="Liên kết footer">
+            <a href="index.html">Gần đây</a>
+            <a href="toan-hoc-thu-vi.html">Toán học thú vị</a>
+            <a href="stem-toan-hoc.html">STEM Toán học</a>
+            <a href="toan-chuyen-sau.html">Toán chuyên sâu</a>
+            <a href="hoc-toan-hang-ngay.html">Học Toán hằng ngày</a>
+            <a href="bai-giang-on-luyen-toan.html">Bài giảng ôn luyện Toán</a>
+            <a href="nao-bo-hoc-toan.html">Não bộ học Toán</a>
+            <a href="about.html">Về tôi</a>
+            <a href="membership.html">Thành viên</a>
+            <a href="#newsletterForm" class="is-bold">Bản tin miễn phí</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer-legal-dark">&copy; Nguyễn Thế Vận &middot; Phát triển tư duy qua Toán: Vững gốc, vươn xa. Bảo lưu mọi quyền. &middot; <a href="chinh-sach-rieng-tu.html">Chính sách quyền riêng tư</a></p>
+    </div>
+  </section>
+</footer>
+
+<div class="auth-modal" id="authModal">
+  <div class="auth-modal-backdrop" id="authModalBackdrop"></div>
+  <div class="auth-card auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button type="button" class="auth-modal-close" id="authModalClose" aria-label="Đóng">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/site-icon-logo.svg" alt="Nguyễn Thế Vận · Phát triển tư duy qua Toán: Vững gốc, vươn xa.">
+      <span class="logo-wordmark"><span class="logo-name">Nguyễn Thế Vận</span> <span class="logo-slogan">Phát triển tư duy qua Toán: <br class="logo-slogan-break">Vững gốc, vươn xa.</span></span>
+    </a>
+
+    <h1 id="authTitle">Đăng nhập</h1>
+    <p class="auth-sub" id="authSub">Chào mừng bạn quay lại. Truy cập nội dung thành viên bên dưới.</p>
+
+    <div class="auth-error" id="authError">Vui lòng điền đầy đủ thông tin để tiếp tục.</div>
+
+    <form id="authForm">
+      <div class="auth-field" id="nameField" style="display:none;">
+        <label for="fullName">Họ và tên</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A" autocomplete="name">
+      </div>
+      <div class="auth-field">
+        <label for="email">Địa chỉ email</label>
+        <input type="email" id="email" name="email" placeholder="ban@vidu.com" autocomplete="email" required>
+      </div>
+      <div class="auth-field">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password" required>
+      </div>
+      <p class="auth-forgot" id="forgotRow"><a href="#">Quên mật khẩu?</a></p>
+
+      <div class="auth-submit">
+        <button type="submit" class="button" id="authSubmit" style="width:100%;">Đăng nhập</button>
+      </div>
+    </form>
+
+    <p class="auth-switch" id="authSwitch">
+      Chưa có tài khoản? <a href="#" id="switchToSignup">Đăng ký</a>
+    </p>
+
+    <div class="auth-divider">hoặc</div>
+    <p class="auth-switch">
+      Chưa là thành viên? <a href="membership.html">Khám phá gói thành viên</a>
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

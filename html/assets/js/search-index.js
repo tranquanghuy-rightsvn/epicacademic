@@ -39,6 +39,13 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     type: "Bài viết",
+    title: "31 mũ 11 hay 17 mũ 14: ước lượng, thử và bỏ đúng lúc",
+    url: "uoc-luong-so-sanh-luy-thua-31-mu-11-17-mu-14.html",
+    pillar: "Toán chuyên sâu",
+    tags: ["toán chuyên sâu"]
+  },
+  {
+    type: "Bài viết",
     title: "Âm 5 hay âm 2, số nào lớn hơn? Dựng số nguyên từ một cái mốc",
     url: "so-nguyen-am-5-hay-am-2.html",
     pillar: "Bài giảng ôn luyện Toán",
