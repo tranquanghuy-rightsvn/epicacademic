@@ -1,5 +1,14 @@
 [
   {
+    "slug": "co-so-nguyen-to-lon-nhat-khong-lop-hoc-that",
+    "title": "Có số nguyên tố lớn nhất không? Một buổi học thật lớp 6",
+    "category": "toan-chuyen-sau",
+    "description": "Càng đi xa số nguyên tố càng thưa, vậy có cạn không? Sàng Eratosthenes, 1000 hợp số liên tiếp, hai bài làm thật của học trò, lập luận Euclid IX.20 và bài toán p, 8p − 1, 8p + 1.",
+    "audience": "Học sinh lớp 6 và học sinh khá giỏi THCS",
+    "date": "2026-11-05",
+    "updated_at": "2026-11-05T14:27:52Z"
+  },
+  {
     "slug": "uoc-luong-so-sanh-luy-thua-31-mu-11-17-mu-14",
     "title": "31 mũ 11 hay 17 mũ 14: ước lượng, thử và bỏ đúng lúc",
     "category": "toan-chuyen-sau",
